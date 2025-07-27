@@ -1,0 +1,526 @@
+/* Mrs. Violet Noire - Book Review Website Styles */
+
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Color Palette - Elegant Mystery Theme */
+    --primary-color: #2c1810;        /* Deep brown - sophistication */
+    --secondary-color: #8b4a6b;      /* Muted purple - mystery */
+    --accent-color: #d4af37;         /* Gold - luxury */
+    --text-primary: #2c1810;         /* Dark brown for readability */
+    --text-secondary: #5a4a42;       /* Lighter brown */
+    --text-light: #8b7d73;           /* Light brown */
+    --background-cream: #f7f4f0;     /* Warm cream */
+    --background-white: #ffffff;
+    --border-light: #e6ddd6;         /* Light border */
+    --shadow-light: rgba(44, 24, 16, 0.1);
+    --shadow-medium: rgba(44, 24, 16, 0.15);
+
+    /* Typography */
+    --font-serif: 'Crimson Text', serif;
+    --font-sans: 'Inter', sans-serif;
+
+    /* Spacing */
+    --container-max: 1200px;
+    --padding-section: 4rem 0;
+    --padding-container: 0 1.5rem;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--background-cream);
+}
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--padding-container);
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Header */
+.header {
+    background: var(--background-white);
+    box-shadow: 0 2px 10px var(--shadow-light);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+.nav-brand h1 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-bottom: 0;
+}
+
+.tagline {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin: 0;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-sans);
+}
+
+.btn-primary {
+    background: var(--secondary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #7a4160;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--secondary-color);
+    color: white;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 6rem 1.5rem 4rem;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    gap: 4rem;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Book Stack Animation */
+.book-stack {
+    position: relative;
+    width: 200px;
+    height: 240px;
+}
+
+.book {
+    position: absolute;
+    width: 140px;
+    height: 200px;
+    border-radius: 4px;
+    box-shadow: 0 4px 15px var(--shadow-medium);
+}
+
+.book-1 {
+    background: linear-gradient(135deg, var(--secondary-color), #7a4160);
+    transform: rotate(-5deg);
+    z-index: 3;
+}
+
+.book-2 {
+    background: linear-gradient(135deg, var(--accent-color), #b8951f);
+    transform: rotate(2deg) translate(20px, 15px);
+    z-index: 2;
+}
+
+.book-3 {
+    background: linear-gradient(135deg, var(--primary-color), #3d241a);
+    transform: rotate(-2deg) translate(40px, 25px);
+    z-index: 1;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+}
+
+/* Featured Reviews */
+.featured-reviews {
+    padding: var(--padding-section);
+    background: var(--background-white);
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.review-card {
+    background: var(--background-cream);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px var(--shadow-medium);
+}
+
+.book-cover {
+    height: 200px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+    position: relative;
+}
+
+.book-cover::after {
+    content: "📚";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    opacity: 0.3;
+}
+
+.review-content {
+    padding: 1.5rem;
+}
+
+.book-title {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.book-author {
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.stars {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+.rating-text {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.review-excerpt {
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.read-more {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: var(--primary-color);
+}
+
+/* Genres Section */
+.genres {
+    padding: var(--padding-section);
+}
+
+.genres-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.genre-card {
+    background: var(--background-white);
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 15px var(--shadow-light);
+    transition: transform 0.3s ease;
+}
+
+.genre-card:hover {
+    transform: translateY(-3px);
+}
+
+.genre-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.genre-card p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* About Section */
+.about {
+    padding: var(--padding-section);
+    background: var(--background-white);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text {
+    color: var(--text-secondary);
+}
+
+.portrait-placeholder {
+    width: 250px;
+    height: 300px;
+    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+    border-radius: 8px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.portrait-placeholder::after {
+    content: "👤";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    opacity: 0.3;
+}
+
+/* Newsletter Section */
+.newsletter {
+    padding: var(--padding-section);
+    background: var(--primary-color);
+    color: white;
+    text-align: center;
+}
+
+.newsletter h2 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.newsletter p {
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+}
+
+/* Footer */
+.footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand h3 {
+    color: white;
+    margin-bottom: 0.5rem;
+}
+
+.footer-brand p {
+    opacity: 0.8;
+    margin: 0;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.footer-column h4 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.footer-column a:hover {
+    opacity: 1;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1rem;
+    text-align: center;
+    opacity: 0.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+}

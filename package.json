@@ -1,0 +1,39 @@
+{
+  "name": "mrs-violet-noire-website",
+  "version": "1.0.0",
+  "description": "Mrs. Violet Noire - A sophisticated book review website specializing in mystery novels and literary analysis",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=5500 --entry-file=index.html --open=/",
+    "start": "npm run dev",
+    "validate": "html-validate **/*.html",
+    "format": "prettier --write **/*.html **/*.css **/*.js",
+    "build": "npm run format && npm run validate",
+    "deploy": "npm run build && git add . && git commit -m 'Deploy website' && git push origin main",
+    "setup": "npm install"
+  },
+  "keywords": [
+    "book-reviews",
+    "mystery-novels",
+    "literature",
+    "mrs-violet-noire",
+    "book-blog",
+    "literary-analysis"
+  ],
+  "author": "Mrs. Violet Noire",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "html-validate": "^8.7.4",
+    "prettier": "^3.1.1"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mooit-artist/Mrs-Violet-Noire.git"
+  },
+  "homepage": "https://mooit-artist.github.io/Mrs-Violet-Noire"
+}
