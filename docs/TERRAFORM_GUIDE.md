@@ -8,6 +8,7 @@ The [Hostinger Terraform provider](https://github.com/hostinger/terraform-provid
 
 **Complete Terraform Setup**:
 - ✅ **Terraform Configuration** - Ready-to-deploy Git server infrastructure
+- ✅ **🆕 Container Platform** - Full Docker deployment with Portainer
 - ✅ **Automated Deployment** - One-command Git server setup
 - ✅ **Infrastructure Management** - Version-controlled infrastructure
 - ✅ **Post-Install Automation** - Comprehensive Git server configuration
@@ -27,6 +28,10 @@ The [Hostinger Terraform provider](https://github.com/hostinger/terraform-provid
 
 # 4. SSH to your new server
 ./terraform/deploy.sh ssh
+
+# 🆕 5. Deploy containers
+./terraform/deploy.sh deploy-container my-nginx nginx:latest 80
+./terraform/deploy.sh ssh-container
 ```
 
 ### 📁 **File Structure**
@@ -143,20 +148,26 @@ Check what's available for your infrastructure:
 
 ### 🎉 **Complete Infrastructure Stack**
 
-You now have four complementary approaches to Hostinger management:
+You now have **FIVE** complementary approaches to Hostinger management:
 
 1. **Shell Scripts** (`scripts/hostinger-api.sh`) - Quick tasks
 2. **Python SDK** (`scripts/hostinger_simple.py`) - Automation
-3. **Terraform** (`terraform/`) - Infrastructure as Code
-4. **Direct API** - Maximum flexibility
+3. **Terraform Git Server** (`terraform/git-server.tf`) - Git Infrastructure as Code
+4. **🆕 Terraform Container Platform** (`terraform/container-server.tf`) - Container Infrastructure as Code
+5. **🆕 Container Deployment** (`scripts/container-deploy.sh`) - Quick container deployment
+6. **Direct API** - Maximum flexibility
 
 **Choose the right tool for each task and combine them for maximum efficiency!** 🚀
 
 ### 🔄 **Next Steps**
 
 1. **Deploy Your Git Server**: Use `./terraform/deploy.sh apply`
-2. **Configure DNS**: Point `git.yourdomain.com` to your server
-3. **Set Up Repositories**: Create your project repositories
-4. **Automate Deployments**: Use webhooks for CI/CD integration
+2. **🆕 Deploy Container Platform**: Complete Docker infrastructure ready
+3. **Configure DNS**: Point `git.yourdomain.com` and `containers.yourdomain.com` to your servers
+4. **Set Up Repositories**: Create your project repositories
+5. **🆕 Deploy Applications**: Use `./terraform/deploy.sh deploy-container` for instant container deployment
+6. **Automate Deployments**: Use webhooks for CI/CD integration
 
-**Your complete Git hosting infrastructure is now ready to deploy!** ⚡
+**Your complete Git + Container hosting infrastructure is now ready to deploy!** ⚡
+
+**See also**: `docs/CONTAINER_GUIDE.md` for complete container deployment documentation.

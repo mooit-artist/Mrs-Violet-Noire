@@ -6,7 +6,8 @@
 
 ### ✅ **What's Available**:
 - **🚀 One-Command Deployment**: Complete Git server setup with `./terraform/deploy.sh apply`
-- **📋 Infrastructure Management**: Version-controlled, reproducible infrastructure
+- **� Container Platform**: Full Docker deployment with `./terraform/container-server.tf`
+- **�📋 Infrastructure Management**: Version-controlled, reproducible infrastructure
 - **🔧 Automated Configuration**: Post-install scripts, SSH keys, firewall setup
 - **💻 VPS Provisioning**: Multiple plans, data centers, and OS templates
 - **🌐 DNS Integration**: Subdomain management (planned feature)
@@ -17,10 +18,15 @@
 ./terraform/deploy.sh init     # Initialize Terraform
 ./terraform/deploy.sh plan     # Review infrastructure plan
 ./terraform/deploy.sh apply    # Deploy Git server
-./terraform/deploy.sh ssh      # Connect to your new server
+
+# Deploy containers to VPS
+./terraform/deploy.sh deploy-container my-nginx nginx:latest 80
+./terraform/deploy.sh ssh-container  # SSH to container server
 ```
 
-See complete guide: `docs/TERRAFORM_GUIDE.md`
+See complete guides:
+- `docs/TERRAFORM_GUIDE.md` - Infrastructure as Code
+- `docs/CONTAINER_GUIDE.md` - Container deployment
 
 ## 🐍 **Python SDK Integration - WORKING!**Can Do With Your Hostinger API
 

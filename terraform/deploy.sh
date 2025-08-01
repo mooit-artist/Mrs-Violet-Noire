@@ -162,6 +162,83 @@ ssh_to_server() {
     ssh -o StrictHostKeyChecking=no root@"$SERVER_IP"
 }
 
+# SSH to the Container server
+ssh_to_container_server() {
+    cd "$TERRAFORM_DIR"
+
+    if [ ! -f "terraform.tfstate" ]; then
+        print_error "No infrastructure deployed"
+        exit 1
+    fi
+
+    SERVER_IP=$(terraform output -raw container_server_ip 2>/dev/null)
+
+    if [ -z "$SERVER_IP" ]; then
+        print_error "Could not get container server IP"
+        exit 1
+    fi
+
+    print_status "Connecting to Container server at $SERVER_IP..."
+    ssh -o StrictHostKeyChecking=no docker-user@"$SERVER_IP"
+}
+
+# Deploy container to server
+deploy_container() {
+    if [ $# -lt 2 ]; then
+        print_error "Usage: $0 deploy-container <container-name> <image> [port] [env-file]"
+        echo ""
+        echo "Examples:"
+        echo "  $0 deploy-container my-nginx nginx:latest 80"
+        echo "  $0 deploy-container my-app node:18 3000"
+        echo "  $0 deploy-container database postgres:15 5432 postgres.env"
+        exit 1
+    fi
+
+    cd "$TERRAFORM_DIR"
+
+    if [ ! -f "terraform.tfstate" ]; then
+        print_error "No infrastructure deployed"
+        exit 1
+    fi
+
+    SERVER_IP=$(terraform output -raw container_server_ip 2>/dev/null)
+
+    if [ -z "$SERVER_IP" ]; then
+        print_error "Could not get container server IP"
+        exit 1
+    fi
+
+    CONTAINER_NAME="$1"
+    IMAGE="$2"
+    PORT="$3"
+    ENV_FILE="$4"
+
+    print_status "Deploying container '$CONTAINER_NAME' with image '$IMAGE' to $SERVER_IP..."
+
+    # Build the deployment command
+    DEPLOY_CMD="./deploy-container.sh $CONTAINER_NAME $IMAGE"
+    if [ -n "$PORT" ]; then
+        DEPLOY_CMD="$DEPLOY_CMD $PORT"
+    fi
+    if [ -n "$ENV_FILE" ]; then
+        DEPLOY_CMD="$DEPLOY_CMD $ENV_FILE"
+    fi
+
+    # Execute deployment on remote server
+    ssh -o StrictHostKeyChecking=no docker-user@"$SERVER_IP" "$DEPLOY_CMD"
+
+    if [ $? -eq 0 ]; then
+        print_success "Container deployed successfully!"
+        echo ""
+        echo "🌐 Access URLs:"
+        if [ -n "$PORT" ]; then
+            echo "  Container: http://$SERVER_IP:$PORT"
+        fi
+        echo "  Dashboard: http://$SERVER_IP"
+        echo "  Portainer: http://$SERVER_IP:9000"
+    fi
+}
+
 # Show help
 show_help() {
     echo "Terraform Hostinger Infrastructure Manager"
@@ -176,6 +253,8 @@ show_help() {
     echo "  status      Show current infrastructure status"
     echo "  resources   Show available Hostinger resources"
     echo "  ssh         SSH to the Git server"
+    echo "  ssh-container SSH to the Container server"
+    echo "  deploy-container Deploy a container to the container server"
     echo "  help        Show this help message"
     echo ""
     echo "Examples:"
@@ -183,6 +262,8 @@ show_help() {
     echo "  $0 plan     # Plan Git server deployment"
     echo "  $0 apply    # Deploy Git server"
     echo "  $0 ssh      # Connect to deployed server"
+    echo "  $0 ssh-container # Connect to container server as docker-user"
+    echo "  $0 deploy-container my-nginx nginx:latest 80"
 }
 
 # Main script logic
@@ -213,6 +294,13 @@ main() {
             ;;
         "ssh")
             ssh_to_server
+            ;;
+        "ssh-container")
+            ssh_to_container_server
+            ;;
+        "deploy-container")
+            shift  # Remove 'deploy-container' from arguments
+            deploy_container "$@"
             ;;
         "help"|*)
             show_help

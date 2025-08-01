@@ -62,3 +62,16 @@ variable "template_id" {
   type        = number
   default     = 1002  # Ubuntu 22.04 LTS
 }
+
+# Container server specific variables
+variable "container_vps_plan" {
+  description = "VPS plan for container server (needs more resources)"
+  type        = string
+  default     = "hostingercom-vps-kvm4-usd-1m"  # Premium VPS plan for containers
+}
+
+variable "container_server_hostname" {
+  description = "Hostname for the container server"
+  type        = string
+  default     = "container-server.example.com"
+}

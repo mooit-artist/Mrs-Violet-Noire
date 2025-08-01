@@ -11,6 +11,10 @@
 git_server_hostname = "git.yourdomain.com"
 domain_name        = "yourdomain.com"
 
+# Container server configuration
+container_server_hostname = "containers.yourdomain.com"
+container_vps_plan       = "hostingercom-vps-kvm4-usd-1m"  # Premium plan recommended for containers
+
 # VPS Configuration
 vps_plan       = "hostingercom-vps-kvm2-usd-1m"  # Basic VPS plan
 data_center_id = 13                               # Data center location
