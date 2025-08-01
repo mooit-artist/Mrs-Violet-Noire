@@ -1,0 +1,38 @@
+{
+  "name": "security-check",
+  "version": "1.0.0",
+  "description": "Security scanning configuration for Mrs. Violet Noire",
+  "main": "index.js",
+  "scripts": {
+    "security:scan": "./scripts/security-scan.sh",
+    "security:audit": "npm audit --audit-level moderate",
+    "security:fix": "npm audit fix",
+    "security:report": "npm audit --json > security-audit.json",
+    "precommit": "npm run security:scan",
+    "test:security": "npm run security:audit && npm run security:scan"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-security": "^1.7.1",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.0.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged && npm run security:scan"
+    }
+  },
+  "lint-staged": {
+    "*.{js,html,css}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "security": {
+    "advisories": {
+      "ignore": []
+    },
+    "auditLevel": "moderate"
+  }
+}
