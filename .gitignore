@@ -16,6 +16,16 @@ ENV/
 env.bak/
 venv.bak/
 
+# API Keys and Secrets
+*.violet
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+config/secrets.*
+secrets/
+
 # IDE
 .vscode/launch.json
 .idea/
