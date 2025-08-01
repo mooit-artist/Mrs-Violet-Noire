@@ -43,6 +43,39 @@ Realistic investigations that follow the methodical work of law enforcement, cel
 - **["The Push"](https://www.amazon.com/Push-Novel-Ashley-Audrain/dp/0593087275?tag=mrsvioletnoire-20)** by Ashley Audrain ⭐⭐⭐⭐
   *A disturbing examination of maternal anxiety and generational trauma*
 
+### Exceptional Discoveries from the Library
+- **["The Nightingale"](https://www.amazon.com/Nightingale-Kristin-Hannah/dp/0312577222?tag=mrsvioletnoire-20)** by [Kristin Hannah](https://www.amazon.com/s?k=Kristin+Hannah&tag=mrsvioletnoire-20) ⭐⭐⭐⭐⭐
+  *A stunning historical thriller about courage and survival during WWII*
+
+- **["Where the Crawdads Sing"](https://www.amazon.com/Where-Crawdads-Sing-Delia-Owens/dp/0735219117?tag=mrsvioletnoire-20)** by [Delia Owens](https://www.amazon.com/s?k=Delia+Owens&tag=mrsvioletnoire-20) ⭐⭐⭐⭐
+  *A mesmerizing murder mystery set in the atmospheric American South*
+
+- **["The Housemaid"](https://www.amazon.com/Housemaid-Freida-McFadden/dp/1803144378?tag=mrsvioletnoire-20)** by [Freida McFadden](https://www.amazon.com/s?k=Freida+McFadden&tag=mrsvioletnoire-20) ⭐⭐⭐⭐
+  *A gripping domestic thriller that will keep you guessing until the end*
+
+- **["Verity"](https://www.amazon.com/Verity-Colleen-Hoover/dp/153872474X?tag=mrsvioletnoire-20)** by [Colleen Hoover](https://www.amazon.com/s?k=Colleen+Hoover&tag=mrsvioletnoire-20) ⭐⭐⭐⭐
+  *A psychological thriller that blurs the lines between truth and fiction*
+
+- **["The Maid's Diary"](https://www.amazon.com/Maids-Diary-Loreth-Anne-White/dp/B09X9TWRH9?tag=mrsvioletnoire-20)** by [Loreth Anne White](https://www.amazon.com/s?k=Loreth+Anne+White&tag=mrsvioletnoire-20) ⭐⭐⭐⭐
+  *A psychological thriller exploring secrets, lies, and betrayal*
+
+### Crime Series Worth Following
+- **Stillhouse Lake Series** by [Rachel Caine](https://www.amazon.com/s?k=Rachel+Caine+Stillhouse+Lake&tag=mrsvioletnoire-20)
+  - ["Stillhouse Lake"](https://www.amazon.com/Stillhouse-Lake-Rachel-Caine/dp/1477821554?tag=mrsvioletnoire-20) ⭐⭐⭐⭐
+  - ["Killman Creek"](https://www.amazon.com/Killman-Creek-Stillhouse-Lake-Book/dp/1542096413?tag=mrsvioletnoire-20) ⭐⭐⭐⭐
+  - ["Bitter Falls"](https://www.amazon.com/Bitter-Falls-Stillhouse-Lake-Book/dp/1542042348?tag=mrsvioletnoire-20) ⭐⭐⭐⭐
+
+- **Morgan Dane Series** by [Melinda Leigh](https://www.amazon.com/s?k=Melinda+Leigh+Morgan+Dane&tag=mrsvioletnoire-20)
+  - ["Say You're Sorry"](https://www.amazon.com/Say-Youre-Sorry-Morgan-Dane/dp/1503948706?tag=mrsvioletnoire-20) ⭐⭐⭐⭐
+  - ["Her Last Goodbye"](https://www.amazon.com/Her-Last-Goodbye-Morgan-Dane/dp/154204796X?tag=mrsvioletnoire-20) ⭐⭐⭐⭐
+  - ["What I've Done"](https://www.amazon.com/What-Ive-Done-Morgan-Dane/dp/1503903052?tag=mrsvioletnoire-20) ⭐⭐⭐⭐⭐
+
+### Contemporary Thrillers Making Waves
+- **["The Only One Left"](https://www.amazon.com/Only-One-Left-Riley-Sager/dp/0593183223?tag=mrsvioletnoire-20)** by [Riley Sager](https://www.amazon.com/s?k=Riley+Sager&tag=mrsvioletnoire-20) ⭐⭐⭐⭐
+- **["Local Woman Missing"](https://www.amazon.com/Local-Woman-Missing-Mary-Kubica/dp/077831166X?tag=mrsvioletnoire-20)** by [Mary Kubica](https://www.amazon.com/s?k=Mary+Kubica&tag=mrsvioletnoire-20) ⭐⭐⭐⭐
+- **["A Flicker in the Dark"](https://www.amazon.com/Flicker-Dark-Stacy-Willingham/dp/1250803829?tag=mrsvioletnoire-20)** by [Stacy Willingham](https://www.amazon.com/s?k=Stacy+Willingham&tag=mrsvioletnoire-20) ⭐⭐⭐⭐
+- **["The Guest List"](https://www.amazon.com/Guest-List-Lucy-Foley/dp/B083DX4Y2T?tag=mrsvioletnoire-20)** by [Lucy Foley](https://www.amazon.com/s?k=Lucy+Foley&tag=mrsvioletnoire-20) ⭐⭐⭐⭐
+
 ### Currently Reading
 Following Mrs. Noire's live reading progress and discovering new mysteries as they unfold on her reading journey.
 
@@ -69,9 +102,6 @@ Mrs. Noire's reviews go beyond simple plot summaries to examine:
 - Lasting impact and re-readability
 
 ## 📚 Reading Statistics & Discovery
-
-### Current Reading Challenge
-Join Mrs. Noire in reading **100 mysteries in 2025**—from classic whodunits to cutting-edge psychological thrillers.
 
 ### By the Numbers
 - **500+** mysteries reviewed since 2003
@@ -113,7 +143,7 @@ Explore the atmospheric world of Medieval mysteries with [Ellis Peters' Brother 
 
 **Literary Correspondence**
 - Email: reviews@mrs-violet-noire.com
-- Goodreads: Follow [@MrsVioletNoire](https://goodreads.com/user/show/99526-mrs-violet-noire) for live reading updates
+- Goodreads: Follow [@MrsVioletNoire](https://www.goodreads.com/mrsvioletnoire) for live reading updates
 - Book Suggestions: Always welcome! Send your mystery recommendations
 
 **Reading Community**
