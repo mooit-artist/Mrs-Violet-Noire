@@ -90,14 +90,14 @@ if [ -f ".gitignore" ]; then
         "terraform.tfstate*"
         "*.backup"
     )
-    
+
     missing_ignores=()
     for ignore in "${required_ignores[@]}"; do
         if ! grep -q "$ignore" .gitignore; then
             missing_ignores+=("$ignore")
         fi
     done
-    
+
     if [ ${#missing_ignores[@]} -eq 0 ]; then
         print_success ".gitignore has good coverage"
     else
@@ -186,9 +186,9 @@ if find . -name "*.html" -not -path "./node_modules/*" | grep -q .; then
         "Referrer-Policy"
         "Permissions-Policy"
     )
-    
+
     html_files=$(find . -name "*.html" -not -path "./node_modules/*")
-    
+
     for header in "${security_headers[@]}"; do
         if grep -l "$header" $html_files >/dev/null 2>&1; then
             print_success "Security header '$header' found in HTML files"
@@ -215,12 +215,12 @@ if [ -d "terraform" ] && [ "$(ls -A terraform/*.tf 2>/dev/null)" ]; then
     else
         print_warning "terraform command not found, skipping validation"
     fi
-    
+
     # Check for common Terraform security issues
     if grep -r "password.*=" terraform/ >/dev/null 2>&1; then
         print_warning "Potential hardcoded passwords in Terraform files"
     fi
-    
+
     if grep -r "secret.*=" terraform/ >/dev/null 2>&1; then
         print_warning "Potential hardcoded secrets in Terraform files"
     fi

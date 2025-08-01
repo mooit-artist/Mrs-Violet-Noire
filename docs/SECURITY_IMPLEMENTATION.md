@@ -114,7 +114,7 @@ The pre-commit hook automatically:
 ### Automated Alerts
 
 - **High Priority**: Patched within 24-48 hours
-- **Medium Priority**: Patched within 1 week  
+- **Medium Priority**: Patched within 1 week
 - **Low Priority**: Patched in next release
 
 ### Security Metrics Tracked
@@ -152,7 +152,7 @@ The pre-commit hook automatically:
 
 1. **Setup Repository Secrets** for CI/CD:
    - `SEMGREP_APP_TOKEN`
-   - `SNYK_TOKEN` 
+   - `SNYK_TOKEN`
    - Any other required API tokens
 
 2. **Enable Branch Protection**:
@@ -189,6 +189,6 @@ The pre-commit hook automatically:
 
 ---
 
-**Security Contact**: security@mrs-violet-noire.com  
-**Last Updated**: January 2025  
+**Security Contact**: security@mrs-violet-noire.com
+**Last Updated**: January 2025
 **Security Framework**: OWASP Top 10, NIST Cybersecurity Framework

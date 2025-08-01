@@ -792,6 +792,38 @@ section {
     text-decoration: none;
 }
 
+.amazon-disclosure {
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Amazon Book Links Styling */
+.book-title a,
+.book-author a,
+.recommendation-content a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+.book-title a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+.book-author a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.recommendation-content a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
 /* Custom Goodreads Widget Integration */
 .goodreads-widget .gr_custom_container_ {
     border: 2px solid var(--border-light) !important;
