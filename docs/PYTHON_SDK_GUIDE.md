@@ -21,7 +21,7 @@ I've created multiple working implementations:
 # Test connection
 python scripts/hostinger_simple.py test
 
-# List VPS instances  
+# List VPS instances
 python scripts/hostinger_simple.py vps
 
 # List domains

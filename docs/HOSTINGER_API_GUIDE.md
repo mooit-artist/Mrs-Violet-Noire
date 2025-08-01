@@ -1,6 +1,28 @@
 # Hostinger API Capabilities & Usage Guide
 
-## 🚀 What You Can Do With Your Hostinger API
+## 🚀 What You## 🏗️ **Terraform Provider - Infrastructure as Code!**
+
+**Amazing!** The [Hostinger Terraform provider](https://github.com/hostinger/terraform-provider-hostinger) provides complete Infrastructure as Code capabilities:
+
+### ✅ **What's Available**:
+- **🚀 One-Command Deployment**: Complete Git server setup with `./terraform/deploy.sh apply`
+- **📋 Infrastructure Management**: Version-controlled, reproducible infrastructure
+- **🔧 Automated Configuration**: Post-install scripts, SSH keys, firewall setup
+- **💻 VPS Provisioning**: Multiple plans, data centers, and OS templates
+- **🌐 DNS Integration**: Subdomain management (planned feature)
+
+### 🎯 **Quick Deployment**:
+```bash
+# Deploy complete Git server infrastructure
+./terraform/deploy.sh init     # Initialize Terraform
+./terraform/deploy.sh plan     # Review infrastructure plan
+./terraform/deploy.sh apply    # Deploy Git server
+./terraform/deploy.sh ssh      # Connect to your new server
+```
+
+See complete guide: `docs/TERRAFORM_GUIDE.md`
+
+## 🐍 **Python SDK Integration - WORKING!**Can Do With Your Hostinger API
 
 Based on the official documentation, here are all the capabilities available:
 

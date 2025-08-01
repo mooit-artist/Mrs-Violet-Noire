@@ -1,0 +1,35 @@
+# Terraform Variables Configuration
+# Copy this file to terraform.tfvars and customize
+
+# Hostinger API Token (load from environment or specify here)
+# hostinger_api_token = "your-api-token-here"
+
+# SSH Public Key for VPS access (will auto-detect from ~/.ssh/id_rsa.pub if not specified)
+# ssh_public_key = "ssh-rsa AAAAB3NzaC... user@host"
+
+# Git server configuration
+git_server_hostname = "git.yourdomain.com"
+domain_name        = "yourdomain.com"
+
+# VPS Configuration
+vps_plan       = "hostingercom-vps-kvm2-usd-1m"  # Basic VPS plan
+data_center_id = 13                               # Data center location
+template_id    = 1002                             # Ubuntu 22.04 LTS
+
+# Available VPS Plans (as of latest):
+# - hostingercom-vps-kvm2-usd-1m (Basic: 1 vCPU, 1GB RAM, 20GB SSD)
+# - hostingercom-vps-kvm4-usd-1m (Premium: 2 vCPU, 4GB RAM, 80GB SSD)
+# - hostingercom-vps-kvm8-usd-1m (Business: 4 vCPU, 8GB RAM, 160GB SSD)
+
+# Common Template IDs:
+# 1002 - Ubuntu 22.04 LTS
+# 1001 - Ubuntu 20.04 LTS
+# 1003 - Debian 11
+# 1004 - CentOS 7
+# 1005 - AlmaLinux 8
+
+# Data Center IDs (examples):
+# 13 - Netherlands
+# 14 - United States (West Coast)
+# 15 - Singapore
+# 16 - Brazil

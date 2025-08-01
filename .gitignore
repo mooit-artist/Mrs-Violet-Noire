@@ -26,6 +26,14 @@ venv.bak/
 config/secrets.*
 secrets/
 
+# Terraform
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/tfplan
+terraform/terraform.tfvars
+terraform/.terraform.lock.hcl
+
 # IDE
 .vscode/launch.json
 .idea/
