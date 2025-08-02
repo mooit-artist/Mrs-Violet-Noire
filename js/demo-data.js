@@ -1,6 +1,10 @@
 // Sample data update for demonstration
 // This will show how your actual Goodreads data populates the site
 
+// 📚 Mrs. Violet Noire's Curated Book Library
+// Demo data showcasing murder mysteries and psychological thrillers
+
+// Library initialization (remove console logs for production)
 console.log('🔍 Mrs. Violet Noire Library Loading...');
 
 // Sample of your highly-rated books for immediate display

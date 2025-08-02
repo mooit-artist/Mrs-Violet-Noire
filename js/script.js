@@ -1,6 +1,39 @@
 // Mrs. Violet Noire Website JavaScript
 
 document.addEventListener('DOMContentLoaded', function() {
+
+    // Notification system for better UX
+    function showNotification(message, type = 'info') {
+        const notification = document.createElement('div');
+        notification.className = `notification notification-${type}`;
+        notification.textContent = message;
+        notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px 20px;
+            background: ${type === 'success' ? '#4CAF50' : type === 'error' ? '#f44336' : '#2196F3'};
+            color: white;
+            border-radius: 5px;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            max-width: 300px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        `;
+
+        document.body.appendChild(notification);
+
+        // Fade in
+        setTimeout(() => notification.style.opacity = '1', 100);
+
+        // Remove after 4 seconds
+        setTimeout(() => {
+            notification.style.opacity = '0';
+            setTimeout(() => notification.remove(), 300);
+        }, 4000);
+    }
+
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('.nav-link');
 
@@ -35,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (email) {
                 // Simulate newsletter signup
-                alert('Thank you for subscribing! You\'ll receive notifications about new mystery novel reviews.');
+                showNotification('Thank you for subscribing! You\'ll receive notifications about new mystery novel reviews.', 'success');
                 emailInput.value = '';
             }
         });
@@ -127,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
     genreCards.forEach(card => {
         card.addEventListener('click', function() {
             const genre = this.querySelector('h3').textContent;
-            alert(`Exploring ${genre} reviews... (This would navigate to the ${genre} section)`);
+            showNotification(`Exploring ${genre} reviews... (This would navigate to the ${genre} section)`, 'info');
         });
     });
 
