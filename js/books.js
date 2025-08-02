@@ -286,11 +286,11 @@ class BookLibrary {
                 `A solid entry in the ${genre.toLowerCase()} genre with engaging characters and a well-paced plot. ${author} crafts an entertaining read that kept me invested throughout.`,
                 `Well-written and atmospheric, this book delivers on its promises. While not groundbreaking, it's a satisfying read for fans of ${genre.toLowerCase()}.`,
                 `${author} creates a compelling narrative with good character development. A reliable choice for readers seeking quality ${genre.toLowerCase()}.`,
-                `An engaging thriller with enough twists to keep readers guessing. The writing is solid and the pacing well-maintained.`
+                'An engaging thriller with enough twists to keep readers guessing. The writing is solid and the pacing well-maintained.'
             ],
             low: [
                 `While this book has its moments, it doesn't quite reach the heights of ${author}'s best work. Still worth reading for fans of ${genre.toLowerCase()}.`,
-                `A decent read with some interesting elements, though the execution could have been stronger. Has potential but falls short of expectations.`,
+                'A decent read with some interesting elements, though the execution could have been stronger. Has potential but falls short of expectations.',
                 `Mixed feelings about this one. Some strong points but overall doesn't stand out in the crowded ${genre.toLowerCase()} field.`
             ]
         };
@@ -364,7 +364,7 @@ class BookLibrary {
     updateReadingStats() {
         const totalBooks = this.books.filter(book => book['Exclusive Shelf'] === 'read').length;
         const currentlyReading = this.books.filter(book => book['Exclusive Shelf'] === 'currently-reading').length;
-        const toRead = this.books.filter(book => book['Exclusive Shelf'] === 'to-read').length;
+        // const toRead = this.books.filter(book => book['Exclusive Shelf'] === 'to-read').length; // Unused for now
 
         // Update credentials section if it exists
         const credentials = document.querySelector('.credentials');

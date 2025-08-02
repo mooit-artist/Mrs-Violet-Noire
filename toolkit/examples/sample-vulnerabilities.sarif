@@ -1,0 +1,88 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "Security Scanner",
+          "version": "1.0.0"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "SQL_INJECTION",
+          "level": "error",
+          "message": {
+            "text": "SQL injection vulnerability detected in login endpoint"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/auth/login.js"
+                },
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 15
+                }
+              }
+            }
+          ],
+          "properties": {
+            "cvss_score": "9.8",
+            "cve": "CVE-2023-12345"
+          }
+        },
+        {
+          "ruleId": "UNAUTH_ACCESS",
+          "level": "warning",
+          "message": {
+            "text": "Unauthenticated access to admin panel endpoints"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "src/admin/routes.js"
+                },
+                "region": {
+                  "startLine": 15,
+                  "startColumn": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "cvss_score": "7.5",
+            "cve": "CVE-2023-67890"
+          }
+        },
+        {
+          "ruleId": "WEAK_TLS",
+          "level": "note",
+          "message": {
+            "text": "Outdated TLS configuration allowing weak ciphers"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "config/server.conf"
+                },
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1
+                }
+              }
+            }
+          ],
+          "properties": {
+            "cvss_score": "4.3",
+            "cve": "CVE-2023-54321"
+          }
+        }
+      ]
+    }
+  ]
+}

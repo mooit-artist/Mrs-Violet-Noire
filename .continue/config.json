@@ -1,0 +1,29 @@
+{
+  "models": [
+    {
+      "title": "Dolphin Llama 3 8B (Agent)",
+      "provider": "ollama",
+      "model": "dolphin-llama3:latest"
+    },
+    {
+      "title": "Llama 3 8B",
+      "provider": "ollama",
+      "model": "llama3:8b"
+    },
+    {
+      "title": "CodeLlama 13B",
+      "provider": "ollama",
+      "model": "codellama:13b"
+    },
+    {
+      "title": "LLaVA Vision",
+      "provider": "ollama",
+      "model": "llava:latest"
+    }
+  ],
+  "tabAutocompleteModel": {
+    "title": "CodeLlama 13B",
+    "provider": "ollama",
+    "model": "codellama:13b"
+  }
+}

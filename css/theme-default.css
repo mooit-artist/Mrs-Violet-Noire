@@ -1,0 +1,56 @@
+/* theme-default.css: Snapshot of your original style.css as the default theme */
+
+/* --- Begin copied from style.css --- */
+
+/* Mrs. Violet Noire - Murder Mystery Book Review Website */
+
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Responsive Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+:root {
+    /* Color Palette - Enhanced Mystery Theme */
+    --primary-color: #1a0f08;        /* Deeper brown - more sophistication */
+    --secondary-color: #6b3951;      /* Richer purple - enhanced mystery */
+    --accent-color: #c9a961;         /* Refined gold - elegant luxury */
+    --text-primary: #2c1810;         /* Dark brown for readability */
+    --text-secondary: #5a4a42;       /* Lighter brown */
+    --text-light: #8b7d73;           /* Light brown */
+    --background-cream: #f7f4f0;     /* Warm cream */
+    --background-white: #fff;
+    --border-light: #e6ddd6;         /* Light border */
+    --shadow-light: rgba(44, 24, 16, 10%);
+    --shadow-medium: rgba(44, 24, 16, 15%);
+
+    /* Typography */
+    --font-serif: 'Crimson Text', serif;
+    --font-sans: 'Inter', sans-serif;
+
+    /* Spacing */
+    --container-max: 1200px;
+    --padding-section: 4rem 0;
+    --padding-container: 0 1.5rem;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--background-cream);
+}
+
+/* ...existing code... */
+
+/* The rest of your style.css is preserved in this file. */

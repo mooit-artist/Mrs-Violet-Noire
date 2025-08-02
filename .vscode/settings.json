@@ -1,0 +1,43 @@
+{
+  "github.copilot.enable": {
+    "*": false,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false,
+    "javascript": false,
+    "python": false,
+    "html": false,
+    "css": false,
+    "json": false
+  },
+  "github.copilot.editor.enableAutoCompletions": false,
+  "github.copilot.chat.localeOverride": "en",
+  "github.copilot.chat.welcomeMessage": "never",
+
+  "continue.enableTabAutocomplete": true,
+  "continue.manuallyTriggerCompletion": false,
+  "continue.telemetryEnabled": false,
+  "continue.enableCodeLens": true,
+  "continue.defaultModelTitle": "Dolphin Llama 3 8B (Agent)",
+  "continue.preferLocalModels": true,
+
+  "localLLMCopilot.enabled": true,
+  "localLLMCopilot.apiUrl": "http://localhost:11434",
+  "localLLMCopilot.model": "dolphin-llama3:latest",
+  "localLLMCopilot.maxTokens": 512,
+  "localLLMCopilot.temperature": 0.2,
+  "localLLMCopilot.priority": 1,
+
+  "files.associations": {
+    "*.md": "markdown",
+    "*.json": "jsonc"
+  },
+  "workbench.settings.editor": "json",
+  "extensions.ignoreRecommendations": false,
+  "python.defaultInterpreterPath": "./.venv/bin/python",
+  "python.linting.enabled": false,
+  "python.linting.flake8Enabled": false,
+  "html-validate.enable": false,
+  "eslint.enable": false,
+  "stylelint.enable": false
+}

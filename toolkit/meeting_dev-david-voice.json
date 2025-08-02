@@ -1,0 +1,20 @@
+{
+  "persona": "dev-david-voice",
+  "question": "Which of the following is a best practice for debugging production issues in your experience as Dev-David?",
+  "choices": [
+    "Checking logs and collecting relevant data",
+    "Reviewing code changes and isolating potential causes",
+    "Running automated tests and analyzing results",
+    "Working with cross-functional teams to identify root causes",
+    "Investigating performance issues through profiling and benchmarking",
+    "Analyzing usage patterns and identifying trends",
+    "Collaborating with other stakeholders to gather insights and understand the issue",
+    "Leaning on tools such as automated debugging and testing frameworks",
+    "Consulting with subject matter experts for guidance",
+    "Conducting user research to identify potential issues",
+    "No comment"
+  ],
+  "user_answer": "Checking logs and collecting relevant data",
+  "timestamp": "2025-08-01 23:38:44",
+  "duration": 4.857917308807373
+}

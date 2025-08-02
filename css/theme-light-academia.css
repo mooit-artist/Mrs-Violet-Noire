@@ -1,0 +1,101 @@
+/* theme-light-academia.css: Light Academia Theme for Mrs. Violet Noire */
+
+:root {
+    --primary-color: #ede6db;        /* Soft parchment */
+    --secondary-color: #b7a07a;      /* Muted tan */
+    --accent-color: #7c6f57;         /* Warm brown accent */
+    --text-primary: #3d2c1e;         /* Deep brown for text */
+    --text-secondary: #7c6f57;       /* Warm brown for secondary text */
+    --text-light: #b7a07a;           /* Muted tan for light text */
+    --background-cream: #f9f6f1;     /* Creamy off-white */
+    --background-white: #fff;
+    --border-light: #e0d6c3;         /* Light tan border */
+    --shadow-light: rgba(125, 110, 90, 10%);
+    --shadow-medium: rgba(125, 110, 90, 15%);
+    --font-serif: 'Crimson Text', serif;
+    --font-sans: 'Inter', sans-serif;
+    --container-max: 1200px;
+    --padding-section: 4rem 0;
+    --padding-container: 0 1.5rem;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--background-cream);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: url('https://www.transparenttextures.com/patterns/old-mathematics.png');
+    opacity: 0.04;
+    z-index: 0;
+}
+
+.btn-primary {
+    background: var(--secondary-color);
+    color: var(--text-primary);
+}
+
+.btn-primary:hover {
+    background: #cbb893;
+    color: var(--accent-color);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+}
+
+.btn-secondary:hover {
+    background: var(--accent-color);
+    color: var(--background-cream);
+}
+
+.review-card, .genre-card, .mystery-card, .goodreads-widget, .recommendation-card, .profile-card {
+    background: #f9f6f1;
+    color: var(--text-primary);
+    box-shadow: 0 4px 20px var(--shadow-light);
+}
+
+.header, .footer {
+    background: var(--primary-color);
+    color: var(--accent-color);
+}
+
+.footer a, .header a {
+    color: var(--accent-color);
+}
+
+.footer a:hover, .header a:hover {
+    color: var(--text-primary);
+}
+
+.section-title, .brand-text h1, h2, h3 {
+    color: var(--accent-color);
+}
+
+hr, .review-meta, .footer-bottom {
+    border-color: var(--border-light);
+}
+
+input, textarea {
+    background: #fff;
+    color: var(--text-primary);
+    border: 1px solid var(--border-light);
+}
+
+::-webkit-scrollbar {
+    background: var(--background-cream);
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-light);
+    border-radius: 5px;
+}

@@ -1,3 +1,8 @@
+variable "postgres_password" {
+  description = "Password for the PostgreSQL database. Set this securely via terraform.tfvars or environment variable."
+  type        = string
+  sensitive   = true
+}
 # Hostinger Terraform Provider Configuration
 # Infrastructure as Code for Git Server and Web Hosting
 

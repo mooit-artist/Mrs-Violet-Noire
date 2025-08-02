@@ -98,3 +98,11 @@ build/
 # Backup files
 *.bak
 *.backup
+
+# Lint history tracking
+.lint-history/
+.lint-tmp
+
+# Ignore sensitive files
+config/secrets.env
+config/secrets.env.template

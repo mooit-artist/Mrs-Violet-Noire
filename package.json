@@ -1,6 +1,7 @@
 {
   "name": "mrs-violet-noire-website",
   "version": "1.0.0",
+  "type": "module",
   "description": "Mrs. Violet Noire - A sophisticated book review website specializing in mystery novels and literary analysis",
   "main": "index.html",
   "scripts": {
@@ -10,7 +11,11 @@
     "format": "prettier --write **/*.html **/*.css **/*.js",
     "build": "npm run format && npm run validate",
     "deploy": "npm run build && git add . && git commit -m 'Deploy website' && git push origin main",
-    "setup": "npm install"
+    "setup": "npm install",
+    "llm:check": "ollama list",
+    "llm:pull": "ollama pull llama3.2 && ollama pull codellama && ollama pull nomic-embed-text",
+    "llm:start": "ollama serve",
+    "llm:test": "make llm-test"
   },
   "keywords": [
     "book-reviews",
@@ -23,11 +28,13 @@
   "author": "Mrs. Violet Noire",
   "license": "MIT",
   "devDependencies": {
-    "live-server": "^1.2.2",
+    "@eslint/js": "^8.57.0",
+    "eslint": "^8.57.0",
     "html-validate": "^8.7.4",
-    "prettier": "^3.1.1"
+    "prettier": "^3.1.1",
+    "stylelint": "^16.0.0",
+    "stylelint-config-standard": "^36.0.0"
   },
-  "dependencies": {},
   "engines": {
     "node": ">=16.0.0"
   },

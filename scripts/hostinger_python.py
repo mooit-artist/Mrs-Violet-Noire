@@ -5,8 +5,6 @@ Enhanced Git server automation with proper Python SDK imports
 """
 
 import os
-import sys
-import json
 import base64
 from pathlib import Path
 from typing import Optional, Dict, List
@@ -16,6 +14,7 @@ from dotenv import load_dotenv
 import hostinger_api
 from hostinger_api import ApiClient, Configuration
 from hostinger_api.exceptions import ApiException
+
 
 class HostingerManager:
     """Comprehensive Hostinger API management using official Python SDK"""
@@ -30,7 +29,9 @@ class HostingerManager:
                 token = os.getenv("HOSTINGER_API_TOKEN")
 
         if not token:
-            raise ValueError("❌ HOSTINGER_API_TOKEN not found. Check config/secrets.env")
+            raise ValueError(
+                "❌ HOSTINGER_API_TOKEN not found. Check config/secrets.env"
+            )
 
         # Configure SDK with proper imports
         self.configuration = Configuration(access_token=token)
@@ -267,6 +268,7 @@ echo "3. Clone with: git clone git@your-server-ip:<repo-name>.git"
             print(f"❌ Error creating SSH key: {e}")
             return None
 
+
 def run_command(action: str, **kwargs):
     """Run specific command with error handling"""
     try:
@@ -279,7 +281,8 @@ def run_command(action: str, **kwargs):
             instances = manager.list_vps_instances()
             print(f"\n📋 VPS Instances ({len(instances)}):")
             for vps in instances:
-                print(f"  • {vps['name']} ({vps['id']}) - {vps['status']} - {vps['ip']}")
+                print(
+                    f"  • {vps['name']} ({vps['id']}) - {vps['status']} - {vps['ip']}")
             return instances
 
         elif action == "list-domains":
@@ -321,6 +324,7 @@ def run_command(action: str, **kwargs):
         print(f"❌ Error: {e}")
         return None
 
+
 def main():
     """Main CLI interface"""
     import argparse
@@ -336,6 +340,7 @@ def main():
     args = parser.parse_args()
 
     run_command(args.action, domain=args.domain, ip=args.ip)
+
 
 if __name__ == "__main__":
     main()

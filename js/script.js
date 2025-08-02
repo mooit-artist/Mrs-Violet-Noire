@@ -160,10 +160,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add some personality with random book recommendations
     const bookRecommendations = [
-        "Have you read 'The Seven Deaths of Evelyn Hardcastle' by Stuart Turton?",
-        "I recommend 'The Sweetness at the Bottom of the Pie' by Alan Bradley for cozy mystery lovers.",
-        "For Nordic Noir fans, try 'The Girl with the Dragon Tattoo' by Stieg Larsson.",
-        "Agatha Christie's 'And Then There Were None' is a timeless classic worth revisiting."
+        'Have you read \'The Seven Deaths of Evelyn Hardcastle\' by Stuart Turton?',
+        'I recommend \'The Sweetness at the Bottom of the Pie\' by Alan Bradley for cozy mystery lovers.',
+        'For Nordic Noir fans, try \'The Girl with the Dragon Tattoo\' by Stieg Larsson.',
+        'Agatha Christie\'s \'And Then There Were None\' is a timeless classic worth revisiting.'
     ];
 
     // Show random recommendation (could be triggered by various events)

@@ -5,13 +5,12 @@ Working version with proper error handling
 """
 
 import os
-import sys
-import json
 from pathlib import Path
 from typing import Optional, Dict, List
 from dotenv import load_dotenv
 
 import hostinger_api
+
 
 class HostingerSDK:
     """Simple Hostinger API wrapper using Python SDK"""
@@ -116,7 +115,13 @@ class HostingerSDK:
             print(f"❌ Error getting catalog: {e}")
             return []
 
-    def create_dns_record(self, domain: str, record_type: str, name: str, content: str, ttl: int = 3600) -> bool:
+    def create_dns_record(
+            self,
+            domain: str,
+            record_type: str,
+            name: str,
+            content: str,
+            ttl: int = 3600) -> bool:
         """Create a DNS record"""
         try:
             # Note: This is a simplified version - actual implementation may vary
@@ -126,6 +131,7 @@ class HostingerSDK:
         except Exception as e:
             print(f"❌ Error creating DNS record: {e}")
             return False
+
 
 def main():
     """CLI interface"""
@@ -150,14 +156,18 @@ def main():
             print(f"\n📋 VPS Instances ({len(instances)}):")
             for vps in instances:
                 print(f"  • {vps['name']} ({vps['id']})")
-                print(f"    Status: {vps['status']} | IP: {vps['ip']} | Location: {vps['location']}")
+                print(
+                    f"    Status: {vps['status']} | IP: {vps['ip']} | "
+                    f"Location: {vps['location']}"
+                )
 
         elif args.command == "domains":
             domains = sdk.list_domains()
             print(f"\n🌐 Domains ({len(domains)}):")
             for domain in domains:
                 print(f"  • {domain['name']} - {domain['status']}")
-                print(f"    Created: {domain['created']} | Expires: {domain['expires']}")
+                print(
+                    f"    Created: {domain['created']} | Expires: {domain['expires']}")
 
         elif args.command == "catalog":
             items = sdk.get_billing_catalog(category=args.category)
@@ -168,6 +178,7 @@ def main():
 
     except Exception as e:
         print(f"❌ Error: {e}")
+
 
 if __name__ == "__main__":
     main()

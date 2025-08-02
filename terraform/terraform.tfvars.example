@@ -1,3 +1,5 @@
+# Example: Set your PostgreSQL password here (do not commit real secrets)
+postgres_password = "changeme-securely"
 # Terraform Variables Configuration
 # Copy this file to terraform.tfvars and customize
 

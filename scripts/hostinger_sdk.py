@@ -5,8 +5,6 @@ Enhanced Git server automation with proper Python SDK
 """
 
 import os
-import sys
-import json
 import base64
 from pathlib import Path
 from typing import Optional, Dict, List
@@ -15,6 +13,7 @@ from dotenv import load_dotenv
 # Load Hostinger Python SDK
 import hostinger_api
 from hostinger_api.rest import ApiException
+
 
 class HostingerManager:
     """Comprehensive Hostinger API management using official Python SDK"""
@@ -29,7 +28,8 @@ class HostingerManager:
                 token = os.getenv("HOSTINGER_API_TOKEN")
 
         if not token:
-            raise ValueError("❌ HOSTINGER_API_TOKEN not found. Check config/secrets.env")
+            raise ValueError(
+                "❌ HOSTINGER_API_TOKEN not found. Check config/secrets.env")
 
         # Configure SDK
         self.configuration = hostinger_api.Configuration(access_token=token)
@@ -51,7 +51,10 @@ class HostingerManager:
         """Test API connection"""
         try:
             vps_list = self.vps_api.get_virtual_machine_list_v1()
-            print(f"✅ API connection successful. Found {len(vps_list.data)} VPS instances")
+            print(
+                f"✅ API connection successful. "
+                f"Found {len(vps_list.data)} VPS instances"
+            )
             return True
         except ApiException as e:
             print(f"❌ API connection failed: {e}")
@@ -255,7 +258,7 @@ echo "3. Clone with: git clone git@your-server-ip:<repo-name>.git"
                 ]
             )
 
-            response = self.dns_api.update_zone_records_v1(
+            self.dns_api.update_zone_records_v1(
                 domain=domain,
                 dnsv1_zone_update_request=dns_update
             )
@@ -286,6 +289,7 @@ echo "3. Clone with: git clone git@your-server-ip:<repo-name>.git"
             print(f"❌ Error creating SSH key: {e}")
             return None
 
+
 def main():
     """Main CLI interface"""
     import argparse
@@ -310,7 +314,8 @@ def main():
             instances = manager.list_vps_instances()
             print(f"\n📋 VPS Instances ({len(instances)}):")
             for vps in instances:
-                print(f"  • {vps['name']} ({vps['id']}) - {vps['status']} - {vps['ip']}")
+                print(
+                    f"  • {vps['name']} ({vps['id']}) - {vps['status']} - {vps['ip']}")
 
         elif args.action == "list-domains":
             domains = manager.list_domains()
@@ -343,6 +348,7 @@ def main():
 
     except Exception as e:
         print(f"❌ Error: {e}")
+
 
 if __name__ == "__main__":
     main()

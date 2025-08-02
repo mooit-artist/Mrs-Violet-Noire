@@ -1,0 +1,109 @@
+/* theme-dark-academia.css: Dark Academia Theme for Mrs. Violet Noire */
+
+:root {
+    --primary-color: #23201a;        /* Deep espresso brown */
+    --secondary-color: #4b3b2a;      /* Muted dark brown */
+    --accent-color: #bfa46d;         /* Antique gold */
+    --text-primary: #e6e1d9;         /* Creamy parchment */
+    --text-secondary: #b3a58a;       /* Faded parchment */
+    --text-light: #a89c8e;           /* Light tan */
+    --background-cream: #181612;     /* Very dark brown/blackboard */
+    --background-white: #23201a;     /* Match primary for deep look */
+    --border-light: #3a3328;         /* Subtle brown border */
+    --shadow-light: rgba(35, 32, 26, 10%);
+    --shadow-medium: rgba(35, 32, 26, 15%);
+    --font-serif: 'Crimson Text', serif;
+    --font-sans: 'Inter', sans-serif;
+    --container-max: 1200px;
+    --padding-section: 4rem 0;
+    --padding-container: 0 1.5rem;
+}
+
+body {
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--background-cream);
+}
+
+/* Optional: Add subtle paper texture or overlay for extra academia feel */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: url('https://www.transparenttextures.com/patterns/old-mathematics.png');
+    opacity: 0.07;
+    z-index: 0;
+}
+
+/* Buttons and links */
+.btn-primary {
+    background: var(--secondary-color);
+    color: var(--accent-color);
+}
+
+.btn-primary:hover {
+    background: #5c4732;
+    color: var(--text-primary);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+}
+
+.btn-secondary:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* Card backgrounds */
+.review-card, .genre-card, .mystery-card, .goodreads-widget, .recommendation-card, .profile-card {
+    background: #23201a;
+    color: var(--text-primary);
+    box-shadow: 0 4px 20px var(--shadow-light);
+}
+
+/* Header and Footer */
+.header, .footer {
+    background: var(--primary-color);
+    color: var(--accent-color);
+}
+
+.footer a, .header a {
+    color: var(--accent-color);
+}
+
+.footer a:hover, .header a:hover {
+    color: var(--text-primary);
+}
+
+/* Section titles */
+.section-title, .brand-text h1, h2, h3 {
+    color: var(--accent-color);
+}
+
+/* Borders */
+hr, .review-meta, .footer-bottom {
+    border-color: var(--border-light);
+}
+
+/* Inputs */
+input, textarea {
+    background: #23201a;
+    color: var(--text-primary);
+    border: 1px solid var(--border-light);
+}
+
+/* Misc */
+::-webkit-scrollbar {
+    background: var(--background-cream);
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--border-light);
+    border-radius: 5px;
+}
