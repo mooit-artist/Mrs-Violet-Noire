@@ -1,65 +1,55 @@
-name: Deploy Mrs. Violet Noire Website
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
+    timeout-minutes: 10
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
+      - name: Stage site files
+        # Only the files the site needs are published. scripts/,
+        # workflows, docs and the raw Goodreads export stay out of the artifact.
+        run: |
+          set -euo pipefail
+          rm -rf _site
+          mkdir -p _site
+          for f in index.html 404.html .nojekyll robots.txt sitemap.xml CNAME; do
+            if [ -f "$f" ]; then cp "$f" _site/; fi
+          done
+          if [ -d assets ]; then cp -R assets _site/assets; fi
+          # Only the built library is public; the raw Goodreads export and notes stay in the repo.
+          mkdir -p _site/data
+          cp data/books.json _site/data/books.json
+          echo "Staged files:"
+          find _site -type f | sort
 
-    - name: Install dependencies
-      run: npm ci --only=production || echo "No package-lock.json found, skipping npm install"
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
-    - name: Deploy to Hostinger via SFTP
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
-      with:
-        server: ${{ secrets.HOSTINGER_FTP_HOST }}
-        username: ${{ secrets.HOSTINGER_FTP_USER }}
-        password: ${{ secrets.HOSTINGER_FTP_PASS }}
-        server-dir: public_html/
-        exclude: |
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
-          **/.vscode/**
-          **/.github/**
-          **/scripts/**
-          **/terraform/**
-          **/config/**
-          **/.env*
-          **/README.md
-          **/package*.json
-          **/*.md
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '_site'
 
-    - name: Test deployment
-      run: |
-        echo "🧪 Testing deployment..."
-        sleep 10
-
-        # Test main page
-        if curl -s https://mrsvioletnoire.com/ | grep -q "Mrs. Violet Noire"; then
-          echo "✅ Main page is loading correctly"
-        else
-          echo "⚠️ Main page may not be loading properly"
-          exit 1
-        fi
-
-        # Test CSS
-        if curl -s https://mrsvioletnoire.com/css/style.css | grep -q "Mrs. Violet Noire"; then
-          echo "✅ CSS is loading correctly"
-        else
-          echo "⚠️ CSS may not be loading properly"
-        fi
-
-        echo "🎉 Deployment successful!"
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

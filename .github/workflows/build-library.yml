@@ -1,0 +1,60 @@
+name: Build library
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - data/goodreads_library_export.csv
+      - data/notes.json
+      - scripts/build-library.mjs
+  workflow_dispatch:
+
+permissions:
+  contents: write   # commit data/books.json
+  actions: write    # kick off the Pages deploy after a push made with GITHUB_TOKEN
+
+concurrency:
+  group: build-library
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build data/books.json from the Goodreads export
+        env:
+          AMAZON_TAG: ${{ vars.AMAZON_TAG }}
+        run: node scripts/build-library.mjs
+
+      - name: Commit if changed
+        id: commit
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- data/books.json; then
+            echo "No changes to data/books.json"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/books.json
+          git commit -m "chore: rebuild library from Goodreads export"
+          git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      # Pushes made with GITHUB_TOKEN do not trigger other workflows on their own,
+      # so start the deploy explicitly when the library changed.
+      - name: Trigger Pages deploy
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main

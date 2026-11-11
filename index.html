@@ -1,1126 +1,886 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mrs. Violet Noire - Murder Mystery Book Reviews</title>
-    <meta name="description" content="Discover the finest murder mysteries, crime novels, and detective fiction. Expert reviews by Mrs. Violet Noire.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mrs. Violet Noire — Murder Mystery Book Reviews</title>
 
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.goodreads.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://i.gr-assets.com https://s.gr-assets.com; frame-src https://www.goodreads.com; connect-src 'self' https://www.goodreads.com;">
-    <meta http-equiv="X-Frame-Options" content="DENY">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=()">
+  <!-- SEO -->
+  <meta name="description" content="Mrs. Violet Noire's library of murder mysteries, psychological thrillers and domestic suspense. Honest ratings, short notes and where to find each book.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mrsvioletnoire.com">
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mrs. Violet Noire — Murder Mystery Book Reviews">
+  <meta property="og:description" content="A curated library of murder mysteries, psychological thrillers and domestic suspense.">
+  <meta property="og:image" content="https://mrsvioletnoire.com/assets/logos/MrsVioletNoire.jpg">
+  <meta property="og:url" content="https://mrsvioletnoire.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mrs. Violet Noire">
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/theme-switcher.js"></script>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mrs. Violet Noire — Murder Mystery Book Reviews">
+  <meta name="twitter:description" content="A curated library of murder mysteries, psychological thrillers and domestic suspense.">
+  <meta name="twitter:image" content="https://mrsvioletnoire.com/assets/logos/MrsVioletNoire.jpg">
 
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="MrsVioletNoire.png">
+  <!-- Favicon -->
+  <link rel="icon" href="assets/logos/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/logos/apple-touch-icon.png">
+  <meta name="theme-color" content="#f9eddb">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Mrs. Violet Noire",
+    "url": "https://mrsvioletnoire.com",
+    "description": "Murder mystery book reviews and a curated library of crime fiction and psychological thrillers.",
+    "publisher": {
+      "@type": "Person",
+      "name": "Mrs. Violet Noire",
+      "image": "https://mrsvioletnoire.com/assets/logos/MrsVioletNoire.jpg",
+      "sameAs": [
+        "https://www.goodreads.com/user/show/8091033-mrs-violet-noire"
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    /* ─── Reset ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #f9eddb;
+      --surface:  #fcf4e8;
+      --border:   #e4d3bb;
+      --text:     #17131a;
+      --muted:    #6a5f6c;
+      --violet:   #4e355e;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; overflow-x: clip; }
+    section[id], div[id="about"] { scroll-margin-top: 72px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-weight: 300;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+    :focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; }
+
+    /* ─── Nav ─────────────────────────────────────────────── */
+    nav#nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2.5rem;
+      transition: background 0.35s, border-color 0.35s;
+      border-bottom: 1px solid transparent;
+    }
+    nav#nav.scrolled {
+      background: rgba(249, 237, 219, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-color: var(--border);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; }
+    .nav-logo img { height: 42px; width: auto; }
+    .nav-logo span {
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+    nav#nav.scrolled .nav-logo span { opacity: 1; }
+    .nav-cta {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.6rem 1.5rem;
+      border: 1px solid rgba(23,19,26,0.5);
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    /* ─── Hero ────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 7rem 2rem 5rem;
+    }
+    .hero-logo {
+      width: clamp(260px, 44vw, 460px);
+      margin: 0 auto 2.75rem;
+    }
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 6vw, 4.75rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+      text-wrap: balance;
+    }
+    .hero h1 em { color: var(--violet); }
+    .hero p {
+      font-size: clamp(0.9375rem, 1.8vw, 1.0625rem);
+      color: var(--muted);
+      max-width: 500px;
+      margin: 0 auto 2.75rem;
+      line-height: 1.8;
+    }
+    .btn {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 1rem 2.75rem;
+      transition: opacity 0.2s, background 0.2s, color 0.2s;
+      text-align: center;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .btn-primary {
+      background: var(--text);
+      color: var(--bg);
+      border: 1px solid var(--text);
+    }
+    .btn-primary:hover { opacity: 0.82; }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--text);
+      color: var(--text);
+    }
+    .btn-outline:hover {
+      background: var(--text);
+      color: var(--bg);
+    }
+    .hero-scroll {
+      margin-top: 4rem;
+      font-size: 0.6875rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: var(--muted);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(0.7); }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+
+    /* ─── Marquee ─────────────────────────────────────────── */
+    .marquee-strip {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 0.9rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .marquee-inner {
+      display: inline-block;
+      animation: marquee 40s linear infinite;
+      font-size: 0.6875rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ─── Section wrapper ─────────────────────────────────── */
+    .section {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 6rem 2rem;
+    }
+    .section-eyebrow {
+      font-size: 0.6875rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.875rem;
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 3.5vw, 2.875rem);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 3rem;
+    }
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .section-head .section-title { margin-bottom: 0; }
+
+    /* ─── Book cards (shared) ─────────────────────────────── */
+    /* Hairlines live on the cards so a short last row leaves no grey gap */
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      border-top: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+    }
+    .book-card {
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .book-cover {
+      display: block;
+      aspect-ratio: 2 / 3;
+      overflow: hidden;
+      background: var(--border);
+      position: relative;
+    }
+    .book-cover img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .book-card:hover .book-cover img { transform: scale(1.04); }
+
+    /* Typographic jacket when no cover image is available */
+    .jacket {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.5rem 1.25rem;
+      color: #f9eddb;
+      text-align: center;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .book-card:hover .jacket { transform: scale(1.03); }
+    .jacket::before {
+      content: '';
+      position: absolute;
+      inset: 0.6rem;
+      border: 1px solid rgba(249,237,219,0.28);
+      pointer-events: none;
+    }
+    .jacket-0 { background: #2a2030; }
+    .jacket-1 { background: #4e355e; }
+    .jacket-2 { background: #5b2b33; }
+    .jacket-3 { background: #1f2a2c; }
+    .jacket-mark {
+      font-size: 0.5625rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+    .jacket-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.125rem, 2vw, 1.375rem);
+      line-height: 1.25;
+      text-wrap: balance;
+      overflow-wrap: break-word;
+    }
+    .jacket-author {
+      font-size: 0.6875rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+
+    .book-body {
+      padding: 1.125rem 1.125rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      flex: 1;
+    }
+    .book-title {
+      font-family: var(--font-serif);
+      font-size: 1.0625rem;
+      font-weight: 400;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .book-author { font-size: 0.875rem; color: var(--muted); }
+    .book-series { font-size: 0.75rem; color: var(--muted); font-style: italic; }
+    .book-rating {
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+    }
+    .book-rating .stars { color: var(--violet); letter-spacing: 0.12em; }
+    .book-blurb {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.6;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-top: 0.25rem;
+    }
+    .book-buy {
+      margin-top: auto;
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border: 1px solid rgba(23,19,26,0.35);
+      padding: 0.75rem 1rem;
+      text-align: center;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .book-body .book-buy { margin-top: auto; }
+    .book-body > .spacer { flex: 1; min-height: 0.75rem; }
+    .book-buy:hover {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    /* ─── Highest rated (featured) ────────────────────────── */
+    .picks-section { border-top: 1px solid var(--border); }
+    .picks-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .pick-card {
+      background: var(--surface);
+      display: grid;
+      grid-template-columns: minmax(120px, 38%) 1fr;
+    }
+    .pick-card .book-cover { aspect-ratio: 2 / 3; }
+    .pick-card .book-body { padding: 1.75rem; gap: 0.5rem; }
+    .pick-card .book-title { font-size: 1.5rem; -webkit-line-clamp: 3; }
+    .pick-card .book-rating { font-size: 0.8125rem; }
+    .pick-card .book-blurb {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.0625rem;
+      color: var(--text);
+      -webkit-line-clamp: 6;
+      margin: 0.5rem 0 1rem;
+    }
+
+    /* ─── Library ─────────────────────────────────────────── */
+    .library-section { border-top: 1px solid var(--border); }
+    .search-label { display: block; }
+    .library-search {
+      width: min(320px, 100%);
+      font: inherit;
+      font-size: 1rem;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.75rem 1rem;
+    }
+    .library-search::placeholder { color: var(--muted); }
+    .library-search:focus { outline: none; border-color: var(--violet); }
+    .library-more { margin-top: 2.5rem; text-align: center; }
+    .library-status {
+      color: var(--muted);
+      font-size: 0.8125rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 3rem 0;
+    }
+    .library-empty {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .library-empty h3 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 400;
+      margin-bottom: 0.75rem;
+    }
+    .library-empty p {
+      color: var(--muted);
+      max-width: 440px;
+      margin: 0 auto 2rem;
+      line-height: 1.8;
+    }
+    [hidden] { display: none !important; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+
+    /* ─── Values ──────────────────────────────────────────── */
+    .values-section { border-top: 1px solid var(--border); }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4rem;
+    }
+    .value-item {
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .value-num {
+      font-size: 0.6875rem;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+    .value-item h3 {
+      font-family: var(--font-serif);
+      font-size: 1.1875rem;
+      font-weight: 400;
+      margin-bottom: 0.75rem;
+    }
+    .value-item p {
+      font-size: 0.9375rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    /* ─── CTA ─────────────────────────────────────────────── */
+    .cta-section {
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.25rem, 5vw, 4.25rem);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .cta-section p {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 2.75rem;
+    }
+
+    /* ─── Social ──────────────────────────────────────────── */
+    .social-section {
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .social-eyebrow {
+      font-size: 0.6875rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+    }
+    .social-links a {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .social-links a:hover { color: var(--text); }
+    .social-links svg { width: 18px; height: 18px; fill: currentColor; }
+
+    /* ─── Footer ──────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    footer span, footer a {
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+    footer a:hover { color: var(--text); }
+
+    /* ─── Responsive ──────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .picks-grid   { grid-template-columns: 1fr; }
+      .values-grid  { grid-template-columns: 1fr; gap: 0; }
+      .value-item   { padding: 2rem 0; border-top: 1px solid var(--border); border-bottom: none; }
+    }
+    @media (max-width: 600px) {
+      nav#nav { padding: 0.75rem 1.25rem; }
+      .nav-logo img { height: 36px; }
+      .nav-logo span { display: none; }
+      .nav-cta { padding: 0.55rem 1rem; font-size: 0.6875rem; letter-spacing: 0.12em; }
+      .section { padding: 4rem 1.25rem; }
+      .books-grid { grid-template-columns: repeat(2, 1fr); }
+      .book-body { padding: 0.875rem; }
+      .book-title { font-size: 0.9375rem; }
+      .book-blurb { display: none; }
+      .book-buy { padding: 0.65rem 0.5rem; font-size: 0.625rem; }
+      .jacket { padding: 1rem 0.75rem; }
+      .jacket-title { font-size: 1rem; }
+      .pick-card { grid-template-columns: 40% 1fr; }
+      .pick-card .book-body { padding: 1rem; }
+      .pick-card .book-title { font-size: 1.125rem; }
+      .pick-card .book-blurb { display: -webkit-box; font-size: 0.9375rem; -webkit-line-clamp: 5; margin: 0.25rem 0 0.75rem; }
+      footer { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 380px) {
+      .books-grid { grid-template-columns: 1fr; }
+      .pick-card { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .marquee-inner, .scroll-line { animation: none; }
+    }
+  </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-brand">
-                <div class="logo-container">
-                    <img src="MrsVioletNoire.png" alt="Mrs. Violet Noire Logo" class="logo" loading="eager">
-                    <div class="brand-text">
-                        <h1>Mrs. Violet Noire</h1>
-                        <p class="tagline">Curator of Dark Literary Mysteries</p>
-                    </div>
-                </div>
-            </div>
 
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#reviews" class="nav-link">Reviews</a></li>
-                <li><a href="#genres" class="nav-link">Genres</a></li>
-                <li><a href="#authors" class="nav-link">Authors</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-            </ul>
+  <!-- ── Nav ───────────────────────────────────────────────── -->
+  <nav id="nav" aria-label="Primary">
+    <a href="/" class="nav-logo" aria-label="Mrs. Violet Noire, home">
+      <picture>
+        <source srcset="assets/logos/mark.webp" type="image/webp">
+        <img src="assets/logos/mark.png" alt="" width="164" height="240">
+      </picture>
+      <span>Mrs. Violet Noire</span>
+    </a>
+    <a href="https://www.goodreads.com/user/show/8091033-mrs-violet-noire" class="nav-cta" target="_blank" rel="noopener">Follow on Goodreads</a>
+  </nav>
 
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+  <!-- ── Hero ──────────────────────────────────────────────── -->
+  <section class="hero">
+    <picture>
+      <source srcset="assets/logos/MrsVioletNoireTrans.webp" type="image/webp">
+      <img
+        src="assets/logos/MrsVioletNoireTrans.png"
+        alt="Mrs. Violet Noire — Murder Mystery Book Reviews"
+        class="hero-logo"
+        width="900" height="608"
+        fetchpriority="high"
+      >
+    </picture>
+    <h1>Every Page Turns<br>With <em>Purpose</em></h1>
+    <p>
+      A curated library of murder mysteries, psychological thrillers and domestic suspense.
+      Every clue followed, every twist weighed, so you can find your next obsession.
+    </p>
+    <a href="#library" class="btn btn-primary">Browse the Library</a>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="container">
-                <div class="hero-text">
-                    <h1 class="hero-title">Welcome to the World of <span class="accent">Dark Mysteries</span></h1>
-                    <p class="hero-description">
-                        Step into the shadows with Mrs. Violet Noire, your guide through the most compelling murder mysteries,
-                        intricate detective fiction, and spine-chilling crime novels. Where every page turns with purpose,
-                        and every clue leads to literary excellence.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#reviews" class="btn btn-primary">Latest Reviews</a>
-                        <a href="#genres" class="btn btn-secondary">Explore Genres</a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="mystery-card">
-                        <div class="card-content">
-                            <div class="magnifying-glass">🔍</div>
-                            <h3>Current Read</h3>
-                            <p class="book-title"><a href="https://www.amazon.com/Silent-Companion-Laura-Purcell/dp/1526619121?tag=mrsvioletnoire-20" target="_blank">"The Silent Companion"</a></p>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Laura+Purcell&amp;tag=mrsvioletnoire-20" target="_blank">Laura Purcell</a></p>
-                            <div class="rating">⭐⭐⭐⭐⭐</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <!-- ── Marquee ────────────────────────────────────────────── -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-inner">
+      Psychological Thrillers &nbsp;·&nbsp; Domestic Suspense &nbsp;·&nbsp; Gothic &amp; Atmospheric &nbsp;·&nbsp; Police Procedurals &nbsp;·&nbsp; True Crime &nbsp;·&nbsp; Unreliable Narrators &nbsp;·&nbsp; Locked Rooms &nbsp;·&nbsp; Psychological Thrillers &nbsp;·&nbsp; Domestic Suspense &nbsp;·&nbsp; Gothic &amp; Atmospheric &nbsp;·&nbsp; Police Procedurals &nbsp;·&nbsp; True Crime &nbsp;·&nbsp; Unreliable Narrators &nbsp;·&nbsp; Locked Rooms &nbsp;·&nbsp;
+    </div>
+  </div>
+
+  <!-- ── Highest rated (from data/books.json) ───────────────── -->
+  <section class="picks-section" id="picks" aria-labelledby="picks-title" hidden>
+    <div class="section">
+      <p class="section-eyebrow">Mrs. Noire's Highest Rated</p>
+      <h2 class="section-title" id="picks-title">The Ones That Kept Her Up at Night</h2>
+      <div id="picks-grid" class="picks-grid"></div>
+    </div>
+  </section>
+
+  <!-- ── Library (from data/books.json, built from the Goodreads export) ── -->
+  <section class="library-section" id="library" aria-labelledby="library-title">
+    <div class="section">
+      <div class="section-head">
+        <div>
+          <p class="section-eyebrow" id="library-count">The Library</p>
+          <h2 class="section-title" id="library-title">Recently Read</h2>
         </div>
-    </section>
+        <label>
+          <span class="section-eyebrow search-label">Search title or author</span>
+          <input id="library-search" class="library-search" type="search" placeholder="e.g. Freida McFadden" autocomplete="off" disabled>
+        </label>
+      </div>
 
-    <!-- Featured Reviews Section -->
-    <section class="featured-reviews" id="reviews">
-        <div class="container">
-            <h2 class="section-title">Featured Reviews</h2>
-            <p class="section-subtitle">Latest literary investigations into the world of crime and mystery</p>
+      <div id="library-grid" class="books-grid" hidden></div>
+      <p id="library-status" class="library-status" role="status">Opening the case files…</p>
+      <div class="library-more"><button id="library-more" class="btn btn-outline" type="button" hidden>Show more</button></div>
 
-            <div class="reviews-grid">
-                <!-- Review Card 1 -->
-                <article class="review-card">
-                    <div class="book-cover">
-                        <div class="cover-placeholder">📚</div>
-                        <div class="rating-badge">4.8/5</div>
-                    </div>
-                    <div class="review-content">
-                        <h3 class="book-title"><a href="https://www.amazon.com/Thursday-Murder-Club-Novel/dp/1984880985?tag=mrsvioletnoire-20" target="_blank">The Thursday Murder Club</a></h3>
-                        <p class="book-author">by <a href="https://www.amazon.com/s?k=Richard+Osman&amp;tag=mrsvioletnoire-20" target="_blank">Richard Osman</a></p>
-                        <p class="book-genre">Cozy Mystery</p>
-                        <p class="review-excerpt">
-                            A delightfully clever debut that proves retirement homes can be hotbeds of intrigue.
-                            Osman weaves humor and heart into a genuinely puzzling mystery...
-                        </p>
-                        <div class="review-meta">
-                            <span class="review-date">January 15, 2025</span>
-                            <a href="#" class="read-more">Read Full Review</a>
-                        </div>
-                    </div>
-                </article>
+      <div id="library-empty" class="library-empty" hidden>
+        <h3>The shelves are being restocked</h3>
+        <p>The library is being updated. In the meantime, the full reading history lives on Goodreads.</p>
+        <a href="https://www.goodreads.com/user/show/8091033-mrs-violet-noire" class="btn btn-outline" target="_blank" rel="noopener">Visit Goodreads</a>
+      </div>
 
-                <!-- Review Card 2 -->
-                <article class="review-card">
-                    <div class="book-cover">
-                        <div class="cover-placeholder">📖</div>
-                        <div class="rating-badge">5.0/5</div>
-                    </div>
-                    <div class="review-content">
-                        <h3 class="book-title"><a href="https://www.amazon.com/Sweetness-Bottom-Pie-Flavia-Luce/dp/0385342314?tag=mrsvioletnoire-20" target="_blank">The Sweetness at the Bottom of the Pie</a></h3>
-                        <p class="book-author">by <a href="https://www.amazon.com/s?k=Alan+Bradley&amp;tag=mrsvioletnoire-20" target="_blank">Alan Bradley</a></p>
-                        <p class="book-genre">Historical Mystery</p>
-                        <p class="review-excerpt">
-                            Flavia de Luce bursts onto the scene with chemistry knowledge and an insatiable curiosity.
-                            Bradley crafts a perfect blend of wit, mystery, and coming-of-age charm...
-                        </p>
-                        <div class="review-meta">
-                            <span class="review-date">January 10, 2025</span>
-                            <a href="#" class="read-more">Read Full Review</a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Review Card 3 -->
-                <article class="review-card">
-                    <div class="book-cover">
-                        <div class="cover-placeholder">📕</div>
-                        <div class="rating-badge">4.6/5</div>
-                    </div>
-                    <div class="review-content">
-                        <h3 class="book-title"><a href="https://www.amazon.com/Silent-Patient-Alex-Michaelides/dp/1250301696?tag=mrsvioletnoire-20" target="_blank">The Silent Patient</a></h3>
-                        <p class="book-author">by <a href="https://www.amazon.com/s?k=Alex+Michaelides&amp;tag=mrsvioletnoire-20" target="_blank">Alex Michaelides</a></p>
-                        <p class="book-genre">Psychological Thriller</p>
-                        <p class="review-excerpt">
-                            A masterclass in psychological manipulation that keeps readers guessing until the final page.
-                            Michaelides delivers a twist that redefines everything...
-                        </p>
-                        <div class="review-meta">
-                            <span class="review-date">January 5, 2025</span>
-                            <a href="#" class="read-more">Read Full Review</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-
-            <div class="section-cta">
-                <a href="#" class="btn btn-outline">View All Reviews</a>
-            </div>
+      <noscript>
+        <div class="library-empty">
+          <h3>See what's on the shelf</h3>
+          <p>The library needs JavaScript. You can browse the full reading history on Goodreads.</p>
+          <a href="https://www.goodreads.com/user/show/8091033-mrs-violet-noire" class="btn btn-outline" target="_blank" rel="noopener">Visit Goodreads</a>
         </div>
-    </section>
-
-    <!-- Mrs. Noire's Library Section -->
-    <section class="library-section" id="library">
-        <div class="container">
-            <h2 class="section-title">Mrs. Noire's Curated Library</h2>
-            <p class="section-subtitle">Handpicked mysteries from my personal collection - each one a literary treasure</p>
-
-            <div class="library-grid">
-                <!-- Recently Read Favorites -->
-                <div class="library-category">
-                    <h3 class="category-title">🌟 Mrs. Noire's Highest Rated</h3>
-                    <div class="book-grid">
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Look-Closer-David-Ellis/dp/0525539298?tag=mrsvioletnoire-20" target="_blank">Look Closer</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=David+Ellis+author&amp;tag=mrsvioletnoire-20" target="_blank">David Ellis</a></p>
-                            <div class="book-rating">⭐⭐⭐⭐⭐ Mrs. Noire's Rating</div>
-                            <p class="book-description">A masterclass in psychological manipulation that redefines the unreliable narrator.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Hidden-Pictures-Jason-Rekulak/dp/1250819725?tag=mrsvioletnoire-20" target="_blank">Hidden Pictures</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Jason+Rekulak+author&amp;tag=mrsvioletnoire-20" target="_blank">Jason Rekulak</a></p>
-                            <div class="book-rating">⭐⭐⭐⭐⭐ Mrs. Noire's Rating</div>
-                            <p class="book-description">A haunting blend of supernatural horror and domestic thriller that lingers long after the final page.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Drowning-Woman-Robyn-Harding/dp/1982187956?tag=mrsvioletnoire-20" target="_blank">The Drowning Woman</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Robyn+Harding+author&amp;tag=mrsvioletnoire-20" target="_blank">Robyn Harding</a></p>
-                            <div class="book-rating">⭐⭐⭐⭐⭐ Mrs. Noire's Rating</div>
-                            <p class="book-description">A taut psychological drama exploring the thin line between victim and perpetrator.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Push-Novel-Ashley-Audrain/dp/0593087275?tag=mrsvioletnoire-20" target="_blank">The Push</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Ashley+Audrain+author&amp;tag=mrsvioletnoire-20" target="_blank">Ashley Audrain</a></p>
-                            <div class="book-rating">⭐⭐⭐⭐ Mrs. Noire's Rating</div>
-                            <p class="book-description">A disturbing examination of maternal anxiety and generational trauma.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Highly Acclaimed Mysteries -->
-                <div class="library-category">
-                    <h3 class="category-title">🏆 Critically Acclaimed Mysteries</h3>
-                    <div class="book-grid">
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Nightingale-Kristin-Hannah/dp/0312577222?tag=mrsvioletnoire-20" target="_blank">The Nightingale</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Kristin+Hannah+author&amp;tag=mrsvioletnoire-20" target="_blank">Kristin Hannah</a></p>
-                            <div class="book-rating">4.64⭐ Average Rating</div>
-                            <p class="book-description">A stunning historical thriller about courage and survival during WWII.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Great-Alone-Novel-Kristin-Hannah/dp/0312577230?tag=mrsvioletnoire-20" target="_blank">The Great Alone</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Kristin+Hannah+author&amp;tag=mrsvioletnoire-20" target="_blank">Kristin Hannah</a></p>
-                            <div class="book-rating">4.45⭐ Average Rating</div>
-                            <p class="book-description">A gripping tale of family secrets and survival in the Alaskan wilderness.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/What-Ive-Done-Morgan-Dane/dp/1503903052?tag=mrsvioletnoire-20" target="_blank">What I've Done</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Melinda+Leigh+author&amp;tag=mrsvioletnoire-20" target="_blank">Melinda Leigh</a></p>
-                            <div class="book-rating">4.44⭐ Average Rating</div>
-                            <p class="book-description">Fourth installment in the compelling Morgan Dane series.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Where-Crawdads-Sing-Delia-Owens/dp/0735219117?tag=mrsvioletnoire-20" target="_blank">Where the Crawdads Sing</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Delia+Owens+author&amp;tag=mrsvioletnoire-20" target="_blank">Delia Owens</a></p>
-                            <div class="book-rating">4.37⭐ Average Rating</div>
-                            <p class="book-description">A mesmerizing murder mystery set in the atmospheric American South.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Contemporary Thrillers -->
-                <div class="library-category">
-                    <h3 class="category-title">🔥 Contemporary Psychological Thrillers</h3>
-                    <div class="book-grid">
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Housemaid-Freida-McFadden/dp/1803144378?tag=mrsvioletnoire-20" target="_blank">The Housemaid</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Freida+McFadden+author&amp;tag=mrsvioletnoire-20" target="_blank">Freida McFadden</a></p>
-                            <div class="book-rating">4.29⭐ Average Rating</div>
-                            <p class="book-description">A gripping domestic thriller that will keep you guessing until the end.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Bitter-Falls-Stillhouse-Lake-Book/dp/1542042348?tag=mrsvioletnoire-20" target="_blank">Bitter Falls</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Rachel+Caine+author&amp;tag=mrsvioletnoire-20" target="_blank">Rachel Caine</a></p>
-                            <div class="book-rating">4.28⭐ Average Rating</div>
-                            <p class="book-description">Fourth book in the intense Stillhouse Lake series.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Killman-Creek-Stillhouse-Lake-Book/dp/1542096413?tag=mrsvioletnoire-20" target="_blank">Killman Creek</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Rachel+Caine+author&amp;tag=mrsvioletnoire-20" target="_blank">Rachel Caine</a></p>
-                            <div class="book-rating">4.24⭐ Average Rating</div>
-                            <p class="book-description">Second gripping installment in the Stillhouse Lake thriller series.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Maids-Diary-Loreth-Anne-White/dp/B09X9TWRH9?tag=mrsvioletnoire-20" target="_blank">The Maid's Diary</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Loreth+Anne+White+author&amp;tag=mrsvioletnoire-20" target="_blank">Loreth Anne White</a></p>
-                            <div class="book-rating">4.22⭐ Average Rating</div>
-                            <p class="book-description">A psychological thriller that explores secrets, lies, and betrayal.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Verity-Colleen-Hoover/dp/153872474X?tag=mrsvioletnoire-20" target="_blank">Verity</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Colleen+Hoover+author&amp;tag=mrsvioletnoire-20" target="_blank">Colleen Hoover</a></p>
-                            <div class="book-rating">4.30⭐ Average Rating</div>
-                            <p class="book-description">A psychological thriller that blurs the lines between truth and fiction.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Quiet-Street-Seraphina-Nova-Glass/dp/0369717058?tag=mrsvioletnoire-20" target="_blank">On a Quiet Street</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Seraphina+Nova+Glass+author&amp;tag=mrsvioletnoire-20" target="_blank">Seraphina Nova Glass</a></p>
-                            <div class="book-rating">4.13⭐ Average Rating</div>
-                            <p class="book-description">A neighborhood thriller that exposes dark secrets behind perfect facades.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Freida McFadden Collection -->
-                <div class="library-category">
-                    <h3 class="category-title">👑 The Freida McFadden Collection</h3>
-                    <div class="book-grid">
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Housemaid-Secret-Freida-McFadden/dp/1837901317?tag=mrsvioletnoire-20" target="_blank">The Housemaid's Secret</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Freida+McFadden+author&amp;tag=mrsvioletnoire-20" target="_blank">Freida McFadden</a></p>
-                            <div class="book-rating">4.20⭐ Average Rating</div>
-                            <p class="book-description">The gripping sequel to The Housemaid that will leave you breathless.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Never-Lie-Freida-McFadden/dp/B0B7Q9XJ9D?tag=mrsvioletnoire-20" target="_blank">Never Lie</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Freida+McFadden+author&amp;tag=mrsvioletnoire-20" target="_blank">Freida McFadden</a></p>
-                            <div class="book-rating">4.08⭐ Average Rating</div>
-                            <p class="book-description">A psychological thriller about secrets that refuse to stay buried.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Wife-Upstairs-Freida-McFadden/dp/B08DCQX2QF?tag=mrsvioletnoire-20" target="_blank">The Wife Upstairs</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Freida+McFadden+author&amp;tag=mrsvioletnoire-20" target="_blank">Freida McFadden</a></p>
-                            <div class="book-rating">4.06⭐ Average Rating</div>
-                            <p class="book-description">A domestic thriller with shocking twists about marriage and deception.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Inmate-Freida-McFadden/dp/B0B7Q8X7RG?tag=mrsvioletnoire-20" target="_blank">The Inmate</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Freida+McFadden+author&amp;tag=mrsvioletnoire-20" target="_blank">Freida McFadden</a></p>
-                            <div class="book-rating">4.02⭐ Average Rating</div>
-                            <p class="book-description">A prison-set thriller that explores justice, revenge, and redemption.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Perfect-Son-Freida-McFadden/dp/B082VDQGVB?tag=mrsvioletnoire-20" target="_blank">The Perfect Son</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Freida+McFadden+author&amp;tag=mrsvioletnoire-20" target="_blank">Freida McFadden</a></p>
-                            <div class="book-rating">4.01⭐ Average Rating</div>
-                            <p class="book-description">A chilling tale about a mother's worst nightmare coming true.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Locked-Door-Freida-McFadden/dp/B09X9V7QWH?tag=mrsvioletnoire-20" target="_blank">The Locked Door</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Freida+McFadden+author&amp;tag=mrsvioletnoire-20" target="_blank">Freida McFadden</a></p>
-                            <div class="book-rating">3.99⭐ Average Rating</div>
-                            <p class="book-description">A suspenseful thriller about family secrets and deadly inheritances.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- John Marrs Thrillers -->
-                <div class="library-category">
-                    <h3 class="category-title">🎭 John Marrs Mind-Benders</h3>
-                    <div class="book-grid">
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/One-John-Marrs/dp/B077XQPQT8?tag=mrsvioletnoire-20" target="_blank">The One</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=John+Marrs+author&amp;tag=mrsvioletnoire-20" target="_blank">John Marrs</a></p>
-                            <div class="book-rating">4.10⭐ Average Rating</div>
-                            <p class="book-description">A sci-fi thriller about finding your perfect genetic match for love.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Keep-Family-John-Marrs/dp/1542017270?tag=mrsvioletnoire-20" target="_blank">Keep It in the Family</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=John+Marrs+author&amp;tag=mrsvioletnoire-20" target="_blank">John Marrs</a></p>
-                            <div class="book-rating">4.08⭐ Average Rating</div>
-                            <p class="book-description">A psychological thriller about families and the secrets they keep.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/What-Lies-Between-Us/dp/1542017025?tag=mrsvioletnoire-20" target="_blank">What Lies Between Us</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=John+Marrs+author&amp;tag=mrsvioletnoire-20" target="_blank">John Marrs</a></p>
-                            <div class="book-rating">4.02⭐ Average Rating</div>
-                            <p class="book-description">A twisted tale of mother-daughter relationships and deadly secrets.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Stranger-Her-House-John-Marrs/dp/1662506473?tag=mrsvioletnoire-20" target="_blank">The Stranger in Her House</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=John+Marrs+author&amp;tag=mrsvioletnoire-20" target="_blank">John Marrs</a></p>
-                            <div class="book-rating">3.94⭐ Average Rating</div>
-                            <p class="book-description">A domestic thriller about identity, memory, and hidden truths.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Lisa Jewell Collection -->
-                <div class="library-category">
-                    <h3 class="category-title">🏠 Lisa Jewell's Domestic Mysteries</h3>
-                    <div class="book-grid">
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Night-She-Disappeared-Lisa-Jewell/dp/1982137363?tag=mrsvioletnoire-20" target="_blank">The Night She Disappeared</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Lisa+Jewell+author&amp;tag=mrsvioletnoire-20" target="_blank">Lisa Jewell</a></p>
-                            <div class="book-rating">4.09⭐ Average Rating</div>
-                            <p class="book-description">A gripping mystery about a teenage couple who vanish without a trace.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/None-This-True-Lisa-Jewell/dp/1982179007?tag=mrsvioletnoire-20" target="_blank">None of This Is True</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Lisa+Jewell+author&amp;tag=mrsvioletnoire-20" target="_blank">Lisa Jewell</a></p>
-                            <div class="book-rating">4.09⭐ Average Rating</div>
-                            <p class="book-description">A psychological thriller about truth, lies, and dangerous obsessions.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Then-She-Was-Gone/dp/1501154648?tag=mrsvioletnoire-20" target="_blank">Then She Was Gone</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Lisa+Jewell+author&amp;tag=mrsvioletnoire-20" target="_blank">Lisa Jewell</a></p>
-                            <div class="book-rating">4.04⭐ Average Rating</div>
-                            <p class="book-description">A mother's desperate search for her missing daughter leads to shocking discoveries.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Family-Upstairs-Lisa-Jewell/dp/1501190105?tag=mrsvioletnoire-20" target="_blank">The Family Upstairs</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Lisa+Jewell+author&amp;tag=mrsvioletnoire-20" target="_blank">Lisa Jewell</a></p>
-                            <div class="book-rating">3.96⭐ Average Rating</div>
-                            <p class="book-description">A dark family saga involving inheritance, secrets, and murder.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/House-We-Grew-Up/dp/1476702993?tag=mrsvioletnoire-20" target="_blank">The House We Grew Up In</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Lisa+Jewell+author&amp;tag=mrsvioletnoire-20" target="_blank">Lisa Jewell</a></p>
-                            <div class="book-rating">3.78⭐ Average Rating</div>
-                            <p class="book-description">A family drama exploring how one tragic event can tear a family apart.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Shari Lapena Thrillers -->
-                <div class="library-category">
-                    <h3 class="category-title">🕵️ Shari Lapena's Neighborhood Secrets</h3>
-                    <div class="book-grid">
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Someone-We-Know-Shari-Lapena/dp/0525557652?tag=mrsvioletnoire-20" target="_blank">Someone We Know</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Shari+Lapena+author&amp;tag=mrsvioletnoire-20" target="_blank">Shari Lapena</a></p>
-                            <div class="book-rating">3.91⭐ Average Rating</div>
-                            <p class="book-description">A suburban thriller about secrets, lies, and deadly consequences.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Couple-Next-Door-Shari-Lapena/dp/0735221081?tag=mrsvioletnoire-20" target="_blank">The Couple Next Door</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Shari+Lapena+author&amp;tag=mrsvioletnoire-20" target="_blank">Shari Lapena</a></p>
-                            <div class="book-rating">3.80⭐ Average Rating</div>
-                            <p class="book-description">A psychological thriller about a baby's disappearance that exposes dark secrets.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Everyone-Here-Lying-Shari-Lapena/dp/0593489934?tag=mrsvioletnoire-20" target="_blank">Everyone Here Is Lying</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Shari+Lapena+author&amp;tag=mrsvioletnoire-20" target="_blank">Shari Lapena</a></p>
-                            <div class="book-rating">3.78⭐ Average Rating</div>
-                            <p class="book-description">A tense thriller about a missing girl and the lies that divide a community.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Not-Happy-Family-Shari-Lapena/dp/1984880551?tag=mrsvioletnoire-20" target="_blank">Not a Happy Family</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Shari+Lapena+author&amp;tag=mrsvioletnoire-20" target="_blank">Shari Lapena</a></p>
-                            <div class="book-rating">3.78⭐ Average Rating</div>
-                            <p class="book-description">A family thriller about inheritance, murder, and sibling rivalry.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Unwanted-Guest-Shari-Lapena/dp/0525557628?tag=mrsvioletnoire-20" target="_blank">An Unwanted Guest</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Shari+Lapena+author&amp;tag=mrsvioletnoire-20" target="_blank">Shari Lapena</a></p>
-                            <div class="book-rating">3.75⭐ Average Rating</div>
-                            <p class="book-description">A locked-room mystery set in a remote inn during a deadly blizzard.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Stranger-House-Shari-Lapena/dp/073522112X?tag=mrsvioletnoire-20" target="_blank">A Stranger in the House</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Shari+Lapena+author&amp;tag=mrsvioletnoire-20" target="_blank">Shari Lapena</a></p>
-                            <div class="book-rating">3.68⭐ Average Rating</div>
-                            <p class="book-description">A domestic thriller about memory loss and marriage secrets.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Recent Discoveries -->
-                <div class="library-category">
-                    <h3 class="category-title">📚 Recent Literary Discoveries</h3>
-                    <div class="book-grid">
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Still-Beating-Jennifer-Hartmann/dp/B08N59V7PW?tag=mrsvioletnoire-20" target="_blank">Still Beating</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Jennifer+Hartmann+author&amp;tag=mrsvioletnoire-20" target="_blank">Jennifer Hartmann</a></p>
-                            <div class="book-rating">4.21⭐ Average Rating</div>
-                            <p class="book-description">An intense psychological thriller exploring trauma and survival.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Cut-Run-Criminal-Profiler-Book/dp/1503957853?tag=mrsvioletnoire-20" target="_blank">Cut and Run</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Mary+Burton+author&amp;tag=mrsvioletnoire-20" target="_blank">Mary Burton</a></p>
-                            <div class="book-rating">4.21⭐ Average Rating</div>
-                            <p class="book-description">Third book in the Criminal Profiler series with expert forensic detail.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Gray-After-Dark-Noelle-Ihli/dp/B0CQCML2BF?tag=mrsvioletnoire-20" target="_blank">Gray After Dark</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Noelle+W+Ihli+author&amp;tag=mrsvioletnoire-20" target="_blank">Noelle W. Ihli</a></p>
-                            <div class="book-rating">4.20⭐ Average Rating</div>
-                            <p class="book-description">A dark psychological thriller that will haunt your dreams.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Kill-Me-You-Steve-Cavanagh/dp/1668049341?tag=mrsvioletnoire-20" target="_blank">Kill for Me, Kill for You</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Steve+Cavanagh+author&amp;tag=mrsvioletnoire-20" target="_blank">Steve Cavanagh</a></p>
-                            <div class="book-rating">4.15⭐ Average Rating</div>
-                            <p class="book-description">A twisted tale of revenge and justice from a master storyteller.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Local-Woman-Missing-Mary-Kubica/dp/077831166X?tag=mrsvioletnoire-20" target="_blank">Local Woman Missing</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Mary+Kubica+author&amp;tag=mrsvioletnoire-20" target="_blank">Mary Kubica</a></p>
-                            <div class="book-rating">4.13⭐ Average Rating</div>
-                            <p class="book-description">A gripping thriller about missing women and the secrets that connect them.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Only-One-Left-Riley-Sager/dp/0593183223?tag=mrsvioletnoire-20" target="_blank">The Only One Left</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Riley+Sager&amp;tag=mrsvioletnoire-20" target="_blank">Riley Sager</a></p>
-                            <div class="book-rating">4.13⭐ Average Rating</div>
-                            <p class="book-description">A haunting thriller about a caretaker and her mysterious patient.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- True Crime & Dark Fiction -->
-                <div class="library-category">
-                    <h3 class="category-title">🔍 True Crime &amp; Dark Realism</h3>
-                    <div class="book-grid">
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/If-You-Tell-Gregg-Olsen/dp/1542005248?tag=mrsvioletnoire-20" target="_blank">If You Tell</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Gregg+Olsen+author&amp;tag=mrsvioletnoire-20" target="_blank">Gregg Olsen</a></p>
-                            <div class="book-rating">3.98⭐ Average Rating</div>
-                            <p class="book-description">A chilling true crime story of family secrets and sisterhood.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Girl-Next-Door-Jack-Ketchum/dp/0843955430?tag=mrsvioletnoire-20" target="_blank">The Girl Next Door</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Jack+Ketchum+author&amp;tag=mrsvioletnoire-20" target="_blank">Jack Ketchum</a></p>
-                            <div class="book-rating">3.92⭐ Average Rating</div>
-                            <p class="book-description">A disturbing tale of childhood innocence lost and human cruelty.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Things-We-Do-Dark/dp/1250763169?tag=mrsvioletnoire-20" target="_blank">Things We Do in the Dark</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Jennifer+Hillier+author&amp;tag=mrsvioletnoire-20" target="_blank">Jennifer Hillier</a></p>
-                            <div class="book-rating">3.94⭐ Average Rating</div>
-                            <p class="book-description">A psychological thriller about dark secrets and deadly consequences.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Jar-Hearts-Jennifer-Hillier/dp/1250154197?tag=mrsvioletnoire-20" target="_blank">Jar of Hearts</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Jennifer+Hillier+author&amp;tag=mrsvioletnoire-20" target="_blank">Jennifer Hillier</a></p>
-                            <div class="book-rating">4.13⭐ Average Rating</div>
-                            <p class="book-description">A dark thriller about childhood friendship turned deadly obsession.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Atmospheric & Gothic -->
-                <div class="library-category">
-                    <h3 class="category-title">🌙 Atmospheric &amp; Gothic Mysteries</h3>
-                    <div class="book-grid">
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Sun-Down-Motel-Simone-James/dp/0440000173?tag=mrsvioletnoire-20" target="_blank">The Sun Down Motel</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Simone+St+James+author&amp;tag=mrsvioletnoire-20" target="_blank">Simone St. James</a></p>
-                            <div class="book-rating">4.00⭐ Average Rating</div>
-                            <p class="book-description">A haunting mystery spanning decades at a supernatural motel.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Broken-Girls-Simone-St-James/dp/B078HBX4VY?tag=mrsvioletnoire-20" target="_blank">The Broken Girls</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Simone+St+James+author&amp;tag=mrsvioletnoire-20" target="_blank">Simone St. James</a></p>
-                            <div class="book-rating">4.06⭐ Average Rating</div>
-                            <p class="book-description">A Gothic mystery about a haunted boarding school and missing girls.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Lock-Every-Door-Riley-Sager/dp/1524745154?tag=mrsvioletnoire-20" target="_blank">Lock Every Door</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Riley+Sager&amp;tag=mrsvioletnoire-20" target="_blank">Riley Sager</a></p>
-                            <div class="book-rating">3.89⭐ Average Rating</div>
-                            <p class="book-description">A chilling thriller set in a luxury New York apartment building.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Rock-Paper-Scissors-Alice-Feeney/dp/1250266106?tag=mrsvioletnoire-20" target="_blank">Rock Paper Scissors</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Alice+Feeney+author&amp;tag=mrsvioletnoire-20" target="_blank">Alice Feeney</a></p>
-                            <div class="book-rating">3.89⭐ Average Rating</div>
-                            <p class="book-description">A twisted psychological thriller about marriage and memory.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Rising Stars & New Voices -->
-                <div class="library-category">
-                    <h3 class="category-title">⭐ Rising Stars &amp; New Voices</h3>
-                    <div class="book-grid">
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Ask-Andrea-Noelle-W-Ihli/dp/B09X9R5KJF?tag=mrsvioletnoire-20" target="_blank">Ask for Andrea</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Noelle+W+Ihli+author&amp;tag=mrsvioletnoire-20" target="_blank">Noelle W. Ihli</a></p>
-                            <div class="book-rating">4.09⭐ Average Rating</div>
-                            <p class="book-description">A haunting thriller inspired by true events about women's safety.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Thats-Not-My-Name/dp/1728270111?tag=mrsvioletnoire-20" target="_blank">That's Not My Name</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Megan+Lally+author&amp;tag=mrsvioletnoire-20" target="_blank">Megan Lally</a></p>
-                            <div class="book-rating">4.06⭐ Average Rating</div>
-                            <p class="book-description">A YA thriller about identity theft and dangerous secrets.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Perfect-Marriage-Jeneva-Rose/dp/1913419657?tag=mrsvioletnoire-20" target="_blank">The Perfect Marriage</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Jeneva+Rose+author&amp;tag=mrsvioletnoire-20" target="_blank">Jeneva Rose</a></p>
-                            <div class="book-rating">3.98⭐ Average Rating</div>
-                            <p class="book-description">A legal thriller about a lawyer defending her husband in a murder case.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Flicker-Dark-Stacy-Willingham/dp/1250803829?tag=mrsvioletnoire-20" target="_blank">A Flicker in the Dark</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Stacy+Willingham&amp;tag=mrsvioletnoire-20" target="_blank">Stacy Willingham</a></p>
-                            <div class="book-rating">3.98⭐ Average Rating</div>
-                            <p class="book-description">A psychological thriller about past trauma and present danger.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Guest-List-Lucy-Foley/dp/B083DX4Y2T?tag=mrsvioletnoire-20" target="_blank">The Guest List</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Lucy+Foley&amp;tag=mrsvioletnoire-20" target="_blank">Lucy Foley</a></p>
-                            <div class="book-rating">3.80⭐ Average Rating</div>
-                            <p class="book-description">A wedding thriller where everyone has a motive for murder.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Greenwich-Park-Katherine-Faulkner/dp/1982150319?tag=mrsvioletnoire-20" target="_blank">Greenwich Park</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Katherine+Faulkner+author&amp;tag=mrsvioletnoire-20" target="_blank">Katherine Faulkner</a></p>
-                            <div class="book-rating">3.84⭐ Average Rating</div>
-                            <p class="book-description">A psychological thriller about friendship, motherhood, and betrayal.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- The B.A. Paris Collection -->
-                <div class="library-category">
-                    <h3 class="category-title">📖 The B.A. Paris Collection</h3>
-                    <div class="book-grid">
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Behind-Closed-Doors-B-Paris/dp/1250121000?tag=mrsvioletnoire-20" target="_blank">Behind Closed Doors</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=B.A.+Paris&amp;tag=mrsvioletnoire-20" target="_blank">B.A. Paris</a></p>
-                            <div class="book-rating">3.97⭐ Average Rating</div>
-                            <p class="book-description">A chilling psychological thriller about a perfect marriage's dark secret.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Breakdown-B-Paris/dp/1250122465?tag=mrsvioletnoire-20" target="_blank">The Breakdown</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=B.A.+Paris&amp;tag=mrsvioletnoire-20" target="_blank">B.A. Paris</a></p>
-                            <div class="book-rating">3.89⭐ Average Rating</div>
-                            <p class="book-description">A psychological thriller about memory loss and mounting terror.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Bring-Me-Back-B-Paris/dp/1250151333?tag=mrsvioletnoire-20" target="_blank">Bring Me Back</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=B.A.+Paris&amp;tag=mrsvioletnoire-20" target="_blank">B.A. Paris</a></p>
-                            <div class="book-rating">3.50⭐ Average Rating</div>
-                            <p class="book-description">A thriller about a woman who vanished and the man who must find her.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Prisoner-B-Paris/dp/1250274141?tag=mrsvioletnoire-20" target="_blank">The Prisoner</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=B.A.+Paris&amp;tag=mrsvioletnoire-20" target="_blank">B.A. Paris</a></p>
-                            <div class="book-rating">3.61⭐ Average Rating</div>
-                            <p class="book-description">A psychological thriller about secrets, lies, and deadly consequences.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- The Morgan Dane Series -->
-                <div class="library-category">
-                    <h3 class="category-title">👮‍♀️ The Morgan Dane Series</h3>
-                    <div class="book-grid">
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Say-Youre-Sorry-Morgan-Dane/dp/1503948706?tag=mrsvioletnoire-20" target="_blank">Say You're Sorry</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Melinda+Leigh&amp;tag=mrsvioletnoire-20" target="_blank">Melinda Leigh</a></p>
-                            <div class="book-rating">4.08⭐ Average Rating</div>
-                            <p class="book-description">First in the Morgan Dane series - a prosecutor turned defense attorney.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Her-Last-Goodbye-Morgan-Dane/dp/154204796X?tag=mrsvioletnoire-20" target="_blank">Her Last Goodbye</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Melinda+Leigh&amp;tag=mrsvioletnoire-20" target="_blank">Melinda Leigh</a></p>
-                            <div class="book-rating">4.32⭐ Average Rating</div>
-                            <p class="book-description">Second in the series - a missing mother and deadly secrets.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Bones-Dont-Lie-Morgan-Dane/dp/1542049865?tag=mrsvioletnoire-20" target="_blank">Bones Don't Lie</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Melinda+Leigh&amp;tag=mrsvioletnoire-20" target="_blank">Melinda Leigh</a></p>
-                            <div class="book-rating">4.41⭐ Average Rating</div>
-                            <p class="book-description">Third in the series - cold cases and fresh murders collide.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/What-Ive-Done-Morgan-Dane/dp/1503903052?tag=mrsvioletnoire-20" target="_blank">What I've Done</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Melinda+Leigh&amp;tag=mrsvioletnoire-20" target="_blank">Melinda Leigh</a></p>
-                            <div class="book-rating">4.44⭐ Average Rating</div>
-                            <p class="book-description">Fourth in the series - a decorated soldier's dark past emerges.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Stillhouse-Lake-Rachel-Caine/dp/1477821554?tag=mrsvioletnoire-20" target="_blank">Stillhouse Lake</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Rachel+Caine&amp;tag=mrsvioletnoire-20" target="_blank">Rachel Caine</a></p>
-                            <div class="book-rating">4.11⭐ Average Rating</div>
-                            <p class="book-description">A woman discovers her husband is a serial killer and must start over.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Look-Closer-David-Ellis/dp/0399170928?tag=mrsvioletnoire-20" target="_blank">Look Closer</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=David+Ellis&amp;tag=mrsvioletnoire-20" target="_blank">David Ellis</a></p>
-                            <div class="book-rating">4.17⭐ Average Rating</div>
-                            <p class="book-description">A suburban murder mystery with multiple twists and unreliable narrators.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Literary & Historical Fiction -->
-                <div class="library-category">
-                    <h3 class="category-title">📚 Literary &amp; Historical Fiction</h3>
-                    <div class="book-grid">
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Nightingale-Kristin-Hannah/dp/0312577222?tag=mrsvioletnoire-20" target="_blank">The Nightingale</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Kristin+Hannah&amp;tag=mrsvioletnoire-20" target="_blank">Kristin Hannah</a></p>
-                            <div class="book-rating">4.64⭐ Average Rating</div>
-                            <p class="book-description">A powerful WWII story of two sisters and their fight for survival.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Great-Alone-Kristin-Hannah/dp/B077JTQ3G4?tag=mrsvioletnoire-20" target="_blank">The Great Alone</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Kristin+Hannah&amp;tag=mrsvioletnoire-20" target="_blank">Kristin Hannah</a></p>
-                            <div class="book-rating">4.45⭐ Average Rating</div>
-                            <p class="book-description">A family's struggle for survival in the Alaskan wilderness.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Necessary-Lies-Diane-Chamberlain/dp/1250010691?tag=mrsvioletnoire-20" target="_blank">Necessary Lies</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Diane+Chamberlain&amp;tag=mrsvioletnoire-20" target="_blank">Diane Chamberlain</a></p>
-                            <div class="book-rating">4.30⭐ Average Rating</div>
-                            <p class="book-description">A social worker confronts the dark history of forced sterilization.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Life-We-Bury-Joe-Talbert/dp/1616149981?tag=mrsvioletnoire-20" target="_blank">The Life We Bury</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Allen+Eskens&amp;tag=mrsvioletnoire-20" target="_blank">Allen Eskens</a></p>
-                            <div class="book-rating">4.09⭐ Average Rating</div>
-                            <p class="book-description">A college student uncovers the truth about a convicted killer.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/We-Were-Liars-E-Lockhart/dp/0385741278?tag=mrsvioletnoire-20" target="_blank">We Were Liars</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=E.+Lockhart&amp;tag=mrsvioletnoire-20" target="_blank">E. Lockhart</a></p>
-                            <div class="book-rating">3.65⭐ Average Rating</div>
-                            <p class="book-description">A haunting tale of privilege, family secrets, and memory.</p>
-                        </div>
-
-                        <div class="book-item">
-                            <h4 class="book-title"><a href="https://www.amazon.com/Saving-Noah-Lucinda-Berry/dp/B073ZSRP3J?tag=mrsvioletnoire-20" target="_blank">Saving Noah</a></h4>
-                            <p class="book-author">by <a href="https://www.amazon.com/s?k=Lucinda+Berry&amp;tag=mrsvioletnoire-20" target="_blank">Lucinda Berry</a></p>
-                            <div class="book-rating">3.91⭐ Average Rating</div>
-                            <p class="book-description">A family torn apart by an unthinkable accusation.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section-cta">
-                <a href="#" class="btn btn-outline">Explore Full Library on Goodreads</a>
-            </div>
+      </noscript>
+    </div>
+  </section>
+
+  <!-- ── Values ─────────────────────────────────────────────── -->
+  <div class="values-section" id="about">
+    <div class="section">
+      <p class="section-eyebrow">The Investigation</p>
+      <h2 class="section-title">What Mrs. Noire Looks For</h2>
+      <div class="values-grid">
+        <div class="value-item">
+          <span class="value-num">01</span>
+          <h3>A Twist That Earns It</h3>
+          <p>The best reveals are hiding in plain sight. She reads for clues that are fair, misdirection that is clever and endings that make you flip back to page one.</p>
         </div>
-    </section>
-
-    <!-- Genres Section -->
-    <section class="genres" id="genres">
-        <div class="container">
-            <h2 class="section-title">Mystery Genres Explored</h2>
-            <p class="section-subtitle">From classic whodunits to modern psychological thrillers</p>
-
-            <div class="genres-grid">
-                <div class="genre-card">
-                    <div class="genre-icon">🔍</div>
-                    <h3>Classic Detective</h3>
-                    <p>Golden age mysteries featuring brilliant detectives and impossible crimes.</p>
-                    <div class="genre-count">42 Reviews</div>
-                </div>
-
-                <div class="genre-card">
-                    <div class="genre-icon">🧠</div>
-                    <h3>Psychological Thriller</h3>
-                    <p>Mind-bending narratives that explore the darkest corners of human psychology.</p>
-                    <div class="genre-count">38 Reviews</div>
-                </div>
-
-                <div class="genre-card">
-                    <div class="genre-icon">🏠</div>
-                    <h3>Cozy Mystery</h3>
-                    <p>Small-town secrets and amateur sleuths in charming, deadly settings.</p>
-                    <div class="genre-count">29 Reviews</div>
-                </div>
-
-                <div class="genre-card">
-                    <div class="genre-icon">⚔️</div>
-                    <h3>Historical Mystery</h3>
-                    <p>Crimes across the centuries, from medieval murders to wartime secrets.</p>
-                    <div class="genre-count">35 Reviews</div>
-                </div>
-
-                <div class="genre-card">
-                    <div class="genre-icon">🌃</div>
-                    <h3>Noir &amp; Hardboiled</h3>
-                    <p>Gritty urban tales of corruption, betrayal, and moral ambiguity.</p>
-                    <div class="genre-count">26 Reviews</div>
-                </div>
-
-                <div class="genre-card">
-                    <div class="genre-icon">👤</div>
-                    <h3>Police Procedural</h3>
-                    <p>Realistic investigations following the methodical work of law enforcement.</p>
-                    <div class="genre-count">31 Reviews</div>
-                </div>
-            </div>
+        <div class="value-item">
+          <span class="value-num">02</span>
+          <h3>The Darkness Next Door</h3>
+          <p>Quiet streets, perfect marriages, the couple upstairs. Domestic suspense and psychological thrillers where the most dangerous mystery is the human mind.</p>
         </div>
-    </section>
-
-    <!-- Goodreads Section -->
-    <section class="goodreads-section" id="authors">
-        <div class="container">
-            <h2 class="section-title">Currently Reading &amp; Recommendations</h2>
-            <p class="section-subtitle">Follow my literary journey on Goodreads and discover what's captivating me now</p>
-
-            <div class="goodreads-content">
-                <!-- Recent Reviews from Goodreads -->
-                <div class="goodreads-widget">
-                    <h3>Recent Goodreads Reviews</h3>
-                    <div class="widget-container">
-                        <!-- Custom Goodreads Widget with Murder Mystery Theme -->
-                        <div class="goodreads-widget-container">
-                            <!-- Goodreads styles are now in style.css -->
-
-                            <div id="gr_custom_widget_">
-                                <div class="gr_custom_container_">
-                                    <h2 class="gr_custom_header_">
-                                        <a rel="nofollow" href="https://www.goodreads.com/review/list/8091033-suzanne?shelf=read&utm_medium=api&utm_source=custom_widget">Mrs. Violet's Recent Reads</a>
-                                    </h2>
-                                    <div class="gr_custom_each_container_">
-                                        <div class="gr_custom_book_container_">
-                                            <a title="The Last One at the Wedding" rel="nofollow" href="https://www.goodreads.com/review/show/7775961037?utm_medium=api&utm_source=custom_widget">
-                                                <img alt="The Last One at the Wedding" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1728476850l/203579177._SY75_.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="gr_custom_rating_">
-                                            <span class="staticStars notranslate">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                            </span>
-                                        </div>
-                                        <div class="gr_custom_title_">
-                                            <a rel="nofollow" href="https://www.goodreads.com/review/show/7775961037?utm_medium=api&utm_source=custom_widget">The Last One at the Wedding</a>
-                                        </div>
-                                        <div class="gr_custom_author_">
-                                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/173181.Jason_Rekulak">Jason Rekulak</a>
-                                        </div>
-                                    </div>
-                                    <div class="gr_custom_each_container_">
-                                        <div class="gr_custom_book_container_">
-                                            <a title="Hemlock" rel="nofollow" href="https://www.goodreads.com/review/show/7775955161?utm_medium=api&utm_source=custom_widget">
-                                                <img alt="Hemlock" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1692908968l/197792760._SY75_.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="gr_custom_rating_">
-                                            <span class="staticStars notranslate">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                            </span>
-                                        </div>
-                                        <div class="gr_custom_title_">
-                                            <a rel="nofollow" href="https://www.goodreads.com/review/show/7775955161?utm_medium=api&utm_source=custom_widget">Hemlock</a>
-                                        </div>
-                                        <div class="gr_custom_author_">
-                                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/15300347.Kiersten_Modglin">Kiersten Modglin</a>
-                                        </div>
-                                    </div>
-                                    <div class="gr_custom_each_container_">
-                                        <div class="gr_custom_book_container_">
-                                            <a title="The House We Grew Up In" rel="nofollow" href="https://www.goodreads.com/review/show/7775953757?utm_medium=api&utm_source=custom_widget">
-                                                <img alt="The House We Grew Up In" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1407719574l/18764826._SY75_.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="gr_custom_rating_">
-                                            <span class="staticStars notranslate">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                            </span>
-                                        </div>
-                                        <div class="gr_custom_title_">
-                                            <a rel="nofollow" href="https://www.goodreads.com/review/show/7775953757?utm_medium=api&utm_source=custom_widget">The House We Grew Up In</a>
-                                        </div>
-                                        <div class="gr_custom_author_">
-                                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/93504.Lisa_Jewell">Lisa Jewell</a>
-                                        </div>
-                                    </div>
-                                    <div class="gr_custom_each_container_">
-                                        <div class="gr_custom_book_container_">
-                                            <a title="The Girl Next Door" rel="nofollow" href="https://www.goodreads.com/review/show/7775951437?utm_medium=api&utm_source=custom_widget">
-                                                <img alt="The Girl Next Door" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1298460378l/179735._SY75_.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="gr_custom_rating_">
-                                            <span class="staticStars notranslate">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                            </span>
-                                        </div>
-                                        <div class="gr_custom_title_">
-                                            <a rel="nofollow" href="https://www.goodreads.com/review/show/7775951437?utm_medium=api&utm_source=custom_widget">The Girl Next Door</a>
-                                        </div>
-                                        <div class="gr_custom_author_">
-                                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/90070.Jack_Ketchum">Jack Ketchum</a>
-                                        </div>
-                                    </div>
-                                    <div class="gr_custom_each_container_">
-                                        <div class="gr_custom_book_container_">
-                                            <a title="The Orphanage by the Lake" rel="nofollow" href="https://www.goodreads.com/review/show/7775949874?utm_medium=api&utm_source=custom_widget">
-                                                <img alt="The Orphanage by the Lake" src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1700048053l/202173601._SY75_.jpg">
-                                            </a>
-                                        </div>
-                                        <div class="gr_custom_rating_">
-                                            <span class="staticStars notranslate">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                                <img src="https://s.gr-assets.com/images/layout/gr_red_star_inactive.png" alt="★">
-                                            </span>
-                                        </div>
-                                        <div class="gr_custom_title_">
-                                            <a rel="nofollow" href="https://www.goodreads.com/review/show/7775949874?utm_medium=api&utm_source=custom_widget">The Orphanage by the Lake</a>
-                                        </div>
-                                        <div class="gr_custom_author_">
-                                            by <a rel="nofollow" href="https://www.goodreads.com/author/show/21148079.Daniel_G_Miller">Daniel G. Miller</a>
-                                        </div>
-                                    </div>
-                                    <div class="widget-footer">
-                                        <a rel="nofollow" href="https://www.goodreads.com/">
-                                            <img alt="goodreads.com" src="https://s.gr-assets.com/images/widget/widget_logo.gif">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Load the dynamic Goodreads script for live updates -->
-                            <script src="https://www.goodreads.com/review/custom_widget/8091033.Suzanne's%20bookshelf:%20read?cover_position=&cover_size=&num_books=5&order=&shelf=&sort=&widget_bg_transparent=" charset="utf-8"></script>
-                        </div>
-                        <p class="widget-note">Live updates from my Goodreads reading activity</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Goodreads Profile Link -->
-            <div class="goodreads-profile">
-                <div class="profile-card">
-                    <div class="goodreads-logo">
-                        <img src="https://s.gr-assets.com/assets/icons/goodreads_icon_50x50-823139ec9dc84278d3863007486ae0ac.png" alt="Goodreads" width="40" height="40">
-                    </div>
-                    <div class="profile-text">
-                        <h4>Follow Mrs. Violet Noire on Goodreads</h4>
-                        <p>Get updates on new reviews, see what I'm reading, and join the discussion about the best mysteries and thrillers.</p>
-                        <a href="https://www.goodreads.com/mrsvioletnoire" target="_blank" class="btn btn-outline goodreads-btn">
-                            Visit My Goodreads Profile
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book Recommendations Carousel -->
-            <div class="recommendations-section">
-                <h3>Mrs. Violet Noire's Mystery Recommendations</h3>
-                <div class="recommendations-grid">
-                    <div class="recommendation-card">
-                        <div class="book-cover-small">📚</div>
-                        <div class="recommendation-content">
-                            <h4>If You Like <a href="https://www.amazon.com/s?k=Agatha+Christie&amp;tag=mrsvioletnoire-20" target="_blank">Agatha Christie</a>...</h4>
-                            <p>Try <a href="https://www.amazon.com/Sweetness-Bottom-Pie-Flavia-Luce/dp/0385342314?tag=mrsvioletnoire-20" target="_blank">"The Sweetness at the Bottom of the Pie"</a> by <a href="https://www.amazon.com/s?k=Alan+Bradley&amp;tag=mrsvioletnoire-20" target="_blank">Alan Bradley</a></p>
-                            <div class="stars">⭐⭐⭐⭐⭐</div>
-                        </div>
-                    </div>
-
-                    <div class="recommendation-card">
-                        <div class="book-cover-small">📖</div>
-                        <div class="recommendation-content">
-                            <h4>For Psychological Thriller Fans...</h4>
-                            <p>Don't miss <a href="https://www.amazon.com/Silent-Patient-Alex-Michaelides/dp/1250301696?tag=mrsvioletnoire-20" target="_blank">"The Silent Patient"</a> by <a href="https://www.amazon.com/s?k=Alex+Michaelides&amp;tag=mrsvioletnoire-20" target="_blank">Alex Michaelides</a></p>
-                            <div class="stars">⭐⭐⭐⭐⭐</div>
-                        </div>
-                    </div>
-
-                    <div class="recommendation-card">
-                        <div class="book-cover-small">📕</div>
-                        <div class="recommendation-content">
-                            <h4>Cozy Mystery Lovers...</h4>
-                            <p>Enjoy <a href="https://www.amazon.com/Thursday-Murder-Club-Novel/dp/1984880985?tag=mrsvioletnoire-20" target="_blank">"The Thursday Murder Club"</a> by <a href="https://www.amazon.com/s?k=Richard+Osman&amp;tag=mrsvioletnoire-20" target="_blank">Richard Osman</a></p>
-                            <div class="stars">⭐⭐⭐⭐⭐</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="value-item">
+          <span class="value-num">03</span>
+          <h3>Atmosphere You Can Feel</h3>
+          <p>Fog, snowed-in inns, motels with a past. Gothic and atmospheric mysteries where the setting is as much a suspect as anyone in the room.</p>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>About Mrs. Violet Noire</h2>
-                    <p class="about-description">
-                        For over a decade, I have been immersed in the shadows of literary crime,
-                        investigating the finest mysteries from around the world. From the fog-shrouded
-                        streets of Victorian London to the sun-drenched villages where secrets simmer,
-                        I seek out stories that challenge, surprise, and satisfy.
-                    </p>
-                    <p>
-                        My passion lies in uncovering not just the plots that enthrall, but the craftsmanship
-                        that makes great mystery writing an art form. Whether you're seeking your next
-                        page-turner or looking to explore new corners of the genre, I'm here to guide
-                        your literary investigations.
-                    </p>
+  <!-- ── CTA ────────────────────────────────────────────────── -->
+  <div class="cta-section">
+    <div class="section">
+      <h2>Ready for Your<br>Next Obsession?</h2>
+      <p>Follow along on Goodreads to see what she's reading now.</p>
+      <a href="https://www.goodreads.com/user/show/8091033-mrs-violet-noire" class="btn btn-primary" target="_blank" rel="noopener">Follow on Goodreads</a>
+    </div>
+  </div>
 
-                    <div class="credentials">
-                        <div class="credential">
-                            <strong>500+</strong>
-                            <span>Books Reviewed</span>
-                        </div>
-                        <div class="credential">
-                            <strong>10+</strong>
-                            <span>Years Experience</span>
-                        </div>
-                        <div class="credential">
-                            <strong>25+</strong>
-                            <span>Author Interviews</span>
-                        </div>
-                    </div>
-                </div>
+  <!-- ── Social ─────────────────────────────────────────────── -->
+  <div class="social-section">
+    <div class="section">
+      <p class="social-eyebrow">Find Her On</p>
+      <nav class="social-links" aria-label="Elsewhere">
+        <a href="https://www.goodreads.com/user/show/8091033-mrs-violet-noire" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.43 23.995c-3.608-.208-6.274-2.077-6.448-5.078.695.007 1.375-.013 2.07-.006.224 1.342 1.065 2.43 2.683 3.026 1.583.496 3.737.46 5.082-.174 1.351-.636 2.145-1.822 2.503-3.577.212-1.042.236-1.734.231-2.92l-.004-1.103h-.05c-.758 1.512-2.026 2.578-3.564 3.032-2.37.698-5.157.124-6.796-1.666C5.38 12.67 5.03 9.42 5.67 6.94c.85-3.31 3.38-5.36 6.33-5.4 2.38-.035 4.03 1.012 5.093 2.817l.03.052h.063V2.002h1.968l.001 13.652c0 3.4-.39 5.31-1.61 6.73-1.13 1.33-3.135 1.68-6.115 1.61zm.34-7.93c2.49-.06 4.36-1.95 4.75-4.75.18-1.32.08-2.73-.38-3.98-.79-2.16-2.6-3.37-4.73-3.29-2.36.09-4.07 1.68-4.6 4.21-.31 1.45-.24 2.97.27 4.33.71 1.9 2.38 3.53 4.69 3.48z"/></svg>
+          Goodreads
+        </a>
+      </nav>
+    </div>
+  </div>
 
-                <div class="about-image">
-                    <div class="image-frame">
-                        <img src="MrsVioletNoire.png" alt="Mrs. Violet Noire" class="about-portrait" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer>
+    <span>&copy; 2026 Mrs. Violet Noire. All rights reserved.</span>
+    <span>As an Amazon Associate, I earn from qualifying purchases.</span>
+  </footer>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2>Join the Investigation</h2>
-                <p>Subscribe to receive weekly mystery recommendations and exclusive author insights.</p>
+  <script>
+    (function () {
+      // Nav background on scroll
+      var nav = document.getElementById('nav');
+      function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 20); }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
 
-                <form class="newsletter-form">
-                    <div class="form-group">
-                        <input type="email" placeholder="Enter your email address" required>
-                        <button type="submit" class="btn btn-primary">Subscribe</button>
-                    </div>
-                    <p class="form-note">No spam, only mysteries. Unsubscribe anytime.</p>
-                </form>
-            </div>
-        </div>
-    </section>
+      // Library from data/books.json (built from the Goodreads export by scripts/build-library.mjs)
+      var PAGE = 24;
+      var picksSection = document.getElementById('picks');
+      var picksGrid    = document.getElementById('picks-grid');
+      var grid         = document.getElementById('library-grid');
+      var status       = document.getElementById('library-status');
+      var empty        = document.getElementById('library-empty');
+      var more         = document.getElementById('library-more');
+      var search       = document.getElementById('library-search');
+      var count        = document.getElementById('library-count');
+      var all = [], filtered = [], shown = 0;
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3>Mrs. Violet Noire</h3>
-                    <p>Curator of Dark Literary Mysteries</p>
-                </div>
+      function esc(s) {
+        return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+      function safeUrl(u, pattern, fallback) {
+        return pattern.test(u || '') ? u : fallback;
+      }
+      function hash(s) {
+        var h = 0;
+        for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
+        return Math.abs(h);
+      }
+      function jacket(b) {
+        return '<div class="jacket jacket-' + (hash(b.id || b.title || '') % 4) + '" aria-hidden="true">' +
+          '<span class="jacket-mark">Mrs. Violet Noire</span>' +
+          '<span class="jacket-title">' + esc(b.title) + '</span>' +
+          '<span class="jacket-author">' + esc(b.author) + '</span>' +
+        '</div>';
+      }
+      function stars(n) {
+        n = Math.max(0, Math.min(5, Math.round(n)));
+        return '<span class="stars" aria-hidden="true">' + '★★★★★'.slice(0, n) + '☆☆☆☆☆'.slice(0, 5 - n) + '</span>';
+      }
+      function rating(b) {
+        if (b.myRating) {
+          return '<p class="book-rating">' + stars(b.myRating) + ' <span>Mrs. Noire</span>' +
+                 '<span class="sr-only"> rated ' + b.myRating + ' of 5</span></p>';
+        }
+        if (b.avgRating) return '<p class="book-rating">' + Number(b.avgRating).toFixed(2) + ' on Goodreads</p>';
+        return '';
+      }
+      function card(b, featured) {
+        var amazon = safeUrl(b.amazon, /^https:\/\/www\.amazon\.com\//, 'https://www.amazon.com/');
+        var gr     = safeUrl(b.goodreads, /^https:\/\/www\.goodreads\.com\//, 'https://www.goodreads.com/');
+        var cover  = /^https:\/\//.test(b.cover || '') ? b.cover : '';
+        var title  = esc(b.title || 'Untitled');
+        var img = cover
+          ? '<img src="' + esc(cover) + '" alt="Cover of ' + title + '" loading="lazy" width="180" height="270" data-fallback>'
+          : '';
+        return '<article class="' + (featured ? 'pick-card' : 'book-card') + '">' +
+          '<a class="book-cover" href="' + esc(gr) + '" target="_blank" rel="noopener" aria-label="' + title + ' on Goodreads">' +
+            jacket(b) + img +
+          '</a>' +
+          '<div class="book-body">' +
+            '<h3 class="book-title">' + title + '</h3>' +
+            '<p class="book-author">' + esc(b.author) + '</p>' +
+            (b.series ? '<p class="book-series">' + esc(b.series) + '</p>' : '') +
+            rating(b) +
+            (b.blurb ? '<p class="book-blurb">' + esc(b.blurb) + '</p>' : '') +
+            '<div class="spacer"></div>' +
+            '<a class="book-buy" href="' + esc(amazon) + '" target="_blank" rel="sponsored noopener">Find on Amazon</a>' +
+          '</div>' +
+        '</article>';
+      }
+      // Cover images sit on top of the typographic jacket; drop any that fail to load.
+      function wireCovers(root) {
+        root.querySelectorAll('img[data-fallback]').forEach(function (img) {
+          img.removeAttribute('data-fallback');
+          function drop() { img.remove(); }
+          img.addEventListener('error', drop);
+          if (img.complete && img.naturalWidth === 0) drop();
+        });
+      }
 
-                <div class="footer-links">
-                    <div class="link-group">
-                        <h4>Reviews</h4>
-                        <ul>
-                            <li><a href="#">Latest Reviews</a></li>
-                            <li><a href="#">Top Rated</a></li>
-                            <li><a href="#">Classic Mysteries</a></li>
-                            <li><a href="#">New Releases</a></li>
-                        </ul>
-                    </div>
+      function renderPicks() {
+        var picks = all.filter(function (b) { return b.myRating >= 4; })
+          .sort(function (a, b) { return b.myRating - a.myRating; })
+          .slice(0, 4);
+        if (!picks.length) return;
+        picksGrid.innerHTML = picks.map(function (b) { return card(b, true); }).join('');
+        wireCovers(picksGrid);
+        picksSection.hidden = false;
+      }
 
-                    <div class="link-group">
-                        <h4>Genres</h4>
-                        <ul>
-                            <li><a href="#">Detective Fiction</a></li>
-                            <li><a href="#">Psychological Thriller</a></li>
-                            <li><a href="#">Cozy Mystery</a></li>
-                            <li><a href="#">Historical Mystery</a></li>
-                        </ul>
-                    </div>
+      function renderMore() {
+        var next = filtered.slice(shown, shown + PAGE);
+        grid.insertAdjacentHTML('beforeend', next.map(function (b) { return card(b, false); }).join(''));
+        wireCovers(grid);
+        shown += next.length;
+        more.hidden = shown >= filtered.length;
+        more.textContent = 'Show more (' + (filtered.length - shown) + ')';
+      }
 
-                    <div class="link-group">
-                        <h4>Connect</h4>
-                        <ul>
-                            <li><a href="#">Newsletter</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Book Suggestions</a></li>
-                            <li><a href="#">Author Interviews</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      function applyFilter() {
+        var q = search.value.trim().toLowerCase();
+        filtered = !q ? all : all.filter(function (b) {
+          return (b.title + ' ' + b.author + ' ' + (b.series || '')).toLowerCase().indexOf(q) !== -1;
+        });
+        grid.innerHTML = '';
+        shown = 0;
+        if (!filtered.length) {
+          grid.hidden = true;
+          more.hidden = true;
+          status.hidden = false;
+          status.textContent = 'No books match "' + search.value.trim() + '"';
+          return;
+        }
+        status.hidden = true;
+        grid.hidden = false;
+        renderMore();
+      }
 
-            <div class="footer-bottom">
-                <p>&copy; 2025 Mrs. Violet Noire. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-                <p class="amazon-disclosure">As an Amazon Associate, I earn from qualifying purchases.</p>
-            </div>
-        </div>
-    </footer>
+      function showEmpty() {
+        status.hidden = true;
+        grid.hidden = true;
+        more.hidden = true;
+        empty.hidden = false;
+      }
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
-    <script src="js/demo-data.js"></script>
-    <script src="js/books.js"></script>
+      more.addEventListener('click', renderMore);
+      search.addEventListener('input', applyFilter);
+
+      fetch('data/books.json', { cache: 'no-cache' })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (books) {
+          if (!Array.isArray(books) || !books.length) { showEmpty(); return; }
+          all = books;
+          count.textContent = books.length + ' Mysteries on the Shelf';
+          search.disabled = false;
+          renderPicks();
+          applyFilter();
+        })
+        .catch(showEmpty);
+    })();
+  </script>
+
 </body>
 </html>
