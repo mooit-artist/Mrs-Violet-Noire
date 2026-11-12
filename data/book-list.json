@@ -1,0 +1,2390 @@
+{
+  "owned": [
+    {
+      "title": "Never Ask Me",
+      "author": "Jeff Abbott",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "No Exit",
+      "author": "Taylor Adams",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Brother",
+      "author": "Ania Ahlborn",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Push",
+      "author": "Ashley Audrain",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Housewife",
+      "author": "Natalie Barelli",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Widow",
+      "author": "Fiona Barton",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "We Were Never Here",
+      "author": "Andrea Bartz",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Appetite for Innocence",
+      "author": "Lucinda Berry",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Saving Noah",
+      "author": "Lucinda Berry",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Best of Friends",
+      "author": "Lucinda Berry",
+      "isbn": "9781542022149",
+      "rating": null
+    },
+    {
+      "title": "The Perfect Child",
+      "author": "Lucinda Berry",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "When She Returned",
+      "author": "Lucinda Berry",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Mean Streak",
+      "author": "Sandra Brown",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Out of Nowhere",
+      "author": "Sandra Brown",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Cut and Run",
+      "author": "Mary Burton",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Last Move",
+      "author": "Mary Burton",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Bitter Falls",
+      "author": "Rachel Caine",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Killman Creek",
+      "author": "Rachel Caine",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Stillhouse Lake",
+      "author": "Rachel Caine",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Wolfhunter River",
+      "author": "Rachel Caine",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "A Stranger on the Beach",
+      "author": "Michele Campbell",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "It's Always the Husband",
+      "author": "Michele Campbell",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Wife Who Knew Too Much",
+      "author": "Michele Campbell",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Kill for Me",
+      "author": "Steven Cavanaugh",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Big Lies in a Small Town",
+      "author": "Diane Chamberlain",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Necessary Lies",
+      "author": "Diane Chamberlain",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Chasing the Boogeyman",
+      "author": "Richard Chizmar",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Taken to the Grave",
+      "author": "M. M. Chouinard",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Dead of Winter",
+      "author": "Darcy Coates",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Haunting of Ashburn House",
+      "author": "Darcy Coates",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Don't Let Go",
+      "author": "Harlan Coben",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Promise Me",
+      "author": "Harlan Coben",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Stranger",
+      "author": "Harlan Coben",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "When No One Is Watching",
+      "author": "Alyssa Cole",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "This Story Might Save Your Life",
+      "author": "Tiffany Crum",
+      "isbn": "9781250395238",
+      "rating": null
+    },
+    {
+      "title": "The Last Thing He Told Me",
+      "author": "Laura Dave",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Last One",
+      "author": "Will Dean",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Guess Again",
+      "author": "Charlie Donlea",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Summit Lake",
+      "author": "Charlie Donlea",
+      "isbn": "9781496736994",
+      "rating": null
+    },
+    {
+      "title": "The Girl Who Was Taken",
+      "author": "Charlie Donlea",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Those Empty Eyes",
+      "author": "Charlie Donlea",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Couple at Number 9",
+      "author": "Claire Douglas",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Wrong Sister",
+      "author": "Claire Douglas",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Keep Them Close",
+      "author": "David Ellis",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Look Closer",
+      "author": "David Ellis",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Lie to Me",
+      "author": "j. t. ellision",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Anatomy of an Alibi",
+      "author": "Ashley Elston",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Life we bury",
+      "author": "Allan ESkens",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Greenwich Park",
+      "author": "Katherine Faulkner",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Beautiful Ugly",
+      "author": "Alice Feeney",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "My Husband's Wife",
+      "author": "Alice Feeney",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Rock Paper Scissors",
+      "author": "Alice Feeney",
+      "isbn": "9781250266125",
+      "rating": null
+    },
+    {
+      "title": "Sometimes I Lie",
+      "author": "Alice Feeney",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Silent Wife",
+      "author": "Kerry Fisher",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Dark Places",
+      "author": "Gillian Flynn",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Sharp Objects",
+      "author": "Gillian Flynn",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Guest List",
+      "author": "Lucy Foley",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Business Trip",
+      "author": "Jessie Garcia",
+      "isbn": "9781250364418",
+      "rating": null
+    },
+    {
+      "title": "Before She Disappeared",
+      "author": "Lisa Gardner",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Gone",
+      "author": "Lisa Gardner",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Never Tell",
+      "author": "Lisa Gardner",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "One Step Too Far",
+      "author": "Lisa Gardner",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Next Accident",
+      "author": "Lisa Gardner",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Vanish",
+      "author": "Tess Gerritsen",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "She Started It",
+      "author": "Sian Gilbert",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "On a Quiet Street",
+      "author": "Seraphina Nova Glass",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "These Silent Woods",
+      "author": "Kimi Cunningham Grant",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Beach Rental",
+      "author": "grace greene",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Marley & Me",
+      "author": "John Grogan",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Overnight Guest",
+      "author": "Heather Gudenkauf",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Angel Falls",
+      "author": "Kristin Hannah",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Distant Shores",
+      "author": "Kristin Hannah",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Fly Away",
+      "author": "Kristin Hannah",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Great Alone",
+      "author": "Kristin Hannah",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Nightingale",
+      "author": "Kristin Hannah",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Things We Do for Love",
+      "author": "Kristin Hannah",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Strangers in the Villa",
+      "author": "Robyn Harding",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Drowning Woman",
+      "author": "Robyn Harding",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Still Beating",
+      "author": "Jennifer Hartmann",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "A Slow Fire Burning",
+      "author": "Paula Hawkins",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Wife Between Us",
+      "author": "Greer Hendricks & Sarah Pekkanen",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Darling Girls",
+      "author": "Sally Hepworth",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Family Next Door",
+      "author": "Sally Hepworth",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Good Sister",
+      "author": "Sally Hepworth",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Mother-in-Law",
+      "author": "Sally Hepworth",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Soulmate",
+      "author": "Sally Hepworth",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Jar of Hearts",
+      "author": "Jennifer Hillier",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Little Secrets",
+      "author": "Jennifer Hillier",
+      "isbn": "9781250797087",
+      "rating": null
+    },
+    {
+      "title": "The Butcher",
+      "author": "Jennifer Hillier",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Things We Do in the Dark",
+      "author": "Jennifer Hillier",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Wonderland",
+      "author": "Jennifer Hillier",
+      "isbn": "9781501157509",
+      "rating": null
+    },
+    {
+      "title": "Layla",
+      "author": "Colleen Hoover",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Verity",
+      "author": "Colleen Hoover",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Marble Hall Murders",
+      "author": "Anthony Horowitz",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Butterfly Garden",
+      "author": "Dot Hutchison",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Ask for Andrea",
+      "author": "Noelle W. Ihli",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Gray After Dark",
+      "author": "Noelle W. Ihli",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Room for Rent",
+      "author": "Noelle W. Ihli",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Run on Red",
+      "author": "Noelle W. Ihli",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Such Quiet Girls",
+      "author": "Noelle W. Ihli",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Last to Drown",
+      "author": "Noelle W. Ihli",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Five Survive",
+      "author": "Holly Jackson",
+      "isbn": "9780593374184",
+      "rating": null
+    },
+    {
+      "title": "Not Quite Dead Yet",
+      "author": "Holly Jackson",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Paranoid",
+      "author": "Lisa Jackson",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "25 Days",
+      "author": "Per Jacobsen",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Don't Let Him In",
+      "author": "Lisa Jewell",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "I Found You",
+      "author": "Lisa Jewell",
+      "isbn": "9781501154591",
+      "rating": null
+    },
+    {
+      "title": "Invisible Girl",
+      "author": "Lisa Jewell",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "It Could Have Been Her",
+      "author": "Lisa Jewell",
+      "isbn": "9781529196009",
+      "rating": null
+    },
+    {
+      "title": "None of This Is True",
+      "author": "Lisa Jewell",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Family Upstairs",
+      "author": "Lisa Jewell",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Girls in the Garden",
+      "author": "Lisa Jewell",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The House We Grew Up In",
+      "author": "Lisa Jewell",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Night She Disappeared",
+      "author": "Lisa Jewell",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Then She Was Gone",
+      "author": "Lisa Jewell",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Girl Next Door",
+      "author": "Jack Ketchum",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "We Used to Live Here",
+      "author": "Marcus Kliewer",
+      "isbn": "9781982198794",
+      "rating": null
+    },
+    {
+      "title": "Every Last Lie",
+      "author": "Mary Kubica",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "It's Not Her",
+      "author": "Mary Kubica",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Just the Nicest Couple",
+      "author": "Mary Kubica",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Local Woman Missing",
+      "author": "Mary Kubica",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Pretty Baby",
+      "author": "Mary Kubica",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "She's Not Sorry",
+      "author": "Mary Kubica",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Good Girl",
+      "author": "Mary Kubica",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Other Mrs.",
+      "author": "Mary Kubica",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "When the Lights Go Out",
+      "author": "Mary Kubica",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "No Place Left to Hide",
+      "author": "Megan Lally",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "That's Not My Name",
+      "author": "Megan Lally",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "What We Did to Survive",
+      "author": "Megan Lally",
+      "isbn": "9781728270173",
+      "rating": null
+    },
+    {
+      "title": "Good Me Bad Me",
+      "author": "Ali Land",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "A Stranger in the House",
+      "author": "Shari Lapena",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "An Unwanted Guest",
+      "author": "Shari Lapena",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Everyone Here Is Lying",
+      "author": "Shari Lapena",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Getting Away with Murder",
+      "author": "Shari Lapena",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Not a Happy Family",
+      "author": "Shari Lapena",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "She Didn't See It Coming",
+      "author": "Shari Lapena",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Someone We Know",
+      "author": "Shari Lapena",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Couple Next Door",
+      "author": "Shari Lapena",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The End of Her",
+      "author": "Shari Lapena",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "What Have You Done",
+      "author": "Shari Lapena",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Bones Don't Lie",
+      "author": "Melinda Leigh",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Her Last Goodbye",
+      "author": "Melinda Leigh",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Say You're Sorry",
+      "author": "Melinda Leigh",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "What I've Done",
+      "author": "Melinda Leigh",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Speak Softly, She Can Hear",
+      "author": "Pam Lewis",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Memory Keeper of Kyiv",
+      "author": "Erin Litteken",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "We Were Liars",
+      "author": "E. Lockhart",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Afterwards",
+      "author": "Rosamund Lupton",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "I Know You Know",
+      "author": "Gilly Macmillan",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "All Her Fault",
+      "author": "Andrea Mara",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Keep It in the Family",
+      "author": "John Marrs",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Good Samaritan",
+      "author": "John Marrs",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The One",
+      "author": "John Marrs",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Stranger in Her House",
+      "author": "John Marrs",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "What Lies Between Us",
+      "author": "John Marrs",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "You Killed Me First",
+      "author": "John Marrs",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "No One Can Know",
+      "author": "Kate Alice Marshall",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Stranger upstairs",
+      "author": "Lisa Matlin",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Wrong Place Wrong Time",
+      "author": "Gillian McAllister",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Do Not Disturb",
+      "author": "Freida McFadden",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Do You Remember?",
+      "author": "Freida McFadden",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Never Lie",
+      "author": "Freida McFadden",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "One by One",
+      "author": "Freida McFadden",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Crash",
+      "author": "Freida McFadden",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Housemaid",
+      "author": "Freida McFadden",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Housemaid Is Watching",
+      "author": "Freida McFadden",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Housemaid's Secret",
+      "author": "Freida McFadden",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Inmate",
+      "author": "Freida McFadden",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Locked Door",
+      "author": "Freida McFadden",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Perfect Son",
+      "author": "Freida McFadden",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Tenant",
+      "author": "Freida McFadden",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Wife Upstairs",
+      "author": "Freida McFadden",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Want to Know a Secret?",
+      "author": "Freida McFadden",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Ward D",
+      "author": "Freida McFadden",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Only One Survives",
+      "author": "Hannah Mary McKinnon",
+      "isbn": "9780369747907",
+      "rating": null
+    },
+    {
+      "title": "The Winter People",
+      "author": "Jennifer McMahon",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Quiet Tenant",
+      "author": "Clemence Michallon",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Orphanage by the Lake",
+      "author": "Daniel G. Miller",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "All the Missing Girls",
+      "author": "Megan Miranda",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Daughter of Mine",
+      "author": "Megan Miranda",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Last House Guest",
+      "author": "Megan Miranda",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Hemlock",
+      "author": "Kiersten Modglin",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "And There He Kept Her",
+      "author": "Joshua Moehling",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Goodnight Beautiful",
+      "author": "Aimee Molloy",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Cilka's Journey",
+      "author": "Heather Morris",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Tattooist of Auschwitz",
+      "author": "Heather Morris",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Lake House",
+      "author": "Kate Morton",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Dissection of a Murder",
+      "author": "Jo Murray",
+      "isbn": "9781035072682",
+      "rating": null
+    },
+    {
+      "title": "Drowning",
+      "author": "T.J. Newman",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Falling",
+      "author": "T.J. Newman",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Little Fires Everywhere",
+      "author": "Celeste Ng",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Strange Sally Diamond",
+      "author": "Liz Nugent",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "If You Tell",
+      "author": "Gregg Olsen",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Where the Crawdads Sing",
+      "author": "Delia Owens",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Wonder",
+      "author": "R.J. Palacio",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Behind Closed Doors",
+      "author": "B.A. Paris",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Bring Me Back",
+      "author": "B.A. Paris",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Breakdown",
+      "author": "B.A. Paris",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Prisoner",
+      "author": "B.A. Paris",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Lies Lies Lies",
+      "author": "Adele Parks",
+      "isbn": null,
+      "rating": 5
+    },
+    {
+      "title": "The Sanatorium",
+      "author": "Sarah Pearse",
+      "isbn": "9780593296677",
+      "rating": null
+    },
+    {
+      "title": "House of Glass",
+      "author": "Sarah Pekkanen",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "A rule against murder",
+      "author": "Louise Penny",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Nineteen Minutes",
+      "author": "Jodi Picoult",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Cross Her Heart",
+      "author": "Sarah Pinborough",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Clinic",
+      "author": "Cate Quinn",
+      "isbn": "9781728293981",
+      "rating": null
+    },
+    {
+      "title": "The Seven Husbands of Evelyn Hugo",
+      "author": "Taylor Jenkins Reid",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Hidden Pictures",
+      "author": "Jason Rekulak",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Last One at the Wedding",
+      "author": "Jason Rekulak",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The House in the pines",
+      "author": "Anna Reyes",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Home Is Where the Bodies Are",
+      "author": "Jeneva Rose",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Perfect Marriage",
+      "author": "Jeneva Rose",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "You Shouldn't Have Come Here",
+      "author": "Jeneva Rose",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Woman Outside My Door",
+      "author": "Rachel Ryan",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Final Girls",
+      "author": "Riley Sager",
+      "isbn": "9781101985380",
+      "rating": null
+    },
+    {
+      "title": "Home Before Dark",
+      "author": "Riley Sager",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Lock Every Door",
+      "author": "Riley Sager",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Middle of the Night",
+      "author": "Riley Sager",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The House Across the Lake",
+      "author": "Riley Sager",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Last Time I Lied",
+      "author": "Riley Sager",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Only One Left",
+      "author": "Riley Sager",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Don't Let Her Stay",
+      "author": "Nicola Sanders",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "After Anna",
+      "author": "Lisa Scottoline",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Come Home",
+      "author": "Lisa Scottoline",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Look again",
+      "author": "Lisa Scottoline",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Most Wanted",
+      "author": "Lisa Scottoline",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "One perfect lie",
+      "author": "Lisa Scottoline",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Save Me",
+      "author": "Lisa Scottoline",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "What happended to the Bennetts",
+      "author": "Lisa Scottoline",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Nightwatching",
+      "author": "Tracy Sierra",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "After That Night",
+      "author": "Karin Slaughter",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Pretty Girls",
+      "author": "Karin Slaughter",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Silent Wife",
+      "author": "Karin Slaughter",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "We Are All Guilty Here",
+      "author": "Karin Slaughter",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Neighbor",
+      "author": "Joseph Souza",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Broken Girls",
+      "author": "Simone St. James",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Sun Down Motel",
+      "author": "Simone St. James",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Girls in the Cabin",
+      "author": "Caleb Stephens",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Dark Roads",
+      "author": "Chevy Stevens",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Never Knowing",
+      "author": "Chevy Stevens",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Never Let You Go",
+      "author": "Chevy Stevens",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Still Missing",
+      "author": "Chevy Stevens",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "That Night",
+      "author": "Chevy Stevens",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Hitchhikers",
+      "author": "Chevy Stevens",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Those Girls",
+      "author": "Chevy Stevens",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Listen for the Lie",
+      "author": "Amy Tintera",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Stranger Inside",
+      "author": "Lisa Unger",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Butcher and the Wren",
+      "author": "Alaina Urquhart",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "the it girl",
+      "author": "Ruth Ware",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "All Fall Down",
+      "author": "Jennifer Weiner",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Drowning in Paper Flowers",
+      "author": "E.L. Westbury",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Educated",
+      "author": "Tara Westover",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "All the Colors of the Dark",
+      "author": "Chris Whitaker",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "The Maid's Diary",
+      "author": "Loreth Anne White",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "A Flicker in the Dark",
+      "author": "Stacy Willingham",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "All the Dangerous Things",
+      "author": "Stacy Willingham",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Tell Me What You Did",
+      "author": "Carter Wilson",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Before We Were Yours",
+      "author": "Lisa Wingate",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Love, Mom",
+      "author": "Iliana Xander",
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Buried in the Woods",
+      "author": null,
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Eve: A Christmas Psychological Thriller",
+      "author": null,
+      "isbn": null,
+      "rating": null
+    },
+    {
+      "title": "Pretty Dead Things",
+      "author": null,
+      "isbn": null,
+      "rating": null
+    }
+  ],
+  "tbr": [
+    {
+      "title": "The Sanatorium",
+      "author": "Sarah Pearse",
+      "isbn": "9780593296677",
+      "format": null,
+      "dateAdded": "2026-10-30"
+    },
+    {
+      "title": "Buried in the Woods",
+      "author": null,
+      "isbn": null,
+      "format": null,
+      "dateAdded": "2026-10-30"
+    },
+    {
+      "title": "Only One Survives",
+      "author": "Hannah Mary McKinnon",
+      "isbn": "9780369747907",
+      "format": null,
+      "dateAdded": "2026-10-30"
+    },
+    {
+      "title": "Eve: A Christmas Psychological Thriller",
+      "author": null,
+      "isbn": null,
+      "format": null,
+      "dateAdded": "2026-10-30"
+    },
+    {
+      "title": "Pretty Dead Things",
+      "author": null,
+      "isbn": null,
+      "format": "Hardcover",
+      "dateAdded": "2026-10-30"
+    },
+    {
+      "title": "Final Girls",
+      "author": "Riley Sager",
+      "isbn": "9781101985380",
+      "format": null,
+      "dateAdded": "2026-10-30"
+    },
+    {
+      "title": "The Best of Friends",
+      "author": "Lucinda Berry",
+      "isbn": "9781542022149",
+      "format": null,
+      "dateAdded": "2026-10-30"
+    },
+    {
+      "title": "This Story Might Save Your Life",
+      "author": "Tiffany Crum",
+      "isbn": "9781250395238",
+      "format": null,
+      "dateAdded": "2026-10-30"
+    },
+    {
+      "title": "I Found You",
+      "author": "Lisa Jewell",
+      "isbn": "9781501154591",
+      "format": null,
+      "dateAdded": "2026-10-30"
+    },
+    {
+      "title": "The Business Trip",
+      "author": "Jessie Garcia",
+      "isbn": "9781250364418",
+      "format": null,
+      "dateAdded": "2026-10-30"
+    },
+    {
+      "title": "Five Survive",
+      "author": "Holly Jackson",
+      "isbn": "9780593374184",
+      "format": null,
+      "dateAdded": "2026-10-30"
+    },
+    {
+      "title": "Rock Paper Scissors",
+      "author": "Alice Feeney",
+      "isbn": "9781250266125",
+      "format": null,
+      "dateAdded": "2026-10-30"
+    },
+    {
+      "title": "The Clinic",
+      "author": "Cate Quinn",
+      "isbn": "9781728293981",
+      "format": null,
+      "dateAdded": "2026-10-30"
+    },
+    {
+      "title": "Summit Lake",
+      "author": "Charlie Donlea",
+      "isbn": "9781496736994",
+      "format": null,
+      "dateAdded": "2026-10-30"
+    },
+    {
+      "title": "Your Deepest, Darkest Secret: An Unputdownable Psychological Thriller with a Jaw-Dropping Twist",
+      "author": "Liv Lowry",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-09-07"
+    },
+    {
+      "title": "Missing Molly: A Novel",
+      "author": "Natalie Barelli",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-09-01"
+    },
+    {
+      "title": "Finders Keepers: A Novel",
+      "author": "Natalie Barelli",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-08-28"
+    },
+    {
+      "title": "Last One Out: A Thriller",
+      "author": "Steph Nelson",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-08-17"
+    },
+    {
+      "title": "The New Neighbors: An International Bestseller - A Gripping Dark Suspense Novel",
+      "author": "Claire Douglas",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-08-02"
+    },
+    {
+      "title": "Wild Dark Shore: Reese's Book Club Pick (A Novel)",
+      "author": "Charlotte McConaghy",
+      "isbn": null,
+      "format": "Hardcover",
+      "dateAdded": "2026-07-16"
+    },
+    {
+      "title": "You'll Never Know: A Thriller",
+      "author": "Caleb Stephens",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-07-14"
+    },
+    {
+      "title": "Nothing Ever Happens Here: A Thriller - A Gripping Domestic Mystery About a Woman Hunting Her Attacker",
+      "author": "Seraphina Nova Glass",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-07-14"
+    },
+    {
+      "title": "Dead Girls Don't Talk",
+      "author": "Sandra J. Paul",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-07-14"
+    },
+    {
+      "title": "You Deserve to Know",
+      "author": "Aggie Blum Thompson",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-07-14"
+    },
+    {
+      "title": "The Butcher's Wife",
+      "author": "RJ Law",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-07-12"
+    },
+    {
+      "title": "The Farmhouse",
+      "author": "Chelsea Conradt",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-07-08"
+    },
+    {
+      "title": "It's Not What You Think: A Novel",
+      "author": "Clare Mackintosh",
+      "isbn": null,
+      "format": "Hardcover",
+      "dateAdded": "2026-07-07"
+    },
+    {
+      "title": "Dissection of a Murder: A Novel",
+      "author": "Jo Murray",
+      "isbn": "9781035072682",
+      "format": "Paperback",
+      "dateAdded": "2026-07-06"
+    },
+    {
+      "title": "None Left to Tell: A Historical Thriller",
+      "author": "Noelle W. Ihli",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-06-24"
+    },
+    {
+      "title": "Forget You Saw Her: A standalone prequel to Ask for Andrea",
+      "author": "Noelle W. Ihli",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-06-23"
+    },
+    {
+      "title": "It Could Have Been Her: A Novel",
+      "author": "Lisa Jewell",
+      "isbn": "9781529196009",
+      "format": "Hardcover",
+      "dateAdded": "2026-06-21"
+    },
+    {
+      "title": "What We Did to Survive: A heart-stopping YA Vacation Thriller",
+      "author": "Megan Lally",
+      "isbn": "9781728270173",
+      "format": "Paperback",
+      "dateAdded": "2026-06-19"
+    },
+    {
+      "title": "Locked in a Stranger's Room",
+      "author": "Spencer Guerrero",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-06-19"
+    },
+    {
+      "title": "Daisy Darker",
+      "author": "Alice Feeney",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-06-04"
+    },
+    {
+      "title": "To His New Wife: A twisty and utterly unputdownable psychological thriller (The Stone Family)",
+      "author": "Willow Rose",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-05-01"
+    },
+    {
+      "title": "Agreeable Avery",
+      "author": "E.L. Westbury",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-04-23"
+    },
+    {
+      "title": "Her First Lie: A Thriller",
+      "author": "Lucinda Berry",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-04-21"
+    },
+    {
+      "title": "We Need to Talk About Kevin: A Novel",
+      "author": "Lionel Shriver",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-04-19"
+    },
+    {
+      "title": "Wild",
+      "author": "Kristin Hannah",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-03-09"
+    },
+    {
+      "title": "Nobody's Girl: A Memoir of Surviving Abuse and Fighting for Justice",
+      "author": "Virginia Roberts Giuffre",
+      "isbn": null,
+      "format": "Hardcover",
+      "dateAdded": "2026-02-28"
+    },
+    {
+      "title": "The Good Neighbors",
+      "author": "Kiersten Modglin",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-02-19"
+    },
+    {
+      "title": "The Stalker: a dark and gripping psychological thriller",
+      "author": "Sarah Alderson",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2026-02-13"
+    },
+    {
+      "title": "We Are All Guilty Here (A North Falls Thriller, 1)",
+      "author": "Karin Slaughter",
+      "isbn": null,
+      "format": "Hardcover",
+      "dateAdded": "2026-01-03"
+    },
+    {
+      "title": "The Midwife of Auschwitz",
+      "author": "Anna Stuart",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2025-10-18"
+    },
+    {
+      "title": "The Shadows We Hide: The sequel to The Life We Bury",
+      "author": "Allen Eskens",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2025-10-01"
+    },
+    {
+      "title": "Morsels: A Novel",
+      "author": "Abe Moss",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2025-09-25"
+    },
+    {
+      "title": "The Last Party",
+      "author": "A. R. Torre",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2025-06-21"
+    },
+    {
+      "title": "The Institution",
+      "author": "Helen Fields",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2025-06-18"
+    },
+    {
+      "title": "The Shadow Man",
+      "author": "Helen Fields",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2025-06-18"
+    },
+    {
+      "title": "When You Disappeared",
+      "author": "John Marrs",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2025-06-14"
+    },
+    {
+      "title": "They Call Her Dirty Sally",
+      "author": "Amy Matayo",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2025-06-02"
+    },
+    {
+      "title": "Nine Pines",
+      "author": "Kiersten Modglin",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2025-04-12"
+    },
+    {
+      "title": "Bitter House",
+      "author": "Kiersten Modglin",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2025-04-12"
+    },
+    {
+      "title": "The Thicket: A Thriller",
+      "author": "Noelle W. Ihli",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2025-03-07"
+    },
+    {
+      "title": "The Guest",
+      "author": "BA Paris",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2025-02-02"
+    },
+    {
+      "title": "The Guilty One",
+      "author": "Kiersten Modglin",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2025-01-27"
+    },
+    {
+      "title": "Our Little Secret",
+      "author": "Kiersten Modglin",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2025-01-03"
+    },
+    {
+      "title": "The Liar's Wife",
+      "author": "Kiersten Modglin",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-12-30"
+    },
+    {
+      "title": "The Swimmer: A Novel",
+      "author": "Loreth Anne White",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-12-28"
+    },
+    {
+      "title": "Allegedly: A Story About Injustice, Trauma, and the Search for Truth",
+      "author": "Tiffany D. Jackson",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-12-20"
+    },
+    {
+      "title": "The Quiet Wife: A Thriller",
+      "author": "J.M. Cannon",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-11-29"
+    },
+    {
+      "title": "Old Country",
+      "author": "Matt Query, Harrison Query",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-11-15"
+    },
+    {
+      "title": "We Used to Live Here: A Novel",
+      "author": "Marcus Kliewer",
+      "isbn": "9781982198787",
+      "format": "Hardcover",
+      "dateAdded": "2024-07-26"
+    },
+    {
+      "title": "Phantom Limb: A Gripping Psychological Thriller",
+      "author": "Lucinda Berry",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-07-16"
+    },
+    {
+      "title": "The Couple at the Lake House: A Thriller",
+      "author": "James Caine",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-07-16"
+    },
+    {
+      "title": "The Missing",
+      "author": "Kiersten Modglin",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-06-27"
+    },
+    {
+      "title": "The Night Sister",
+      "author": "Jennifer McMahon",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-06-16"
+    },
+    {
+      "title": "No Time for Goodbye: A Thriller",
+      "author": "Linwood Barclay",
+      "isbn": null,
+      "format": "Mass Market Paperback",
+      "dateAdded": "2024-06-15"
+    },
+    {
+      "title": "A Killer's Wife",
+      "author": "Victor Methos",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-06-14"
+    },
+    {
+      "title": "The Boy Who Followed His Father into Auschwitz: A True Story of Family and Survival",
+      "author": "Jeremy Dronfield",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-06-13"
+    },
+    {
+      "title": "The Best Lies",
+      "author": "David Ellis",
+      "isbn": null,
+      "format": "Hardcover",
+      "dateAdded": "2024-06-03"
+    },
+    {
+      "title": "The Haters",
+      "author": "Robyn Harding",
+      "isbn": null,
+      "format": "Hardcover",
+      "dateAdded": "2024-06-02"
+    },
+    {
+      "title": "Her Pretty Face",
+      "author": "Robyn Harding",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-06-01"
+    },
+    {
+      "title": "Bad Games (Bad Games Series)",
+      "author": "Jeff Menapace",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-05-30"
+    },
+    {
+      "title": "The Frozen River: A GMA Book Club Pick",
+      "author": "Ariel Lawhon",
+      "isbn": null,
+      "format": "Hardcover",
+      "dateAdded": "2024-05-29"
+    },
+    {
+      "title": "The Midnight Feast",
+      "author": "Lucy Foley",
+      "isbn": null,
+      "format": "Kindle",
+      "dateAdded": "2024-05-24"
+    },
+    {
+      "title": "The Book of Lost Names",
+      "author": "Kristin Harmel",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-05-14"
+    },
+    {
+      "title": "They Are the Hunters",
+      "author": "Faith Gardner",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-05-07"
+    },
+    {
+      "title": "Silent Victim",
+      "author": "Caroline Mitchell",
+      "isbn": null,
+      "format": "Kindle",
+      "dateAdded": "2024-05-03"
+    },
+    {
+      "title": "The Perfect Family",
+      "author": "Robyn Harding",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-05-01"
+    },
+    {
+      "title": "Girls' Trip (Girls' Trilogy Book 1)",
+      "author": "Jason Letts",
+      "isbn": null,
+      "format": "Kindle",
+      "dateAdded": "2024-04-30"
+    },
+    {
+      "title": "Silent Scream (Detective Kim Stone Book 1)",
+      "author": "Angela Marsons",
+      "isbn": null,
+      "format": "Kindle",
+      "dateAdded": "2024-04-14"
+    },
+    {
+      "title": "Freak",
+      "author": "Jennifer Hillier",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-01-27"
+    },
+    {
+      "title": "No One Can Know: A Novel",
+      "author": "Kate Alice Marshall",
+      "isbn": null,
+      "format": "Hardcover",
+      "dateAdded": "2024-01-20"
+    },
+    {
+      "title": "First Lie Wins: Reese's Book Club: A Novel",
+      "author": "Ashley Elston",
+      "isbn": null,
+      "format": "Hardcover",
+      "dateAdded": "2024-01-14"
+    },
+    {
+      "title": "The Vacancy in Room 10",
+      "author": "Seraphina Nova Glass",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2024-01-13"
+    },
+    {
+      "title": "The Whispers: A Novel",
+      "author": "Ashley Audrain",
+      "isbn": null,
+      "format": "Hardcover",
+      "dateAdded": "2023-12-07"
+    },
+    {
+      "title": "Do Not Open",
+      "author": "Kiersten Modglin",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-11-30"
+    },
+    {
+      "title": "The Woman in the Attic",
+      "author": "Emily Hepditch",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-11-19"
+    },
+    {
+      "title": "Christmas Presents",
+      "author": "Lisa Unger",
+      "isbn": null,
+      "format": "Hardcover",
+      "dateAdded": "2023-11-02"
+    },
+    {
+      "title": "My Son Is a Murderer (Twisted Family Mysteries)",
+      "author": "Spencer Guerrero",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-10-29"
+    },
+    {
+      "title": "The Family Remains: A Novel",
+      "author": "Lisa Jewell",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-10-27"
+    },
+    {
+      "title": "Woom (The Lonely Motel)",
+      "author": "Duncan Ralston",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-10-10"
+    },
+    {
+      "title": "Her Last Move",
+      "author": "John Marrs",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-10-03"
+    },
+    {
+      "title": "The Swap",
+      "author": "Robyn Harding",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-10-02"
+    },
+    {
+      "title": "The Arrangement (Arrangement Novels Book 1)",
+      "author": "Kiersten Modglin",
+      "isbn": null,
+      "format": "Kindle",
+      "dateAdded": "2023-09-30"
+    },
+    {
+      "title": "Trust No One",
+      "author": "Keri Beevis",
+      "isbn": null,
+      "format": "Kindle",
+      "dateAdded": "2023-09-24"
+    },
+    {
+      "title": "The September House",
+      "author": "Carissa Orlando",
+      "isbn": null,
+      "format": "Hardcover",
+      "dateAdded": "2023-09-18"
+    },
+    {
+      "title": "The Kind Worth Killing",
+      "author": "Peter Swanson",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-09-08"
+    },
+    {
+      "title": "The Companion",
+      "author": "Katie Alender",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-09-03"
+    },
+    {
+      "title": "The Ex",
+      "author": "Freida McFadden",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-08-31"
+    },
+    {
+      "title": "The Perfect Mother",
+      "author": "Aimee Molloy",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-08-31"
+    },
+    {
+      "title": "Silence for the Dead",
+      "author": "Simone St. James",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-08-30"
+    },
+    {
+      "title": "The Book of Cold Cases",
+      "author": "Simone St. James",
+      "isbn": null,
+      "format": "Kindle",
+      "dateAdded": "2023-08-30"
+    },
+    {
+      "title": "Appetite for Innocence",
+      "author": "Lucinda Berry",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-08-21"
+    },
+    {
+      "title": "The Roanoke Girls: A Novel",
+      "author": "Amy Engel",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-08-20"
+    },
+    {
+      "title": "Stranger in the Woods: A Tense Psychological Thriller",
+      "author": "Anni Taylor",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-08-12"
+    },
+    {
+      "title": "Wonderland: A Thriller",
+      "author": "Jennifer Hillier",
+      "isbn": "9781668012178",
+      "format": "Mass Market Paperback",
+      "dateAdded": "2023-08-06"
+    },
+    {
+      "title": "And Then There Were None",
+      "author": "Agatha Christie",
+      "isbn": null,
+      "format": "Mass Market Paperback",
+      "dateAdded": "2023-08-06"
+    },
+    {
+      "title": "Little Secrets: A Novel",
+      "author": "Jennifer Hillier",
+      "isbn": null,
+      "format": "Kindle",
+      "dateAdded": "2023-08-06"
+    },
+    {
+      "title": "The Children on the Hill",
+      "author": "Jennifer McMahon",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-08-05"
+    },
+    {
+      "title": "The Last Mrs. Parrish: A Reese's Book Club Pick",
+      "author": "Liv Constantine",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-08-05"
+    },
+    {
+      "title": "What Never Happened: A Thriller",
+      "author": "Rachel Howzell Hall",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-07-10"
+    },
+    {
+      "title": "The Silent Sister: A Novel",
+      "author": "Diane Chamberlain",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-07-08"
+    },
+    {
+      "title": "A Thousand Boy Kisses",
+      "author": "Tillie Cole",
+      "isbn": null,
+      "format": "Paperback",
+      "dateAdded": "2023-07-08"
+    },
+    {
+      "title": "Mad Honey: A GMA Book Club Pick: A Novel",
+      "author": "Jodi Picoult, Jennifer Finney Boylan",
+      "isbn": null,
+      "format": "Hardcover",
+      "dateAdded": "2023-07-08"
+    }
+  ]
+}

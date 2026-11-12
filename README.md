@@ -6,11 +6,27 @@ Follow along on Goodreads: [Mrs Violet Noire](https://www.goodreads.com/user/sho
 
 ## Updating the library
 
-1. On Goodreads, go to **My Books → Import and export → Export library** and download the CSV.
-2. Replace `data/goodreads_library_export.csv` with it and push to `main`.
-3. The **Build library** workflow rebuilds `data/books.json` and redeploys the site.
+The **book-list** Google Sheet is the source of truth for the site:
 
-To add or change a book's note or Amazon link, edit `data/notes.json` (keyed by Goodreads Book Id). Ratings come from your Goodreads stars. Book links use the Amazon Associates tag `mrsvioletnoire-20`.
+- the **Owned** tab is the library ("On Her Shelves");
+- the **TBR** tab is "Up Next". A book on both tabs shows only in Up Next.
+
+Edit the sheet, and the site follows. Once a day a scheduled sync reads both tabs, runs `scripts/import-book-list.mjs` and commits `data/book-list.json` if anything changed. The **Build library** workflow then rebuilds `data/books.json` and redeploys the site.
+
+Only titles, authors, ISBNs, formats, TBR dates and her own star ratings are published. Shelf locations, quantities, prices and the Notes column stay in the sheet.
+
+To sync by hand, save each tab as a Sheets API `values.get` response and run:
+
+```sh
+node scripts/import-book-list.mjs owned.json tbr.json
+node scripts/build-library.mjs
+```
+
+### Goodreads extras
+
+The Goodreads export in `data/goodreads_library_export.csv` no longer decides which books appear. It adds her Goodreads star ratings, read dates and book links to matching books. To refresh it, export from **My Books → Import and export → Export library** on Goodreads and replace the file.
+
+To add or change a book's note or Amazon link, edit `data/notes.json` (keyed by Goodreads Book Id). Book links use the Amazon Associates tag `mrsvioletnoire-20`. Covers come from Open Library, by ISBN when the sheet or Goodreads has one, otherwise by title search (cached in `data/covers.json`).
 
 ## Rights
 
