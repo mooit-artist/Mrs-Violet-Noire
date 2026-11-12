@@ -22,7 +22,8 @@
  *                                      list: "library" | "upnext".
  *
  * Env:
- *   AMAZON_TAG      Amazon Associates tracking ID (default "mrsvioletnoire-20")
+ *   AMAZON_TAG      Amazon Associates tracking ID. Empty or unset = plain Amazon
+ *                   links with no affiliate tag (any tag in notes.json is removed).
  *   LOOKUP_COVERS   "1" to check covers for books not yet in data/covers.json:
  *                   the ISBN cover first, then an Open Library title + author
  *                   search (network; failures are ignored).
@@ -42,7 +43,7 @@ const CSV_FILE = resolve(ROOT, 'data', 'goodreads_library_export.csv');
 const NOTES_FILE = resolve(ROOT, 'data', 'notes.json');
 const COVERS_FILE = resolve(ROOT, 'data', 'covers.json');
 const OUT_FILE = resolve(ROOT, 'data', 'books.json');
-const TAG = (process.env.AMAZON_TAG || 'mrsvioletnoire-20').trim();
+const TAG = (process.env.AMAZON_TAG || '').trim();
 const LOOKUP = process.env.LOOKUP_COVERS === '1';
 
 // RFC 4180 parser: quoted fields, doubled quotes and newlines inside quotes.
@@ -121,11 +122,20 @@ function findGoodreads(book, gr) {
 
 const search = (title, author) => encodeURIComponent(`${title} ${author || ''}`.trim()).replace(/%20/g, '+');
 
+// Add the Associates tag when AMAZON_TAG is set; otherwise strip any tag so
+// the links are plain Amazon links.
+function withTag(href) {
+  const u = new URL(href);
+  u.searchParams.delete('tag');
+  if (TAG) u.searchParams.set('tag', TAG);
+  return u.toString();
+}
+
 function amazonUrl(note, isbn10, title, author) {
-  if (note?.amazon && /^https:\/\/www\.amazon\.com\//.test(note.amazon)) return note.amazon;
+  if (note?.amazon && /^https:\/\/www\.amazon\.com\//.test(note.amazon)) return withTag(note.amazon);
   // For print books the ISBN-10 is also the Amazon ASIN.
-  if (isbn10 && isbn10.length === 10) return `https://www.amazon.com/dp/${isbn10}?tag=${encodeURIComponent(TAG)}`;
-  return `https://www.amazon.com/s?k=${search(title, author)}&i=stripbooks&tag=${encodeURIComponent(TAG)}`;
+  if (isbn10 && isbn10.length === 10) return withTag(`https://www.amazon.com/dp/${isbn10}`);
+  return withTag(`https://www.amazon.com/s?k=${search(title, author)}&i=stripbooks`);
 }
 
 // ISBN-13 (978 prefix) -> ISBN-10, so sheet ISBNs can make direct Amazon links.

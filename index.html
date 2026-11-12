@@ -747,7 +747,7 @@
   <!-- ── Footer ─────────────────────────────────────────────── -->
   <footer>
     <span>&copy; 2026 Mrs. Violet Noire. All rights reserved.</span>
-    <span>As an Amazon Associate, I earn from qualifying purchases.</span>
+    <span id="associate-disclosure" hidden>As an Amazon Associate, I earn from qualifying purchases.</span>
   </footer>
 
   <script>
@@ -854,7 +854,7 @@
             rating(b) +
             (b.blurb ? '<p class="book-blurb">' + esc(b.blurb) + '</p>' : '') +
             '<div class="spacer"></div>' +
-            '<a class="book-buy" href="' + esc(amazon) + '" target="_blank" rel="sponsored noopener">Find on Amazon</a>' +
+            '<a class="book-buy" href="' + esc(amazon) + '" target="_blank" rel="' + (/[?&]tag=/.test(amazon) ? 'sponsored ' : '') + 'noopener">Find on Amazon</a>' +
           '</div>' +
         '</article>';
       }
@@ -909,6 +909,9 @@
           upnext.count.textContent  = 'Up Next · ' + upnext.books.length + ' to be read';
           upnextSection.hidden = !upnext.books.length;
           search.disabled = false;
+          // Show the Associates disclosure only while links carry an affiliate tag.
+          document.getElementById('associate-disclosure').hidden =
+            !books.some(function (b) { return /[?&]tag=/.test(b.amazon || ''); });
           renderPicks();
           if (!library.books.length) { showEmpty(); return; }
           applyFilter();
