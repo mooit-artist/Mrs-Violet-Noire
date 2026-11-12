@@ -648,13 +648,13 @@
     </div>
   </section>
 
-  <!-- ── Library (from data/books.json, built from the Goodreads export) ── -->
+  <!-- ── Library: the Owned tab of the book-list sheet (data/books.json) ── -->
   <section class="library-section" id="library" aria-labelledby="library-title">
     <div class="section">
       <div class="section-head">
         <div>
           <p class="section-eyebrow" id="library-count">The Library</p>
-          <h2 class="section-title" id="library-title">Recently Read</h2>
+          <h2 class="section-title" id="library-title">On Her Shelves</h2>
         </div>
         <label>
           <span class="section-eyebrow search-label">Search title or author</span>
@@ -679,6 +679,21 @@
           <a href="https://www.goodreads.com/user/show/8091033-mrs-violet-noire" class="btn btn-outline" target="_blank" rel="noopener">Visit Goodreads</a>
         </div>
       </noscript>
+    </div>
+  </section>
+
+  <!-- ── Up next: the TBR tab of the book-list sheet (data/books.json) ── -->
+  <section class="library-section" id="upnext" aria-labelledby="upnext-title" hidden>
+    <div class="section">
+      <div class="section-head">
+        <div>
+          <p class="section-eyebrow" id="upnext-count">Up Next</p>
+          <h2 class="section-title" id="upnext-title">Waiting on the Nightstand</h2>
+        </div>
+      </div>
+      <div id="upnext-grid" class="books-grid"></div>
+      <p id="upnext-status" class="library-status" role="status" hidden></p>
+      <div class="library-more"><button id="upnext-more" class="btn btn-outline" type="button" hidden>Show more</button></div>
     </div>
   </section>
 
@@ -743,17 +758,50 @@
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
 
-      // Library from data/books.json (built from the Goodreads export by scripts/build-library.mjs)
-      var PAGE = 24;
+      // Library and Up Next from data/books.json, built from the book-list sheet
+      // (Owned and TBR tabs) by scripts/build-library.mjs
       var picksSection = document.getElementById('picks');
       var picksGrid    = document.getElementById('picks-grid');
-      var grid         = document.getElementById('library-grid');
       var status       = document.getElementById('library-status');
       var empty        = document.getElementById('library-empty');
-      var more         = document.getElementById('library-more');
       var search       = document.getElementById('library-search');
-      var count        = document.getElementById('library-count');
-      var all = [], filtered = [], shown = 0;
+      var all = [];
+
+      function List(prefix, page) {
+        this.grid   = document.getElementById(prefix + '-grid');
+        this.more   = document.getElementById(prefix + '-more');
+        this.status = document.getElementById(prefix + '-status');
+        this.count  = document.getElementById(prefix + '-count');
+        this.page = page;
+        this.books = []; this.filtered = []; this.shown = 0;
+        var self = this;
+        this.more.addEventListener('click', function () { self.renderMore(); });
+      }
+      List.prototype.renderMore = function () {
+        var next = this.filtered.slice(this.shown, this.shown + this.page);
+        this.grid.insertAdjacentHTML('beforeend', next.map(function (b) { return card(b, false); }).join(''));
+        wireCovers(this.grid);
+        this.shown += next.length;
+        this.more.hidden = this.shown >= this.filtered.length;
+        this.more.textContent = 'Show more (' + (this.filtered.length - this.shown) + ')';
+      };
+      List.prototype.filter = function (q, raw) {
+        this.filtered = !q ? this.books : this.books.filter(function (b) {
+          return (b.title + ' ' + b.author + ' ' + (b.series || '')).toLowerCase().indexOf(q) !== -1;
+        });
+        this.grid.innerHTML = '';
+        this.shown = 0;
+        if (!this.filtered.length) {
+          this.grid.hidden = true;
+          this.more.hidden = true;
+          this.status.hidden = false;
+          this.status.textContent = q ? 'No books match "' + raw + '"' : 'Nothing here yet';
+          return;
+        }
+        this.status.hidden = true;
+        this.grid.hidden = false;
+        this.renderMore();
+      };
 
       function esc(s) {
         return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
@@ -830,42 +878,23 @@
         picksSection.hidden = false;
       }
 
-      function renderMore() {
-        var next = filtered.slice(shown, shown + PAGE);
-        grid.insertAdjacentHTML('beforeend', next.map(function (b) { return card(b, false); }).join(''));
-        wireCovers(grid);
-        shown += next.length;
-        more.hidden = shown >= filtered.length;
-        more.textContent = 'Show more (' + (filtered.length - shown) + ')';
-      }
+      var library = new List('library', 24);
+      var upnext  = new List('upnext', 12);
+      var upnextSection = document.getElementById('upnext');
 
       function applyFilter() {
-        var q = search.value.trim().toLowerCase();
-        filtered = !q ? all : all.filter(function (b) {
-          return (b.title + ' ' + b.author + ' ' + (b.series || '')).toLowerCase().indexOf(q) !== -1;
-        });
-        grid.innerHTML = '';
-        shown = 0;
-        if (!filtered.length) {
-          grid.hidden = true;
-          more.hidden = true;
-          status.hidden = false;
-          status.textContent = 'No books match "' + search.value.trim() + '"';
-          return;
-        }
-        status.hidden = true;
-        grid.hidden = false;
-        renderMore();
+        var raw = search.value.trim(), q = raw.toLowerCase();
+        library.filter(q, raw);
+        if (upnext.books.length) upnext.filter(q, raw);
       }
 
       function showEmpty() {
         status.hidden = true;
-        grid.hidden = true;
-        more.hidden = true;
+        library.grid.hidden = true;
+        library.more.hidden = true;
         empty.hidden = false;
       }
 
-      more.addEventListener('click', renderMore);
       search.addEventListener('input', applyFilter);
 
       fetch('data/books.json', { cache: 'no-cache' })
@@ -873,9 +902,15 @@
         .then(function (books) {
           if (!Array.isArray(books) || !books.length) { showEmpty(); return; }
           all = books;
-          count.textContent = books.length + ' Mysteries on the Shelf';
+          // Older builds had no list field: everything was the library.
+          library.books = books.filter(function (b) { return (b.list || 'library') === 'library'; });
+          upnext.books  = books.filter(function (b) { return b.list === 'upnext'; });
+          library.count.textContent = library.books.length + ' Mysteries on the Shelf';
+          upnext.count.textContent  = 'Up Next · ' + upnext.books.length + ' to be read';
+          upnextSection.hidden = !upnext.books.length;
           search.disabled = false;
           renderPicks();
+          if (!library.books.length) { showEmpty(); return; }
           applyFilter();
         })
         .catch(showEmpty);
