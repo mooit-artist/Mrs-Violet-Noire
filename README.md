@@ -26,7 +26,7 @@ node scripts/build-library.mjs
 
 The Goodreads export in `data/goodreads_library_export.csv` no longer decides which books appear. It adds her Goodreads star ratings, read dates and book links to matching books. To refresh it, export from **My Books → Import and export → Export library** on Goodreads and replace the file.
 
-To add or change a book's note or Amazon link, edit `data/notes.json` (keyed by Goodreads Book Id). Book links use the Amazon Associates tag `mrsvioletnoire-20`. Covers come from Open Library, by ISBN when the sheet or Goodreads has one, otherwise by title search (cached in `data/covers.json`).
+To add or change a book's note or Amazon link, edit `data/notes.json` (keyed by Goodreads Book Id). Amazon links are plain, untagged links for now. To turn affiliate links on, set the repository variable `AMAZON_TAG` (Settings → Secrets and variables → Actions → Variables) to the Associates tracking ID and re-run **Build library**. Every link gets the tag and the footer disclosure appears on its own. Covers come from Open Library, by ISBN when the sheet or Goodreads has one, otherwise by title search (cached in `data/covers.json`).
 
 ## Rights
 
