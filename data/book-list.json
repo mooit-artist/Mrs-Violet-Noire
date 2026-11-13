@@ -4,1573 +4,1835 @@
       "title": "Never Ask Me",
       "author": "Jeff Abbott",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "No Exit",
       "author": "Taylor Adams",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Brother",
       "author": "Ania Ahlborn",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Push",
       "author": "Ashley Audrain",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Housewife",
       "author": "Natalie Barelli",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Widow",
       "author": "Fiona Barton",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "We Were Never Here",
       "author": "Andrea Bartz",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Appetite for Innocence",
       "author": "Lucinda Berry",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "Saving Noah",
       "author": "Lucinda Berry",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Best of Friends",
       "author": "Lucinda Berry",
       "isbn": "9781542022149",
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "The Perfect Child",
       "author": "Lucinda Berry",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "When She Returned",
       "author": "Lucinda Berry",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Mean Streak",
       "author": "Sandra Brown",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Out of Nowhere",
       "author": "Sandra Brown",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Cut and Run",
       "author": "Mary Burton",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Last Move",
       "author": "Mary Burton",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Bitter Falls",
       "author": "Rachel Caine",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Killman Creek",
       "author": "Rachel Caine",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Stillhouse Lake",
       "author": "Rachel Caine",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Wolfhunter River",
       "author": "Rachel Caine",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "A Stranger on the Beach",
       "author": "Michele Campbell",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "It's Always the Husband",
       "author": "Michele Campbell",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Wife Who Knew Too Much",
       "author": "Michele Campbell",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Kill for Me",
       "author": "Steven Cavanaugh",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Big Lies in a Small Town",
       "author": "Diane Chamberlain",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Necessary Lies",
       "author": "Diane Chamberlain",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Chasing the Boogeyman",
       "author": "Richard Chizmar",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Taken to the Grave",
       "author": "M. M. Chouinard",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Dead of Winter",
       "author": "Darcy Coates",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Haunting of Ashburn House",
       "author": "Darcy Coates",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Don't Let Go",
       "author": "Harlan Coben",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Promise Me",
       "author": "Harlan Coben",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Stranger",
       "author": "Harlan Coben",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "When No One Is Watching",
       "author": "Alyssa Cole",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "This Story Might Save Your Life",
       "author": "Tiffany Crum",
       "isbn": "9781250395238",
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "The Last Thing He Told Me",
       "author": "Laura Dave",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Last One",
       "author": "Will Dean",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Guess Again",
       "author": "Charlie Donlea",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Summit Lake",
       "author": "Charlie Donlea",
       "isbn": "9781496736994",
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "The Girl Who Was Taken",
       "author": "Charlie Donlea",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Those Empty Eyes",
       "author": "Charlie Donlea",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Couple at Number 9",
       "author": "Claire Douglas",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Wrong Sister",
       "author": "Claire Douglas",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Keep Them Close",
       "author": "David Ellis",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Look Closer",
       "author": "David Ellis",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Lie to Me",
       "author": "j. t. ellision",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Anatomy of an Alibi",
       "author": "Ashley Elston",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Life we bury",
       "author": "Allan ESkens",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Greenwich Park",
       "author": "Katherine Faulkner",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Beautiful Ugly",
       "author": "Alice Feeney",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "My Husband's Wife",
       "author": "Alice Feeney",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Rock Paper Scissors",
       "author": "Alice Feeney",
       "isbn": "9781250266125",
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "Sometimes I Lie",
       "author": "Alice Feeney",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Silent Wife",
       "author": "Kerry Fisher",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Dark Places",
       "author": "Gillian Flynn",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Sharp Objects",
       "author": "Gillian Flynn",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Guest List",
       "author": "Lucy Foley",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Business Trip",
       "author": "Jessie Garcia",
       "isbn": "9781250364418",
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "Before She Disappeared",
       "author": "Lisa Gardner",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Gone",
       "author": "Lisa Gardner",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Never Tell",
       "author": "Lisa Gardner",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "One Step Too Far",
       "author": "Lisa Gardner",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Next Accident",
       "author": "Lisa Gardner",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Vanish",
       "author": "Tess Gerritsen",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "She Started It",
       "author": "Sian Gilbert",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "On a Quiet Street",
       "author": "Seraphina Nova Glass",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "These Silent Woods",
       "author": "Kimi Cunningham Grant",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Beach Rental",
       "author": "grace greene",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Marley & Me",
       "author": "John Grogan",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Overnight Guest",
       "author": "Heather Gudenkauf",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Angel Falls",
       "author": "Kristin Hannah",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Distant Shores",
       "author": "Kristin Hannah",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Fly Away",
       "author": "Kristin Hannah",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Great Alone",
       "author": "Kristin Hannah",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Nightingale",
       "author": "Kristin Hannah",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Things We Do for Love",
       "author": "Kristin Hannah",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Strangers in the Villa",
       "author": "Robyn Harding",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Drowning Woman",
       "author": "Robyn Harding",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Still Beating",
       "author": "Jennifer Hartmann",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "A Slow Fire Burning",
       "author": "Paula Hawkins",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Wife Between Us",
       "author": "Greer Hendricks & Sarah Pekkanen",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Darling Girls",
       "author": "Sally Hepworth",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Family Next Door",
       "author": "Sally Hepworth",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Good Sister",
       "author": "Sally Hepworth",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Mother-in-Law",
       "author": "Sally Hepworth",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Soulmate",
       "author": "Sally Hepworth",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Jar of Hearts",
       "author": "Jennifer Hillier",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Little Secrets",
       "author": "Jennifer Hillier",
       "isbn": "9781250797087",
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "The Butcher",
       "author": "Jennifer Hillier",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Things We Do in the Dark",
       "author": "Jennifer Hillier",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Wonderland",
       "author": "Jennifer Hillier",
       "isbn": "9781501157509",
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "Layla",
       "author": "Colleen Hoover",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Verity",
       "author": "Colleen Hoover",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Marble Hall Murders",
       "author": "Anthony Horowitz",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Butterfly Garden",
       "author": "Dot Hutchison",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Ask for Andrea",
       "author": "Noelle W. Ihli",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Gray After Dark",
       "author": "Noelle W. Ihli",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Room for Rent",
       "author": "Noelle W. Ihli",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Run on Red",
       "author": "Noelle W. Ihli",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Such Quiet Girls",
       "author": "Noelle W. Ihli",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Last to Drown",
       "author": "Noelle W. Ihli",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Five Survive",
       "author": "Holly Jackson",
       "isbn": "9780593374184",
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "Not Quite Dead Yet",
       "author": "Holly Jackson",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Paranoid",
       "author": "Lisa Jackson",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "25 Days",
       "author": "Per Jacobsen",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Don't Let Him In",
       "author": "Lisa Jewell",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "I Found You",
       "author": "Lisa Jewell",
       "isbn": "9781501154591",
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "Invisible Girl",
       "author": "Lisa Jewell",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "It Could Have Been Her",
       "author": "Lisa Jewell",
       "isbn": "9781529196009",
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "None of This Is True",
       "author": "Lisa Jewell",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Family Upstairs",
       "author": "Lisa Jewell",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Girls in the Garden",
       "author": "Lisa Jewell",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The House We Grew Up In",
       "author": "Lisa Jewell",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Night She Disappeared",
       "author": "Lisa Jewell",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Then She Was Gone",
       "author": "Lisa Jewell",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Girl Next Door",
       "author": "Jack Ketchum",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "We Used to Live Here",
       "author": "Marcus Kliewer",
       "isbn": "9781982198794",
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "Every Last Lie",
       "author": "Mary Kubica",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "It's Not Her",
       "author": "Mary Kubica",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Just the Nicest Couple",
       "author": "Mary Kubica",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Local Woman Missing",
       "author": "Mary Kubica",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Pretty Baby",
       "author": "Mary Kubica",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "She's Not Sorry",
       "author": "Mary Kubica",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Good Girl",
       "author": "Mary Kubica",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Other Mrs.",
       "author": "Mary Kubica",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "When the Lights Go Out",
       "author": "Mary Kubica",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "No Place Left to Hide",
       "author": "Megan Lally",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "That's Not My Name",
       "author": "Megan Lally",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "What We Did to Survive",
       "author": "Megan Lally",
       "isbn": "9781728270173",
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "Good Me Bad Me",
       "author": "Ali Land",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "A Stranger in the House",
       "author": "Shari Lapena",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "An Unwanted Guest",
       "author": "Shari Lapena",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Everyone Here Is Lying",
       "author": "Shari Lapena",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Getting Away with Murder",
       "author": "Shari Lapena",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Not a Happy Family",
       "author": "Shari Lapena",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "She Didn't See It Coming",
       "author": "Shari Lapena",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Someone We Know",
       "author": "Shari Lapena",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Couple Next Door",
       "author": "Shari Lapena",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The End of Her",
       "author": "Shari Lapena",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "What Have You Done",
       "author": "Shari Lapena",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Bones Don't Lie",
       "author": "Melinda Leigh",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Her Last Goodbye",
       "author": "Melinda Leigh",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Say You're Sorry",
       "author": "Melinda Leigh",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "What I've Done",
       "author": "Melinda Leigh",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Speak Softly, She Can Hear",
       "author": "Pam Lewis",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Memory Keeper of Kyiv",
       "author": "Erin Litteken",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "We Were Liars",
       "author": "E. Lockhart",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Afterwards",
       "author": "Rosamund Lupton",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "I Know You Know",
       "author": "Gilly Macmillan",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "All Her Fault",
       "author": "Andrea Mara",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Keep It in the Family",
       "author": "John Marrs",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Good Samaritan",
       "author": "John Marrs",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The One",
       "author": "John Marrs",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Stranger in Her House",
       "author": "John Marrs",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "What Lies Between Us",
       "author": "John Marrs",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "You Killed Me First",
       "author": "John Marrs",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "No One Can Know",
       "author": "Kate Alice Marshall",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "The Stranger upstairs",
       "author": "Lisa Matlin",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Wrong Place Wrong Time",
       "author": "Gillian McAllister",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Do Not Disturb",
       "author": "Freida McFadden",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Do You Remember?",
       "author": "Freida McFadden",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Never Lie",
       "author": "Freida McFadden",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "One by One",
       "author": "Freida McFadden",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Crash",
       "author": "Freida McFadden",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Housemaid",
       "author": "Freida McFadden",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Housemaid Is Watching",
       "author": "Freida McFadden",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Housemaid's Secret",
       "author": "Freida McFadden",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Inmate",
       "author": "Freida McFadden",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Locked Door",
       "author": "Freida McFadden",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Perfect Son",
       "author": "Freida McFadden",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Tenant",
       "author": "Freida McFadden",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Wife Upstairs",
       "author": "Freida McFadden",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Want to Know a Secret?",
       "author": "Freida McFadden",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Ward D",
       "author": "Freida McFadden",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Only One Survives",
       "author": "Hannah Mary McKinnon",
       "isbn": "9780369747907",
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "The Winter People",
       "author": "Jennifer McMahon",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Quiet Tenant",
       "author": "Clemence Michallon",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Orphanage by the Lake",
       "author": "Daniel G. Miller",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "All the Missing Girls",
       "author": "Megan Miranda",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Daughter of Mine",
       "author": "Megan Miranda",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Last House Guest",
       "author": "Megan Miranda",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Hemlock",
       "author": "Kiersten Modglin",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "And There He Kept Her",
       "author": "Joshua Moehling",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Goodnight Beautiful",
       "author": "Aimee Molloy",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Cilka's Journey",
       "author": "Heather Morris",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Tattooist of Auschwitz",
       "author": "Heather Morris",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Lake House",
       "author": "Kate Morton",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Dissection of a Murder",
       "author": "Jo Murray",
       "isbn": "9781035072682",
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "Drowning",
       "author": "T.J. Newman",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Falling",
       "author": "T.J. Newman",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Little Fires Everywhere",
       "author": "Celeste Ng",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Strange Sally Diamond",
       "author": "Liz Nugent",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "If You Tell",
       "author": "Gregg Olsen",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Where the Crawdads Sing",
       "author": "Delia Owens",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Wonder",
       "author": "R.J. Palacio",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Behind Closed Doors",
       "author": "B.A. Paris",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Bring Me Back",
       "author": "B.A. Paris",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Breakdown",
       "author": "B.A. Paris",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Prisoner",
       "author": "B.A. Paris",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Lies Lies Lies",
       "author": "Adele Parks",
       "isbn": null,
-      "rating": 5
+      "rating": 5,
+      "status": "read"
     },
     {
       "title": "The Sanatorium",
       "author": "Sarah Pearse",
       "isbn": "9780593296677",
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "House of Glass",
       "author": "Sarah Pekkanen",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "A rule against murder",
       "author": "Louise Penny",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Nineteen Minutes",
       "author": "Jodi Picoult",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Cross Her Heart",
       "author": "Sarah Pinborough",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Clinic",
       "author": "Cate Quinn",
       "isbn": "9781728293981",
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "The Seven Husbands of Evelyn Hugo",
       "author": "Taylor Jenkins Reid",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Hidden Pictures",
       "author": "Jason Rekulak",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Last One at the Wedding",
       "author": "Jason Rekulak",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The House in the pines",
       "author": "Anna Reyes",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Home Is Where the Bodies Are",
       "author": "Jeneva Rose",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Perfect Marriage",
       "author": "Jeneva Rose",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "You Shouldn't Have Come Here",
       "author": "Jeneva Rose",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Woman Outside My Door",
       "author": "Rachel Ryan",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Final Girls",
       "author": "Riley Sager",
       "isbn": "9781101985380",
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "Home Before Dark",
       "author": "Riley Sager",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Lock Every Door",
       "author": "Riley Sager",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Middle of the Night",
       "author": "Riley Sager",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The House Across the Lake",
       "author": "Riley Sager",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Last Time I Lied",
       "author": "Riley Sager",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Only One Left",
       "author": "Riley Sager",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Don't Let Her Stay",
       "author": "Nicola Sanders",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "After Anna",
       "author": "Lisa Scottoline",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Come Home",
       "author": "Lisa Scottoline",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Look again",
       "author": "Lisa Scottoline",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Most Wanted",
       "author": "Lisa Scottoline",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "One perfect lie",
       "author": "Lisa Scottoline",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Save Me",
       "author": "Lisa Scottoline",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "What happended to the Bennetts",
       "author": "Lisa Scottoline",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Nightwatching",
       "author": "Tracy Sierra",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "After That Night",
       "author": "Karin Slaughter",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Pretty Girls",
       "author": "Karin Slaughter",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Silent Wife",
       "author": "Karin Slaughter",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "We Are All Guilty Here",
       "author": "Karin Slaughter",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "The Neighbor",
       "author": "Joseph Souza",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Broken Girls",
       "author": "Simone St. James",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Sun Down Motel",
       "author": "Simone St. James",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Girls in the Cabin",
       "author": "Caleb Stephens",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Dark Roads",
       "author": "Chevy Stevens",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Never Knowing",
       "author": "Chevy Stevens",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Never Let You Go",
       "author": "Chevy Stevens",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Still Missing",
       "author": "Chevy Stevens",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "That Night",
       "author": "Chevy Stevens",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Hitchhikers",
       "author": "Chevy Stevens",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Those Girls",
       "author": "Chevy Stevens",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Listen for the Lie",
       "author": "Amy Tintera",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Stranger Inside",
       "author": "Lisa Unger",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Butcher and the Wren",
       "author": "Alaina Urquhart",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "the it girl",
       "author": "Ruth Ware",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "All Fall Down",
       "author": "Jennifer Weiner",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Drowning in Paper Flowers",
       "author": "E.L. Westbury",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Educated",
       "author": "Tara Westover",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "All the Colors of the Dark",
       "author": "Chris Whitaker",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "The Maid's Diary",
       "author": "Loreth Anne White",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "A Flicker in the Dark",
       "author": "Stacy Willingham",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "All the Dangerous Things",
       "author": "Stacy Willingham",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Tell Me What You Did",
       "author": "Carter Wilson",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Before We Were Yours",
       "author": "Lisa Wingate",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Love, Mom",
       "author": "Iliana Xander",
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "read"
     },
     {
       "title": "Buried in the Woods",
       "author": null,
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "Eve: A Christmas Psychological Thriller",
       "author": null,
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "unread"
     },
     {
       "title": "Pretty Dead Things",
       "author": null,
       "isbn": null,
-      "rating": null
+      "rating": null,
+      "status": "unread"
     }
   ],
   "tbr": [

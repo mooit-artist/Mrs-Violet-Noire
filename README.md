@@ -9,11 +9,11 @@ Follow along on Goodreads: [Mrs Violet Noire](https://www.goodreads.com/user/sho
 The **book-list** Google Sheet is the source of truth for the site:
 
 - the **Owned** tab is the library ("On Her Shelves");
-- the **TBR** tab is "Up Next". A book on both tabs shows only in Up Next.
+- **"Up Next"** is the books she owns but hasn't read: Owned rows with **Status** set to "Unread". Switch a book to "Read" when she finishes it and it moves to the library. The TBR tab only adds format and date added; TBR books she doesn't own yet aren't published.
 
 Edit the sheet, and the site follows. Once a day a scheduled sync reads both tabs, runs `scripts/import-book-list.mjs` and commits `data/book-list.json` if anything changed. The **Build library** workflow then rebuilds `data/books.json` and redeploys the site.
 
-Only titles, authors, ISBNs, formats, TBR dates and her own star ratings are published. Shelf locations, quantities, prices and the Notes column stay in the sheet.
+Only titles, authors, ISBNs, formats, TBR dates, read status and her own star ratings are published. Shelf locations, quantities, prices and the Notes column stay in the sheet.
 
 To sync by hand, save each tab as a Sheets API `values.get` response and run:
 
