@@ -13,8 +13,8 @@
  * for that tab, header row first. Columns are found by header name, so they can
  * be reordered in the sheet.
  *
- * Only public fields are written: title, author, ISBN, format, date added and
- * Mrs. Noire's own star rating. Shelf locations, quantities, prices and the
+ * Only public fields are written: title, author, ISBN, format, date added,
+ * read status and Mrs. Noire's own star rating. Shelf locations, quantities, prices and the
  * Notes column (where each copy came from) stay private in the sheet.
  *
  * Node 20+, no dependencies, no network access. A missing column or an empty
@@ -79,6 +79,8 @@ try {
     author: r.get('author') || null,
     isbn: isbn(r.get('isbn')),
     rating: stars(r.get('rating')),
+    // Status column: "Read" / "Unread". Missing or blank = not set.
+    status: /^unread$/i.test(r.get('status')) ? 'unread' : /^read$/i.test(r.get('status')) ? 'read' : null,
   }));
   const tbr = (await readTab(tbrFile, 'TBR', ['title', 'author'])).map(r => ({
     title: r.get('title'),

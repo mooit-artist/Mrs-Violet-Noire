@@ -10,7 +10,7 @@
  *                                      scripts/import-book-list.mjs. This decides
  *                                      which books appear on the site:
  *                                        owned -> The Library
- *                                        tbr   -> Up Next
+ *                                        owned + Status "Unread" -> Up Next
  *   data/goodreads_library_export.csv  Optional. Used only to enrich matching books
  *                                      with Goodreads ratings, dates, ISBNs and links.
  *   data/notes.json                    Optional. Mrs. Noire's blurbs and hand-picked
@@ -29,7 +29,9 @@
  *                   search (network; failures are ignored).
  *
  * Behaviour:
- *   - A book on both tabs appears only in Up Next.
+ *   - Up Next is owned books marked "Unread" in the Owned tab's Status column
+ *     (without that column: owned books also on the TBR tab). They appear only
+ *     in Up Next. TBR books that aren't owned are left off.
  *   - A malformed input exits non-zero and leaves the existing books.json alone.
  */
 
@@ -247,14 +249,23 @@ try {
   const notes = JSON.parse(await readFile(NOTES_FILE, 'utf8').catch(() => '{}'));
   const covers = JSON.parse(await readFile(COVERS_FILE, 'utf8').catch(() => '{}'));
 
-  // A book on both tabs is still waiting to be read: show it once, in Up Next.
-  const tbrKeys = new Set(sheet.tbr.map(b => `${shortTitle(b.title)}|${surname(b.author)}`));
-  const inTbr = b => tbrKeys.has(`${shortTitle(b.title)}|${surname(b.author)}`) ||
-    (!b.author && [...tbrKeys].some(k => k.startsWith(shortTitle(b.title) + '|')));
+  // Up Next is the books she owns but hasn't read yet. The Owned tab's Status
+  // column decides ("Unread"); a matching TBR row only adds format and date.
+  // Sheets without a Status column fall back to "owned and on the TBR tab".
+  // TBR books she doesn't own yet aren't published.
+  const key = b => `${shortTitle(b.title)}|${surname(b.author)}`;
+  const sameBook = (a, b) => key(a) === key(b) ||
+    ((!a.author || !b.author) && shortTitle(a.title) === shortTitle(b.title));
+  const hasStatus = sheet.owned.some(o => o.status);
+  const unread = o => hasStatus ? o.status === 'unread' : sheet.tbr.some(t => sameBook(o, t));
+  const upNext = sheet.owned.filter(unread).map(o => {
+    const t = sheet.tbr.find(t => sameBook(o, t)) || {};
+    return { ...o, format: t.format || null, dateAdded: t.dateAdded || null, isbn: o.isbn || t.isbn || null };
+  });
 
   const entries = [
-    ...sheet.tbr.map(e => ['upnext', e]),
-    ...sheet.owned.filter(e => !inTbr(e)).map(e => ['library', e]),
+    ...upNext.map(e => ['upnext', e]),
+    ...sheet.owned.filter(e => !unread(e)).map(e => ['library', e]),
   ];
 
   if (LOOKUP) {
@@ -296,7 +307,7 @@ try {
 
   const lib = books.filter(b => b.list === 'library'), up = books.filter(b => b.list === 'upnext');
   console.log(`${sheet.owned.length} owned and ${sheet.tbr.length} TBR on the sheet -> ` +
-    `${lib.length} in the library, ${up.length} up next; ${matched} matched to Goodreads, ` +
+    `${lib.length} in the library, ${up.length} up next (owned, unread), TBR tab used for format/date only; ${matched} matched to Goodreads, ` +
     `${books.filter(b => b.blurb).length} with notes, ${books.filter(b => b.myRating).length} rated, ` +
     `${books.filter(b => b.cover).length} with a cover`);
 
