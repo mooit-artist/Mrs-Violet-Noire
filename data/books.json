@@ -193,7 +193,7 @@
     "dateRead": null,
     "dateAdded": "2026-06-21",
     "blurb": null,
-    "cover": "https://covers.openlibrary.org/b/isbn/9781529196009-M.jpg?default=false",
+    "cover": null,
     "amazon": "https://www.amazon.com/dp/1529196000",
     "goodreads": "https://www.goodreads.com/search?q=It+Could+Have+Been+Her+Lisa+Jewell"
   },
@@ -211,7 +211,7 @@
     "dateRead": null,
     "dateAdded": "2024-07-26",
     "blurb": null,
-    "cover": "https://covers.openlibrary.org/b/isbn/9781982198794-M.jpg?default=false",
+    "cover": "https://covers.openlibrary.org/b/id/14749242-M.jpg",
     "amazon": "https://www.amazon.com/dp/1982198796",
     "goodreads": "https://www.goodreads.com/search?q=We+Used+to+Live+Here+Marcus+Kliewer"
   },
@@ -247,7 +247,7 @@
     "dateRead": null,
     "dateAdded": "2024-01-20",
     "blurb": null,
-    "cover": null,
+    "cover": "https://covers.openlibrary.org/b/id/14570538-M.jpg",
     "amazon": "https://www.amazon.com/s?k=No+One+Can+Know+Kate+Alice+Marshall&i=stripbooks",
     "goodreads": "https://www.goodreads.com/search?q=No+One+Can+Know+Kate+Alice+Marshall"
   },
@@ -355,7 +355,7 @@
     "dateRead": null,
     "dateAdded": "2026-01-03",
     "blurb": null,
-    "cover": null,
+    "cover": "https://covers.openlibrary.org/b/id/15226366-M.jpg",
     "amazon": "https://www.amazon.com/s?k=We+Are+All+Guilty+Here+Karin+Slaughter&i=stripbooks",
     "goodreads": "https://www.goodreads.com/search?q=We+Are+All+Guilty+Here+Karin+Slaughter"
   },
