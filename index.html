@@ -682,7 +682,7 @@
     </div>
   </section>
 
-  <!-- ── Up next: the TBR tab of the book-list sheet (data/books.json) ── -->
+  <!-- ── Up next: owned books marked Unread on the book-list sheet (data/books.json) ── -->
   <section class="library-section" id="upnext" aria-labelledby="upnext-title" hidden>
     <div class="section">
       <div class="section-head">
@@ -694,6 +694,21 @@
       <div id="upnext-grid" class="books-grid"></div>
       <p id="upnext-status" class="library-status" role="status" hidden></p>
       <div class="library-more"><button id="upnext-more" class="btn btn-outline" type="button" hidden>Show more</button></div>
+    </div>
+  </section>
+
+  <!-- ── To be read: TBR books she doesn't own yet (data/books.json) ── -->
+  <section class="library-section" id="tbr" aria-labelledby="tbr-title" hidden>
+    <div class="section">
+      <div class="section-head">
+        <div>
+          <p class="section-eyebrow" id="tbr-count">To Be Read</p>
+          <h2 class="section-title" id="tbr-title">On the Wish List</h2>
+        </div>
+      </div>
+      <div id="tbr-grid" class="books-grid"></div>
+      <p id="tbr-status" class="library-status" role="status" hidden></p>
+      <div class="library-more"><button id="tbr-more" class="btn btn-outline" type="button" hidden>Show more</button></div>
     </div>
   </section>
 
@@ -758,7 +773,7 @@
       window.addEventListener('scroll', onScroll, { passive: true });
       onScroll();
 
-      // Library and Up Next from data/books.json, built from the book-list sheet
+      // Library, Up Next and To Be Read from data/books.json, built from the book-list sheet
       // (Owned and TBR tabs) by scripts/build-library.mjs
       var picksSection = document.getElementById('picks');
       var picksGrid    = document.getElementById('picks-grid');
@@ -881,11 +896,14 @@
       var library = new List('library', 24);
       var upnext  = new List('upnext', 12);
       var upnextSection = document.getElementById('upnext');
+      var tbr     = new List('tbr', 12);
+      var tbrSection = document.getElementById('tbr');
 
       function applyFilter() {
         var raw = search.value.trim(), q = raw.toLowerCase();
         library.filter(q, raw);
         if (upnext.books.length) upnext.filter(q, raw);
+        if (tbr.books.length) tbr.filter(q, raw);
       }
 
       function showEmpty() {
@@ -906,8 +924,11 @@
           library.books = books.filter(function (b) { return (b.list || 'library') === 'library'; });
           upnext.books  = books.filter(function (b) { return b.list === 'upnext'; });
           library.count.textContent = library.books.length + ' Mysteries on the Shelf';
-          upnext.count.textContent  = 'Up Next · ' + upnext.books.length + ' to be read';
+          tbr.books     = books.filter(function (b) { return b.list === 'tbr'; });
+          upnext.count.textContent  = 'Up Next · ' + upnext.books.length + ' on her shelf, unread';
+          tbr.count.textContent     = 'To Be Read · ' + tbr.books.length + ' still to find';
           upnextSection.hidden = !upnext.books.length;
+          tbrSection.hidden = !tbr.books.length;
           search.disabled = false;
           // Show the Associates disclosure only while links carry an affiliate tag.
           document.getElementById('associate-disclosure').hidden =

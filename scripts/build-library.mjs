@@ -19,7 +19,7 @@
  *
  * Output:
  *   data/books.json                    what the home page renders. Each book has
- *                                      list: "library" | "upnext".
+ *                                      list: "library" | "upnext" | "tbr".
  *
  * Env:
  *   AMAZON_TAG      Amazon Associates tracking ID. Empty or unset = plain Amazon
@@ -31,7 +31,7 @@
  * Behaviour:
  *   - Up Next is owned books marked "Unread" in the Owned tab's Status column
  *     (without that column: owned books also on the TBR tab). They appear only
- *     in Up Next. TBR books that aren't owned are left off.
+ *     in Up Next. TBR books that aren't owned go in To Be Read.
  *   - A malformed input exits non-zero and leaves the existing books.json alone.
  */
 
@@ -252,7 +252,7 @@ try {
   // Up Next is the books she owns but hasn't read yet. The Owned tab's Status
   // column decides ("Unread"); a matching TBR row only adds format and date.
   // Sheets without a Status column fall back to "owned and on the TBR tab".
-  // TBR books she doesn't own yet aren't published.
+  // TBR books she doesn't own yet go in To Be Read.
   const key = b => `${shortTitle(b.title)}|${surname(b.author)}`;
   const sameBook = (a, b) => key(a) === key(b) ||
     ((!a.author || !b.author) && shortTitle(a.title) === shortTitle(b.title));
@@ -263,8 +263,11 @@ try {
     return { ...o, format: t.format || null, dateAdded: t.dateAdded || null, isbn: o.isbn || t.isbn || null };
   });
 
+  const toBeRead = sheet.tbr.filter(t => !sheet.owned.some(o => sameBook(o, t)));
+
   const entries = [
     ...upNext.map(e => ['upnext', e]),
+    ...toBeRead.map(e => ['tbr', e]),
     ...sheet.owned.filter(e => !unread(e)).map(e => ['library', e]),
   ];
 
@@ -305,9 +308,10 @@ try {
     if (n) b.id = `${b.id}-${n + 1}`;
   }
 
-  const lib = books.filter(b => b.list === 'library'), up = books.filter(b => b.list === 'upnext');
+  const lib = books.filter(b => b.list === 'library'), up = books.filter(b => b.list === 'upnext'),
+        tbr = books.filter(b => b.list === 'tbr');
   console.log(`${sheet.owned.length} owned and ${sheet.tbr.length} TBR on the sheet -> ` +
-    `${lib.length} in the library, ${up.length} up next (owned, unread), TBR tab used for format/date only; ${matched} matched to Goodreads, ` +
+    `${lib.length} in the library, ${up.length} up next (owned, unread), ${tbr.length} to be read (TBR, not owned); ${matched} matched to Goodreads, ` +
     `${books.filter(b => b.blurb).length} with notes, ${books.filter(b => b.myRating).length} rated, ` +
     `${books.filter(b => b.cover).length} with a cover`);
 
