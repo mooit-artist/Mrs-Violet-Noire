@@ -11,28 +11,28 @@
       "title": "No Exit",
       "author": "Taylor Adams",
       "isbn": null,
-      "rating": null,
+      "rating": 3,
       "status": "read"
     },
     {
       "title": "Brother",
       "author": "Ania Ahlborn",
       "isbn": null,
-      "rating": null,
+      "rating": 4,
       "status": "read"
     },
     {
       "title": "The Push",
       "author": "Ashley Audrain",
       "isbn": null,
-      "rating": null,
+      "rating": 5,
       "status": "read"
     },
     {
       "title": "The Housewife",
       "author": "Natalie Barelli",
       "isbn": null,
-      "rating": null,
+      "rating": 4,
       "status": "read"
     },
     {
@@ -40,27 +40,27 @@
       "author": "Fiona Barton",
       "isbn": null,
       "rating": null,
-      "status": "read"
+      "status": "unread"
     },
     {
       "title": "We Were Never Here",
       "author": "Andrea Bartz",
       "isbn": null,
       "rating": null,
-      "status": "read"
+      "status": "unread"
     },
     {
       "title": "Appetite for Innocence",
       "author": "Lucinda Berry",
       "isbn": null,
-      "rating": null,
+      "rating": 5,
       "status": "unread"
     },
     {
       "title": "Saving Noah",
       "author": "Lucinda Berry",
       "isbn": null,
-      "rating": null,
+      "rating": 5,
       "status": "read"
     },
     {
@@ -74,14 +74,14 @@
       "title": "The Perfect Child",
       "author": "Lucinda Berry",
       "isbn": null,
-      "rating": null,
+      "rating": 5,
       "status": "read"
     },
     {
       "title": "When She Returned",
       "author": "Lucinda Berry",
       "isbn": null,
-      "rating": null,
+      "rating": 3,
       "status": "read"
     },
     {
@@ -89,55 +89,55 @@
       "author": "Sandra Brown",
       "isbn": null,
       "rating": null,
-      "status": "read"
+      "status": "unread"
     },
     {
       "title": "Out of Nowhere",
       "author": "Sandra Brown",
       "isbn": null,
       "rating": null,
-      "status": "read"
+      "status": "unread"
     },
     {
       "title": "Cut and Run",
       "author": "Mary Burton",
       "isbn": null,
-      "rating": null,
+      "rating": 3,
       "status": "read"
     },
     {
       "title": "The Last Move",
       "author": "Mary Burton",
       "isbn": null,
-      "rating": null,
+      "rating": 3,
       "status": "read"
     },
     {
       "title": "Bitter Falls",
       "author": "Rachel Caine",
       "isbn": null,
-      "rating": null,
+      "rating": 4,
       "status": "read"
     },
     {
       "title": "Killman Creek",
       "author": "Rachel Caine",
       "isbn": null,
-      "rating": null,
+      "rating": 4,
       "status": "read"
     },
     {
       "title": "Stillhouse Lake",
       "author": "Rachel Caine",
       "isbn": null,
-      "rating": null,
+      "rating": 4,
       "status": "read"
     },
     {
       "title": "Wolfhunter River",
       "author": "Rachel Caine",
       "isbn": null,
-      "rating": null,
+      "rating": 4,
       "status": "read"
     },
     {
@@ -145,27 +145,27 @@
       "author": "Michele Campbell",
       "isbn": null,
       "rating": null,
-      "status": "read"
+      "status": "unread"
     },
     {
       "title": "It's Always the Husband",
       "author": "Michele Campbell",
       "isbn": null,
       "rating": null,
-      "status": "read"
+      "status": "unread"
     },
     {
       "title": "The Wife Who Knew Too Much",
       "author": "Michele Campbell",
       "isbn": null,
       "rating": null,
-      "status": "read"
+      "status": "unread"
     },
     {
       "title": "Kill for Me",
       "author": "Steven Cavanaugh",
       "isbn": null,
-      "rating": null,
+      "rating": 5,
       "status": "read"
     },
     {
@@ -173,20 +173,20 @@
       "author": "Diane Chamberlain",
       "isbn": null,
       "rating": null,
-      "status": "read"
+      "status": "unread"
     },
     {
       "title": "Necessary Lies",
       "author": "Diane Chamberlain",
       "isbn": null,
-      "rating": null,
+      "rating": 5,
       "status": "read"
     },
     {
       "title": "Chasing the Boogeyman",
       "author": "Richard Chizmar",
       "isbn": null,
-      "rating": null,
+      "rating": 2,
       "status": "read"
     },
     {
@@ -194,20 +194,20 @@
       "author": "M. M. Chouinard",
       "isbn": null,
       "rating": null,
-      "status": "read"
+      "status": "unread"
     },
     {
       "title": "Dead of Winter",
       "author": "Darcy Coates",
       "isbn": null,
       "rating": null,
-      "status": "read"
+      "status": "unread"
     },
     {
       "title": "The Haunting of Ashburn House",
       "author": "Darcy Coates",
       "isbn": null,
-      "rating": null,
+      "rating": 3,
       "status": "read"
     },
     {
@@ -215,21 +215,21 @@
       "author": "Harlan Coben",
       "isbn": null,
       "rating": null,
-      "status": "read"
+      "status": "unread"
     },
     {
       "title": "Promise Me",
       "author": "Harlan Coben",
       "isbn": null,
       "rating": null,
-      "status": "read"
+      "status": "unread"
     },
     {
       "title": "The Stranger",
       "author": "Harlan Coben",
       "isbn": null,
       "rating": null,
-      "status": "read"
+      "status": "unread"
     },
     {
       "title": "When No One Is Watching",
