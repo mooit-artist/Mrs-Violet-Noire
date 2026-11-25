@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mrs. Violet Noire — Murder Mystery Book Reviews</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Mrs. Violet Noire's library of murder mysteries, psychological thrillers and domestic suspense. Honest ratings, short notes and where to find each book.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mrsvioletnoire.com">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mrs. Violet Noire — Murder Mystery Book Reviews">
+  <meta property="og:description" content="A curated library of murder mysteries, psychological thrillers and domestic suspense.">
+  <meta property="og:image" content="https://mrsvioletnoire.com/assets/logos/MrsVioletNoire.jpg">
+  <meta property="og:url" content="https://mrsvioletnoire.com">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mrs. Violet Noire">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mrs. Violet Noire — Murder Mystery Book Reviews">
+  <meta name="twitter:description" content="A curated library of murder mysteries, psychological thrillers and domestic suspense.">
+  <meta name="twitter:image" content="https://mrsvioletnoire.com/assets/logos/MrsVioletNoire.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/logos/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/logos/apple-touch-icon.png">
+  <meta name="theme-color" content="#f9eddb">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Mrs. Violet Noire",
+    "url": "https://mrsvioletnoire.com",
+    "description": "Murder mystery book reviews and a curated library of crime fiction and psychological thrillers.",
+    "publisher": {
+      "@type": "Person",
+      "name": "Mrs. Violet Noire",
+      "image": "https://mrsvioletnoire.com/assets/logos/MrsVioletNoire.jpg",
+      "sameAs": [
+        "https://www.goodreads.com/user/show/8091033-mrs-violet-noire"
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    /* ─── Reset ───────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #f9eddb;
+      --surface:  #fcf4e8;
+      --border:   #e4d3bb;
+      --text:     #17131a;
+      --muted:    #6a5f6c;
+      --violet:   #4e355e;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans:  'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; overflow-x: clip; }
+    section[id], div[id="about"] { scroll-margin-top: 72px; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-sans);
+      font-weight: 300;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; height: auto; }
+    :focus-visible { outline: 2px solid var(--violet); outline-offset: 3px; }
+
+    /* ─── Nav ─────────────────────────────────────────────── */
+    nav#nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2.5rem;
+      transition: background 0.35s, border-color 0.35s;
+      border-bottom: 1px solid transparent;
+    }
+    nav#nav.scrolled {
+      background: rgba(249, 237, 219, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-color: var(--border);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 0.75rem; }
+    .nav-logo img { height: 42px; width: auto; }
+    .nav-logo span {
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+    nav#nav.scrolled .nav-logo span { opacity: 1; }
+    .nav-cta {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.6rem 1.5rem;
+      border: 1px solid rgba(23,19,26,0.5);
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    /* ─── Hero ────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 7rem 2rem 5rem;
+    }
+    .hero-logo {
+      width: clamp(260px, 44vw, 460px);
+      margin: 0 auto 2.75rem;
+    }
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.5rem, 6vw, 4.75rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.25rem;
+      text-wrap: balance;
+    }
+    .hero h1 em { color: var(--violet); }
+    .hero p {
+      font-size: clamp(0.9375rem, 1.8vw, 1.0625rem);
+      color: var(--muted);
+      max-width: 500px;
+      margin: 0 auto 2.75rem;
+      line-height: 1.8;
+    }
+    .btn {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 1rem 2.75rem;
+      transition: opacity 0.2s, background 0.2s, color 0.2s;
+      text-align: center;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .btn-primary {
+      background: var(--text);
+      color: var(--bg);
+      border: 1px solid var(--text);
+    }
+    .btn-primary:hover { opacity: 0.82; }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--text);
+      color: var(--text);
+    }
+    .btn-outline:hover {
+      background: var(--text);
+      color: var(--bg);
+    }
+    .hero-scroll {
+      margin-top: 4rem;
+      font-size: 0.6875rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: var(--muted);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.3; transform: scaleY(0.7); }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
+
+    /* ─── Marquee ─────────────────────────────────────────── */
+    .marquee-strip {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 0.9rem 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .marquee-inner {
+      display: inline-block;
+      animation: marquee 40s linear infinite;
+      font-size: 0.6875rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ─── Section wrapper ─────────────────────────────────── */
+    .section {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 6rem 2rem;
+    }
+    .section-eyebrow {
+      font-size: 0.6875rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.875rem;
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.75rem, 3.5vw, 2.875rem);
+      font-weight: 400;
+      line-height: 1.2;
+      margin-bottom: 3rem;
+    }
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+    .section-head .section-title { margin-bottom: 0; }
+
+    /* ─── Book cards (shared) ─────────────────────────────── */
+    /* Hairlines live on the cards so a short last row leaves no grey gap */
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      border-top: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+    }
+    .book-card {
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .book-cover {
+      display: block;
+      aspect-ratio: 2 / 3;
+      overflow: hidden;
+      background: var(--border);
+      position: relative;
+    }
+    .book-cover img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .book-card:hover .book-cover img { transform: scale(1.04); }
+
+    /* Typographic jacket when no cover image is available */
+    .jacket {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1.5rem 1.25rem;
+      color: #f9eddb;
+      text-align: center;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .book-card:hover .jacket { transform: scale(1.03); }
+    .jacket::before {
+      content: '';
+      position: absolute;
+      inset: 0.6rem;
+      border: 1px solid rgba(249,237,219,0.28);
+      pointer-events: none;
+    }
+    .jacket-0 { background: #2a2030; }
+    .jacket-1 { background: #4e355e; }
+    .jacket-2 { background: #5b2b33; }
+    .jacket-3 { background: #1f2a2c; }
+    .jacket-mark {
+      font-size: 0.5625rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      opacity: 0.6;
+    }
+    .jacket-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.125rem, 2vw, 1.375rem);
+      line-height: 1.25;
+      text-wrap: balance;
+      overflow-wrap: break-word;
+    }
+    .jacket-author {
+      font-size: 0.6875rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+
+    .book-body {
+      padding: 1.125rem 1.125rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      flex: 1;
+    }
+    .book-title {
+      font-family: var(--font-serif);
+      font-size: 1.0625rem;
+      font-weight: 400;
+      line-height: 1.3;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .book-author { font-size: 0.875rem; color: var(--muted); }
+    .book-series { font-size: 0.75rem; color: var(--muted); font-style: italic; }
+    .book-rating {
+      font-size: 0.75rem;
+      letter-spacing: 0.04em;
+      color: var(--muted);
+    }
+    .book-rating .stars { color: var(--violet); letter-spacing: 0.12em; }
+    .book-blurb {
+      font-size: 0.875rem;
+      color: var(--muted);
+      line-height: 1.6;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-top: 0.25rem;
+    }
+    .book-buy {
+      margin-top: auto;
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      border: 1px solid rgba(23,19,26,0.35);
+      padding: 0.75rem 1rem;
+      text-align: center;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+    .book-body .book-buy { margin-top: auto; }
+    .book-body > .spacer { flex: 1; min-height: 0.75rem; }
+    .book-buy:hover {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    /* ─── Highest rated (featured) ────────────────────────── */
+    .picks-section { border-top: 1px solid var(--border); }
+    .picks-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .pick-card {
+      background: var(--surface);
+      display: grid;
+      grid-template-columns: minmax(120px, 38%) 1fr;
+    }
+    .pick-card .book-cover { aspect-ratio: 2 / 3; }
+    .pick-card .book-body { padding: 1.75rem; gap: 0.5rem; }
+    .pick-card .book-title { font-size: 1.5rem; -webkit-line-clamp: 3; }
+    .pick-card .book-rating { font-size: 0.8125rem; }
+    .pick-card .book-blurb {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.0625rem;
+      color: var(--text);
+      -webkit-line-clamp: 6;
+      margin: 0.5rem 0 1rem;
+    }
+
+    /* ─── Library ─────────────────────────────────────────── */
+    .library-section { border-top: 1px solid var(--border); }
+    .search-label { display: block; }
+    .library-search {
+      width: min(320px, 100%);
+      font: inherit;
+      font-size: 1rem;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 0.75rem 1rem;
+    }
+    .library-search::placeholder { color: var(--muted); }
+    .library-search:focus { outline: none; border-color: var(--violet); }
+    .library-more { margin-top: 2.5rem; text-align: center; }
+    .library-status {
+      color: var(--muted);
+      font-size: 0.8125rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 3rem 0;
+    }
+    .library-empty {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .library-empty h3 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.5rem, 3vw, 2.25rem);
+      font-weight: 400;
+      margin-bottom: 0.75rem;
+    }
+    .library-empty p {
+      color: var(--muted);
+      max-width: 440px;
+      margin: 0 auto 2rem;
+      line-height: 1.8;
+    }
+    [hidden] { display: none !important; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+    }
+
+    /* ─── Values ──────────────────────────────────────────── */
+    .values-section { border-top: 1px solid var(--border); }
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 4rem;
+    }
+    .value-item {
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .value-num {
+      font-size: 0.6875rem;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      display: block;
+    }
+    .value-item h3 {
+      font-family: var(--font-serif);
+      font-size: 1.1875rem;
+      font-weight: 400;
+      margin-bottom: 0.75rem;
+    }
+    .value-item p {
+      font-size: 0.9375rem;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    /* ─── CTA ─────────────────────────────────────────────── */
+    .cta-section {
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .cta-section h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.25rem, 5vw, 4.25rem);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .cta-section p {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 2.75rem;
+    }
+
+    /* ─── Social ──────────────────────────────────────────── */
+    .social-section {
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .social-eyebrow {
+      font-size: 0.6875rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 2rem;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+    }
+    .social-links a {
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .social-links a:hover { color: var(--text); }
+    .social-links svg { width: 18px; height: 18px; fill: currentColor; }
+
+    /* ─── Footer ──────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    footer span, footer a {
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+    footer a:hover { color: var(--text); }
+
+    /* ─── Responsive ──────────────────────────────────────── */
+    @media (max-width: 900px) {
+      .picks-grid   { grid-template-columns: 1fr; }
+      .values-grid  { grid-template-columns: 1fr; gap: 0; }
+      .value-item   { padding: 2rem 0; border-top: 1px solid var(--border); border-bottom: none; }
+    }
+    @media (max-width: 600px) {
+      nav#nav { padding: 0.75rem 1.25rem; }
+      .nav-logo img { height: 36px; }
+      .nav-logo span { display: none; }
+      .nav-cta { padding: 0.55rem 1rem; font-size: 0.6875rem; letter-spacing: 0.12em; }
+      .section { padding: 4rem 1.25rem; }
+      .books-grid { grid-template-columns: repeat(2, 1fr); }
+      .book-body { padding: 0.875rem; }
+      .book-title { font-size: 0.9375rem; }
+      .book-blurb { display: none; }
+      .book-buy { padding: 0.65rem 0.5rem; font-size: 0.625rem; }
+      .jacket { padding: 1rem 0.75rem; }
+      .jacket-title { font-size: 1rem; }
+      .pick-card { grid-template-columns: 40% 1fr; }
+      .pick-card .book-body { padding: 1rem; }
+      .pick-card .book-title { font-size: 1.125rem; }
+      .pick-card .book-blurb { display: -webkit-box; font-size: 0.9375rem; -webkit-line-clamp: 5; margin: 0.25rem 0 0.75rem; }
+      footer { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 380px) {
+      .books-grid { grid-template-columns: 1fr; }
+      .pick-card { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .marquee-inner, .scroll-line { animation: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Nav ───────────────────────────────────────────────── -->
+  <nav id="nav" aria-label="Primary">
+    <a href="/" class="nav-logo" aria-label="Mrs. Violet Noire, home">
+      <picture>
+        <source srcset="assets/logos/mark.webp" type="image/webp">
+        <img src="assets/logos/mark.png" alt="" width="164" height="240">
+      </picture>
+      <span>Mrs. Violet Noire</span>
+    </a>
+    <a href="https://www.goodreads.com/user/show/8091033-mrs-violet-noire" class="nav-cta" target="_blank" rel="noopener">Follow on Goodreads</a>
+  </nav>
+
+  <!-- ── Hero ──────────────────────────────────────────────── -->
+  <section class="hero">
+    <picture>
+      <source srcset="assets/logos/MrsVioletNoireTrans.webp" type="image/webp">
+      <img
+        src="assets/logos/MrsVioletNoireTrans.png"
+        alt="Mrs. Violet Noire — Murder Mystery Book Reviews"
+        class="hero-logo"
+        width="900" height="608"
+        fetchpriority="high"
+      >
+    </picture>
+    <h1>Every Page Turns<br>With <em>Purpose</em></h1>
+    <p>
+      A curated library of murder mysteries, psychological thrillers and domestic suspense.
+      Every clue followed, every twist weighed, so you can find your next obsession.
+    </p>
+    <a href="#library" class="btn btn-primary">Browse the Library</a>
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ── Marquee ────────────────────────────────────────────── -->
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-inner">
+      Psychological Thrillers &nbsp;·&nbsp; Domestic Suspense &nbsp;·&nbsp; Gothic &amp; Atmospheric &nbsp;·&nbsp; Police Procedurals &nbsp;·&nbsp; True Crime &nbsp;·&nbsp; Unreliable Narrators &nbsp;·&nbsp; Locked Rooms &nbsp;·&nbsp; Psychological Thrillers &nbsp;·&nbsp; Domestic Suspense &nbsp;·&nbsp; Gothic &amp; Atmospheric &nbsp;·&nbsp; Police Procedurals &nbsp;·&nbsp; True Crime &nbsp;·&nbsp; Unreliable Narrators &nbsp;·&nbsp; Locked Rooms &nbsp;·&nbsp;
+    </div>
+  </div>
+
+  <!-- ── Highest rated (from data/books.json) ───────────────── -->
+  <section class="picks-section" id="picks" aria-labelledby="picks-title" hidden>
+    <div class="section">
+      <p class="section-eyebrow">Mrs. Noire's Highest Rated</p>
+      <h2 class="section-title" id="picks-title">The Ones That Kept Her Up at Night</h2>
+      <div id="picks-grid" class="picks-grid"></div>
+    </div>
+  </section>
+
+  <!-- ── Library: the Owned tab of the book-list sheet (data/books.json) ── -->
+  <section class="library-section" id="library" aria-labelledby="library-title">
+    <div class="section">
+      <div class="section-head">
+        <div>
+          <p class="section-eyebrow" id="library-count">The Library</p>
+          <h2 class="section-title" id="library-title">On Her Shelves</h2>
+        </div>
+        <label>
+          <span class="section-eyebrow search-label">Search title or author</span>
+          <input id="library-search" class="library-search" type="search" placeholder="e.g. Freida McFadden" autocomplete="off" disabled>
+        </label>
+      </div>
+
+      <div id="library-grid" class="books-grid" hidden></div>
+      <p id="library-status" class="library-status" role="status">Opening the case files…</p>
+      <div class="library-more"><button id="library-more" class="btn btn-outline" type="button" hidden>Show more</button></div>
+
+      <div id="library-empty" class="library-empty" hidden>
+        <h3>The shelves are being restocked</h3>
+        <p>The library is being updated. In the meantime, the full reading history lives on Goodreads.</p>
+        <a href="https://www.goodreads.com/user/show/8091033-mrs-violet-noire" class="btn btn-outline" target="_blank" rel="noopener">Visit Goodreads</a>
+      </div>
+
+      <noscript>
+        <div class="library-empty">
+          <h3>See what's on the shelf</h3>
+          <p>The library needs JavaScript. You can browse the full reading history on Goodreads.</p>
+          <a href="https://www.goodreads.com/user/show/8091033-mrs-violet-noire" class="btn btn-outline" target="_blank" rel="noopener">Visit Goodreads</a>
+        </div>
+      </noscript>
+    </div>
+  </section>
+
+  <!-- ── Up next: owned books marked Unread on the book-list sheet (data/books.json) ── -->
+  <section class="library-section" id="upnext" aria-labelledby="upnext-title" hidden>
+    <div class="section">
+      <div class="section-head">
+        <div>
+          <p class="section-eyebrow" id="upnext-count">Up Next</p>
+          <h2 class="section-title" id="upnext-title">Waiting on the Nightstand</h2>
+        </div>
+      </div>
+      <div id="upnext-grid" class="books-grid"></div>
+      <p id="upnext-status" class="library-status" role="status" hidden></p>
+      <div class="library-more"><button id="upnext-more" class="btn btn-outline" type="button" hidden>Show more</button></div>
+    </div>
+  </section>
+
+  <!-- ── To be read: TBR books she doesn't own yet (data/books.json) ── -->
+  <section class="library-section" id="tbr" aria-labelledby="tbr-title" hidden>
+    <div class="section">
+      <div class="section-head">
+        <div>
+          <p class="section-eyebrow" id="tbr-count">To Be Read</p>
+          <h2 class="section-title" id="tbr-title">On the Wish List</h2>
+        </div>
+      </div>
+      <div id="tbr-grid" class="books-grid"></div>
+      <p id="tbr-status" class="library-status" role="status" hidden></p>
+      <div class="library-more"><button id="tbr-more" class="btn btn-outline" type="button" hidden>Show more</button></div>
+    </div>
+  </section>
+
+  <!-- ── Values ─────────────────────────────────────────────── -->
+  <div class="values-section" id="about">
+    <div class="section">
+      <p class="section-eyebrow">The Investigation</p>
+      <h2 class="section-title">What Mrs. Noire Looks For</h2>
+      <div class="values-grid">
+        <div class="value-item">
+          <span class="value-num">01</span>
+          <h3>A Twist That Earns It</h3>
+          <p>The best reveals are hiding in plain sight. She reads for clues that are fair, misdirection that is clever and endings that make you flip back to page one.</p>
+        </div>
+        <div class="value-item">
+          <span class="value-num">02</span>
+          <h3>The Darkness Next Door</h3>
+          <p>Quiet streets, perfect marriages, the couple upstairs. Domestic suspense and psychological thrillers where the most dangerous mystery is the human mind.</p>
+        </div>
+        <div class="value-item">
+          <span class="value-num">03</span>
+          <h3>Atmosphere You Can Feel</h3>
+          <p>Fog, snowed-in inns, motels with a past. Gothic and atmospheric mysteries where the setting is as much a suspect as anyone in the room.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CTA ────────────────────────────────────────────────── -->
+  <div class="cta-section">
+    <div class="section">
+      <h2>Ready for Your<br>Next Obsession?</h2>
+      <p>Follow along on Goodreads to see what she's reading now.</p>
+      <a href="https://www.goodreads.com/user/show/8091033-mrs-violet-noire" class="btn btn-primary" target="_blank" rel="noopener">Follow on Goodreads</a>
+    </div>
+  </div>
+
+  <!-- ── Social ─────────────────────────────────────────────── -->
+  <div class="social-section">
+    <div class="section">
+      <p class="social-eyebrow">Find Her On</p>
+      <nav class="social-links" aria-label="Elsewhere">
+        <a href="https://www.goodreads.com/user/show/8091033-mrs-violet-noire" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.43 23.995c-3.608-.208-6.274-2.077-6.448-5.078.695.007 1.375-.013 2.07-.006.224 1.342 1.065 2.43 2.683 3.026 1.583.496 3.737.46 5.082-.174 1.351-.636 2.145-1.822 2.503-3.577.212-1.042.236-1.734.231-2.92l-.004-1.103h-.05c-.758 1.512-2.026 2.578-3.564 3.032-2.37.698-5.157.124-6.796-1.666C5.38 12.67 5.03 9.42 5.67 6.94c.85-3.31 3.38-5.36 6.33-5.4 2.38-.035 4.03 1.012 5.093 2.817l.03.052h.063V2.002h1.968l.001 13.652c0 3.4-.39 5.31-1.61 6.73-1.13 1.33-3.135 1.68-6.115 1.61zm.34-7.93c2.49-.06 4.36-1.95 4.75-4.75.18-1.32.08-2.73-.38-3.98-.79-2.16-2.6-3.37-4.73-3.29-2.36.09-4.07 1.68-4.6 4.21-.31 1.45-.24 2.97.27 4.33.71 1.9 2.38 3.53 4.69 3.48z"/></svg>
+          Goodreads
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer>
+    <span>&copy; 2026 Mrs. Violet Noire. All rights reserved.</span>
+    <span id="associate-disclosure" hidden>As an Amazon Associate, I earn from qualifying purchases.</span>
+  </footer>
+
+  <script>
+    (function () {
+      // Nav background on scroll
+      var nav = document.getElementById('nav');
+      function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 20); }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      // Library, Up Next and To Be Read from data/books.json, built from the book-list sheet
+      // (Owned and TBR tabs) by scripts/build-library.mjs
+      var picksSection = document.getElementById('picks');
+      var picksGrid    = document.getElementById('picks-grid');
+      var status       = document.getElementById('library-status');
+      var empty        = document.getElementById('library-empty');
+      var search       = document.getElementById('library-search');
+      var all = [];
+
+      function List(prefix, page) {
+        this.grid   = document.getElementById(prefix + '-grid');
+        this.more   = document.getElementById(prefix + '-more');
+        this.status = document.getElementById(prefix + '-status');
+        this.count  = document.getElementById(prefix + '-count');
+        this.page = page;
+        this.books = []; this.filtered = []; this.shown = 0;
+        var self = this;
+        this.more.addEventListener('click', function () { self.renderMore(); });
+      }
+      List.prototype.renderMore = function () {
+        var next = this.filtered.slice(this.shown, this.shown + this.page);
+        this.grid.insertAdjacentHTML('beforeend', next.map(function (b) { return card(b, false); }).join(''));
+        wireCovers(this.grid);
+        this.shown += next.length;
+        this.more.hidden = this.shown >= this.filtered.length;
+        this.more.textContent = 'Show more (' + (this.filtered.length - this.shown) + ')';
+      };
+      List.prototype.filter = function (q, raw) {
+        this.filtered = !q ? this.books : this.books.filter(function (b) {
+          return (b.title + ' ' + b.author + ' ' + (b.series || '')).toLowerCase().indexOf(q) !== -1;
+        });
+        this.grid.innerHTML = '';
+        this.shown = 0;
+        if (!this.filtered.length) {
+          this.grid.hidden = true;
+          this.more.hidden = true;
+          this.status.hidden = false;
+          this.status.textContent = q ? 'No books match "' + raw + '"' : 'Nothing here yet';
+          return;
+        }
+        this.status.hidden = true;
+        this.grid.hidden = false;
+        this.renderMore();
+      };
+
+      function esc(s) {
+        return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+      function safeUrl(u, pattern, fallback) {
+        return pattern.test(u || '') ? u : fallback;
+      }
+      function hash(s) {
+        var h = 0;
+        for (var i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) | 0;
+        return Math.abs(h);
+      }
+      function jacket(b) {
+        return '<div class="jacket jacket-' + (hash(b.id || b.title || '') % 4) + '" aria-hidden="true">' +
+          '<span class="jacket-mark">Mrs. Violet Noire</span>' +
+          '<span class="jacket-title">' + esc(b.title) + '</span>' +
+          '<span class="jacket-author">' + esc(b.author) + '</span>' +
+        '</div>';
+      }
+      function stars(n) {
+        n = Math.max(0, Math.min(5, Math.round(n)));
+        return '<span class="stars" aria-hidden="true">' + '★★★★★'.slice(0, n) + '☆☆☆☆☆'.slice(0, 5 - n) + '</span>';
+      }
+      function rating(b) {
+        if (b.myRating) {
+          return '<p class="book-rating">' + stars(b.myRating) + ' <span>Mrs. Noire</span>' +
+                 '<span class="sr-only"> rated ' + b.myRating + ' of 5</span></p>';
+        }
+        if (b.avgRating) return '<p class="book-rating">' + Number(b.avgRating).toFixed(2) + ' on Goodreads</p>';
+        return '';
+      }
+      function card(b, featured) {
+        var amazon = safeUrl(b.amazon, /^https:\/\/www\.amazon\.com\//, 'https://www.amazon.com/');
+        var gr     = safeUrl(b.goodreads, /^https:\/\/www\.goodreads\.com\//, 'https://www.goodreads.com/');
+        var cover  = /^https:\/\//.test(b.cover || '') ? b.cover : '';
+        var title  = esc(b.title || 'Untitled');
+        var img = cover
+          ? '<img src="' + esc(cover) + '" alt="Cover of ' + title + '" loading="lazy" width="180" height="270" data-fallback>'
+          : '';
+        return '<article class="' + (featured ? 'pick-card' : 'book-card') + '">' +
+          '<a class="book-cover" href="' + esc(gr) + '" target="_blank" rel="noopener" aria-label="' + title + ' on Goodreads">' +
+            jacket(b) + img +
+          '</a>' +
+          '<div class="book-body">' +
+            '<h3 class="book-title">' + title + '</h3>' +
+            '<p class="book-author">' + esc(b.author) + '</p>' +
+            (b.series ? '<p class="book-series">' + esc(b.series) + '</p>' : '') +
+            rating(b) +
+            (b.blurb ? '<p class="book-blurb">' + esc(b.blurb) + '</p>' : '') +
+            '<div class="spacer"></div>' +
+            '<a class="book-buy" href="' + esc(amazon) + '" target="_blank" rel="' + (/[?&]tag=/.test(amazon) ? 'sponsored ' : '') + 'noopener">Find on Amazon</a>' +
+          '</div>' +
+        '</article>';
+      }
+      // Cover images sit on top of the typographic jacket; drop any that fail to load.
+      function wireCovers(root) {
+        root.querySelectorAll('img[data-fallback]').forEach(function (img) {
+          img.removeAttribute('data-fallback');
+          function drop() { img.remove(); }
+          img.addEventListener('error', drop);
+          if (img.complete && img.naturalWidth === 0) drop();
+        });
+      }
+
+      function renderPicks() {
+        var picks = all.filter(function (b) { return b.myRating >= 4; })
+          .sort(function (a, b) { return b.myRating - a.myRating; })
+          .slice(0, 4);
+        if (!picks.length) return;
+        picksGrid.innerHTML = picks.map(function (b) { return card(b, true); }).join('');
+        wireCovers(picksGrid);
+        picksSection.hidden = false;
+      }
+
+      var library = new List('library', 24);
+      var upnext  = new List('upnext', 12);
+      var upnextSection = document.getElementById('upnext');
+      var tbr     = new List('tbr', 12);
+      var tbrSection = document.getElementById('tbr');
+
+      function applyFilter() {
+        var raw = search.value.trim(), q = raw.toLowerCase();
+        library.filter(q, raw);
+        if (upnext.books.length) upnext.filter(q, raw);
+        if (tbr.books.length) tbr.filter(q, raw);
+      }
+
+      function showEmpty() {
+        status.hidden = true;
+        library.grid.hidden = true;
+        library.more.hidden = true;
+        empty.hidden = false;
+      }
+
+      search.addEventListener('input', applyFilter);
+
+      fetch('data/books.json', { cache: 'no-cache' })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (books) {
+          if (!Array.isArray(books) || !books.length) { showEmpty(); return; }
+          all = books;
+          // Older builds had no list field: everything was the library.
+          library.books = books.filter(function (b) { return (b.list || 'library') === 'library'; });
+          upnext.books  = books.filter(function (b) { return b.list === 'upnext'; });
+          library.count.textContent = library.books.length + ' Mysteries on the Shelf';
+          tbr.books     = books.filter(function (b) { return b.list === 'tbr'; });
+          upnext.count.textContent  = 'Up Next · ' + upnext.books.length + ' on her shelf, unread';
+          tbr.count.textContent     = 'To Be Read · ' + tbr.books.length + ' still to find';
+          upnextSection.hidden = !upnext.books.length;
+          tbrSection.hidden = !tbr.books.length;
+          search.disabled = false;
+          // Show the Associates disclosure only while links carry an affiliate tag.
+          document.getElementById('associate-disclosure').hidden =
+            !books.some(function (b) { return /[?&]tag=/.test(b.amazon || ''); });
+          renderPicks();
+          if (!library.books.length) { showEmpty(); return; }
+          applyFilter();
+        })
+        .catch(showEmpty);
+    })();
+  </script>
+
+</body>
+</html>
