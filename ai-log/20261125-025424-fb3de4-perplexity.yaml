@@ -1,0 +1,37 @@
+id: 20261125-025424-fb3de4
+date: "2026-11-25T02:54:24+00:00"
+repo: Mrs-Violet-Noire
+ai: perplexity
+model: Claude Opus 5.5 (Perplexity Computer)
+lane: cloud-code
+issue: mooit-artist/Mrs-Violet-Noire#39
+pr: null
+result: done
+checklist: null
+merged: pending
+tokens_in: null
+tokens_out: null
+credits: null
+cost_usd: null
+cost_estimated: false
+agent_minutes: null
+fix_minutes: null
+data_class: Public
+task: ENC[AES256_GCM,data:qbSP873xvFsEwXHEDh/AcayVhSiItad4N4otu0S/0FSUs45oJnh4/0GAY9cCwS0IcXru9tTZszMyN6554XO6aCxUqNbiVlp2Esw6WmLyy7VZekCgwbnVDVU=,iv:aVid2chX3Nh6g+biZh/lNyX+aKGU0NzWdZA2VMzRXvg=,tag:yZ1nDkF0qEGCLVVK81dG+Q==,type:str]
+files: ENC[AES256_GCM,data:ddhqB23DkTXAul16AKZQ52f6Ahzi3AWtYIsIrxD+W6YJgLdfNVA=,iv:n81hbjRRfJv/cbfkV64hFLvuaLrO5n9bolJKpIyoOaM=,tag:aPPvRUGxOuIiexmACxgUiQ==,type:str]
+notes: ""
+sops:
+    age:
+        - recipient: age13egdzngd8433jv4jwp5c4cw3x378rhkyen2wpan92wvx0hrqsc9sy7a4m4
+          enc: |
+            -----BEGIN AGE ENCRYPTED FILE-----
+            YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSA4TVVTbUZJQW1XQXBRTVdY
+            cVFFOG1kRE5kZzhZSzRUcDRoWEF5ckNIeTBRCmJ2dTBkV2xnS0NXMmJpeGdreGpr
+            K01tVFZUUHFzNTJvTEh5cXlWM3FaS2MKLS0tIFVRMnI3dnVhUi85ZUd1d0dDTTFS
+            SS9wLzc1Rkh6TFFHUDdSY3JNZ0tnU28KH5ayS5OcF9FV3Mv6SMdXVE5CiT63aFX2
+            F8UwUSXWmzNn5ktgsOa9JMfYZtt3OpUiMzpVOeLO7l6Pcn6DESsuiw==
+            -----END AGE ENCRYPTED FILE-----
+    lastmodified: "2026-11-25T02:54:24Z"
+    mac: ENC[AES256_GCM,data:AlGb8Wtw3ww6DlqxweWsQzwS5K6Af4oRJ4gOmKG5Vt5KApGeExbrYWDf9cJPOCaUIXsfP5Sp/9XPsDsexIOPDPdPUKbuZfr9IsGTogiLKrhsbRlhXmwq4MPmxoBQvCXyms45rjXeQq3IGN6jPxbExws71Pk7WsxSmcl0Vx/Qp+g=,iv:Mex5g40M4nPBPyKcedRuLFx2DNxK7EcJuMyHCJcQtrQ=,tag:8HLp5rWJGIRT83rQa4nSCg==,type:str]
+    encrypted_regex: ^(task|files|notes)$
+    version: 3.10.2

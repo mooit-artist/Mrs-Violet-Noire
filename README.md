@@ -14,6 +14,10 @@ The **book-list** Google Sheet is the source of truth for the site:
 
 Edit the sheet, and the site follows. Once a day a scheduled sync reads both tabs, runs `scripts/import-book-list.mjs` and commits `data/book-list.json` if anything changed. The **Build library** workflow then rebuilds `data/books.json` and redeploys the site.
 
+## Hosting
+
+The **Deploy site** workflow stages only the public files (pages, assets and `data/books.json`) and commits them to the `hostinger` branch. Hostinger's Git deployment (hPanel > Advanced > GIT, auto-deploy on) pulls that branch into `public_html`. Until the domain moves off GitHub Pages, the same workflow also deploys to Pages; set the repository variable `GITHUB_PAGES` to `off` after the cutover.
+
 Only titles, authors, ISBNs, formats, TBR dates, read status and her own star ratings are published. Shelf locations, quantities, prices and the Notes column stay in the sheet.
 
 To sync by hand, save each tab as a Sheets API `values.get` response and run:
