@@ -1,4 +1,17 @@
-name: Deploy to GitHub Pages
+name: Deploy site
+
+# Builds the public site files and publishes them two ways:
+#
+# 1. hostinger branch (always). Hostinger's own GitHub connection
+#    (hPanel > Advanced > GIT, auto-deploy on) pulls this branch into
+#    public_html. The branch holds only the finished site, so scripts/,
+#    workflows, notes and the raw Goodreads export never reach the web host.
+# 2. GitHub Pages (until the DNS cutover). Set the repository variable
+#    GITHUB_PAGES to "off" once mrsvioletnoire.com points at Hostinger,
+#    then turn Pages off in Settings > Pages.
+#
+# build-library.yml starts this workflow by name after it commits a new
+# data/books.json, so keep the file name deploy.yml.
 
 on:
   push:
@@ -7,18 +20,13 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
 
 concurrency:
-  group: pages
+  group: deploy
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  stage:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -26,8 +34,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Stage site files
-        # Only the files the site needs are published. scripts/,
-        # workflows, docs and the raw Goodreads export stay out of the artifact.
+        # Only the files the site needs are published.
         run: |
           set -euo pipefail
           rm -rf _site
@@ -39,13 +46,111 @@ jobs:
           # Only the built library is public; the raw Goodreads export and notes stay in the repo.
           mkdir -p _site/data
           cp data/books.json _site/data/books.json
+          # Apache settings for Hostinger. GitHub Pages ignores this file.
+          cat > _site/.htaccess <<'HTACCESS'
+          ErrorDocument 404 /404.html
+
+          # Hostinger's Git deploy keeps a .git folder in public_html.
+          RedirectMatch 404 ^/\.git(/|$)
+          <FilesMatch "^(\.htaccess|\.nojekyll|CNAME)$">
+            Require all denied
+          </FilesMatch>
+
+          # One canonical address: https://mrsvioletnoire.com (no www).
+          <IfModule mod_rewrite.c>
+            RewriteEngine On
+            RewriteCond %{HTTP_HOST} ^www\.mrsvioletnoire\.com$ [NC]
+            RewriteRule ^ https://mrsvioletnoire.com%{REQUEST_URI} [R=301,L]
+            RewriteCond %{HTTPS} !=on
+            RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+            RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+          </IfModule>
+
+          <IfModule mod_expires.c>
+            ExpiresActive On
+            ExpiresByType image/webp "access plus 30 days"
+            ExpiresByType image/png "access plus 30 days"
+            ExpiresByType image/jpeg "access plus 30 days"
+            ExpiresByType text/html "access plus 0 seconds"
+            ExpiresByType application/json "access plus 0 seconds"
+          </IfModule>
+          HTACCESS
           echo "Staged files:"
           find _site -type f | sort
+
+      - name: Save staged site
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: _site
+          include-hidden-files: true
+          retention-days: 3
+
+  hostinger:
+    # Publishes the staged site to the hostinger branch. Hostinger's
+    # auto-deploy webhook picks up each new commit on that branch.
+    needs: stage
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get staged site
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: _site
+
+      - name: Commit to the hostinger branch
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git ls-remote --exit-code --heads origin hostinger >/dev/null; then
+            git fetch --depth 1 origin hostinger
+            git worktree add -B hostinger _pub FETCH_HEAD
+          else
+            git worktree add --orphan -b hostinger _pub
+          fi
+          # Replace everything except Git's own folder with the staged site.
+          find _pub -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          cp -R _site/. _pub/
+          cd _pub
+          git add -A
+          if git diff --cached --quiet; then
+            echo "hostinger branch already matches main; nothing to publish."
+            exit 0
+          fi
+          git commit -m "Publish site from main@${GITHUB_SHA::7}"
+          # Plain push (no force) so Hostinger's git pull always fast-forwards.
+          git push origin hostinger
+
+  pages:
+    # Temporary: keeps GitHub Pages current until the DNS cutover.
+    needs: stage
+    if: vars.GITHUB_PAGES != 'off'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Get staged site
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: _site
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '_site'
