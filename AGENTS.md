@@ -13,11 +13,11 @@ Read this before working in the repo. Keep it current; other AIs rely on it for 
 - Published fields only: titles, authors, ISBNs, formats, TBR dates, read status, star ratings. Never publish shelf locations, quantities, prices or the Notes column.
 
 ## Monetization status
-- Plan: Amazon Associates affiliate links first (cost $0), Bookshop.org second, newsletter later, display ads only at roughly 50,000 sessions a month.
-- Affiliate links are built in but off: set the repository variable `AMAZON_TAG` to the Associates tracking ID and re-run **Build library**. The footer disclosure appears automatically.
-- Amazon requires 3 qualifying sales within 180 days of approval, so apply when the site can send traffic.
-- Any sponsored or gifted review needs FTC disclosure on the page.
-- Status: no ads, no newsletter, affiliate tag not set (as of 2026-11-25).
+- Decision (Bryan, 2026-11-25): the site is too small for Amazon Associates now (it needs 3 qualifying sales within 180 days). Do not apply yet; revisit when traffic grows.
+- Plan: Bookshop.org affiliate links first (10% commission, open to any website), newsletter next, Amazon Associates later, display ads only at roughly 50,000 sessions a month.
+- The build supports Amazon links only (`AMAZON_TAG` repository variable, off). Bookshop links are not built yet; adding them is a small change to `scripts/build-library.mjs` and needs Bryan's approval first.
+- Any affiliate link needs the footer disclosure. Any sponsored or gifted review needs FTC disclosure on the page.
+- Status: no ads, no newsletter, no affiliate links live (as of 2026-11-25).
 
 ## Rules
 - Do not change trackers, send messages, spend money or sign anything without Bryan's approval.
