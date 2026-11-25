@@ -36,24 +36,6 @@
     "goodreads": "https://www.goodreads.com/search?q=We+Were+Never+Here+Andrea+Bartz"
   },
   {
-    "id": "sheet-appetite-for-innocence-lucinda-berry",
-    "list": "upnext",
-    "title": "Appetite for Innocence",
-    "series": null,
-    "author": "Lucinda Berry",
-    "format": "Paperback",
-    "myRating": 5,
-    "avgRating": null,
-    "year": null,
-    "pages": null,
-    "dateRead": null,
-    "dateAdded": "2023-08-21",
-    "blurb": null,
-    "cover": "https://covers.openlibrary.org/b/id/13117978-M.jpg",
-    "amazon": "https://www.amazon.com/s?k=Appetite+for+Innocence+Lucinda+Berry&i=stripbooks",
-    "goodreads": "https://www.goodreads.com/search?q=Appetite+for+Innocence+Lucinda+Berry"
-  },
-  {
     "id": "sheet-the-best-of-friends-lucinda-berry",
     "list": "upnext",
     "title": "The Best of Friends",
@@ -2410,6 +2392,24 @@
     "cover": "https://covers.openlibrary.org/b/id/15260699-M.jpg",
     "amazon": "https://www.amazon.com/s?k=The+Housewife+Natalie+Barelli&i=stripbooks",
     "goodreads": "https://www.goodreads.com/search?q=The+Housewife+Natalie+Barelli"
+  },
+  {
+    "id": "sheet-appetite-for-innocence-lucinda-berry",
+    "list": "library",
+    "title": "Appetite for Innocence",
+    "series": null,
+    "author": "Lucinda Berry",
+    "format": null,
+    "myRating": 5,
+    "avgRating": null,
+    "year": null,
+    "pages": null,
+    "dateRead": null,
+    "dateAdded": null,
+    "blurb": null,
+    "cover": "https://covers.openlibrary.org/b/id/13117978-M.jpg",
+    "amazon": "https://www.amazon.com/s?k=Appetite+for+Innocence+Lucinda+Berry&i=stripbooks",
+    "goodreads": "https://www.goodreads.com/search?q=Appetite+for+Innocence+Lucinda+Berry"
   },
   {
     "id": "36121086",
