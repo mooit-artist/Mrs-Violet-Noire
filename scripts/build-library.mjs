@@ -14,7 +14,8 @@
  *   data/goodreads_library_export.csv  Optional. Used only to enrich matching books
  *                                      with Goodreads ratings, dates, ISBNs and links.
  *   data/notes.json                    Optional. Mrs. Noire's blurbs and hand-picked
- *                                      Amazon links, keyed by Goodreads Book Id.
+ *                                      Amazon links, keyed by Goodreads Book Id
+ *                                      (or the sheet- id for books not on Goodreads).
  *   data/covers.json                   Optional cache of checked Open Library covers.
  *
  * Output:
@@ -185,7 +186,9 @@ function isbnCover(entry, g) {
 }
 
 function toBook(entry, list, g, notes, covers) {
-  const note = g ? notes[g.id] || null : null;
+  const id = g?.id || `sheet-${coverKey(entry).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
+  // Notes are keyed by Goodreads Book Id, or by the sheet- id for books not on Goodreads.
+  const note = notes[id] || null;
   const { title, series } = splitSeries(entry.title);
   const author = entry.author || g?.author || '';
   const isbn13 = (entry.isbn?.length === 13 ? entry.isbn : null) || g?.isbn13 || null;
@@ -193,7 +196,7 @@ function toBook(entry, list, g, notes, covers) {
   const coverIsbn = isbn13 || isbn10;
   const cached = covers[coverKey(entry)];
   return {
-    id: g?.id || `sheet-${coverKey(entry).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`,
+    id,
     list,
     title,
     series: series || g?.series || null,
